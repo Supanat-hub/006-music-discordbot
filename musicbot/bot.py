@@ -5,7 +5,7 @@ from discord.ext import commands, tasks
 from discord import Intents
 from discord.ext.commands import Bot
 from discord_slash import SlashCommand, SlashContext
-from .cogs import music, error, meta, tips
+from .cogs import music, error, meta
 from . import config
 import asyncio
 
@@ -34,7 +34,7 @@ async def on_guild_join(guild):
     
 
 
-COGS = [music.Music, error.CommandErrorHandler, meta.Meta, tips.Tips]
+COGS = [music.Music, error.CommandErrorHandler, meta.Meta]
 
 
 def add_cogs(bot):
