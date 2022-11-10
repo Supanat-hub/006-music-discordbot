@@ -3,6 +3,8 @@ from discord.ext import commands
 import discord
 import asyncio
 import youtube_dl
+from datetime import datetime
+from pytz import timezone
 import logging
 import urllib.request
 from ..video import Video
@@ -58,7 +60,14 @@ async def is_audio_requester(ctx):
     else:
         raise commands.CommandError(
             "You need to be the song requester to do that.")
+# change time zone
+def timetz(*args):
+    return datetime.now(tz).timetuple()
 
+tz = timezone('Asia/Bangkok') 
+
+logging.Formatter.converter = timetz
+#######
 
 class Music(commands.Cog):
     """Bot commands to help play music."""
