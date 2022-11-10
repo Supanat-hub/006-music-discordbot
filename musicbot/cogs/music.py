@@ -67,7 +67,7 @@ def timetz(*args):
 tz = timezone('Asia/Bangkok') 
 
 logging.Formatter.converter = timetz
-#######
+#time zone list https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568
 
 class Music(commands.Cog):
     """Bot commands to help play music."""
