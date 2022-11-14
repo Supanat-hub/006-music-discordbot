@@ -112,14 +112,13 @@ class Music(commands.Cog):
     )
     async def _playplaylist(self, ctx, url):
         """Plays audio hosted at <url> (or performs a search for <url> and plays the first result)."""
-        try:
-            client = ctx.guild.voice_client
-        except:
+        if discord.ChannelType.private:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
             await ctx.send(content=None, embed=emBed5)
             return
+        client = ctx.guild.voice_client
         state = self.get_state(ctx.guild)  # get the guild's state
         message = await ctx.send("**wait for it....**")
         channel = discord.VoiceChannel = None
@@ -253,15 +252,14 @@ class Music(commands.Cog):
     )
     async def _play(self, ctx, search):
         """Plays audio hosted at <url> (or performs a search for <url> and plays the first result)."""
-        url = search
-        try:
-            client = ctx.guild.voice_client
-        except:
+        if discord.ChannelType.private:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
             await ctx.send(content=None, embed=emBed5)
             return
+        url = search
+        client = ctx.guild.voice_client
         state = self.get_state(ctx.guild)  # get the guild's state
         message = await ctx.send("**wait for it....**")
         channel = discord.VoiceChannel = None
@@ -317,14 +315,13 @@ class Music(commands.Cog):
         description="show songs queue."
     )
     async def _queue(self, ctx):
-        try:
-            client = ctx.guild.voice_client
-        except:
+        if discord.ChannelType.private:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
             await ctx.send(content=None, embed=emBed5)
             return
+        client = ctx.guild.voice_client
         if client and client.channel and client.source:
             state = self.get_state(ctx.guild)
             queue = state.playlist
@@ -341,13 +338,11 @@ class Music(commands.Cog):
             await ctx.send("**Not currently playing any audio.**")
 
     @cog_ext.cog_slash(
-        name="pause/resume",
+        name="resume_or_pause",
         description="pause or resume song."
     )
     async def _pause(self, ctx):
-        try:
-            client = ctx.guild.voice_client
-        except:
+        if discord.ChannelType.private:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
@@ -386,7 +381,6 @@ class Music(commands.Cog):
     def _pause_audio_slash(self, client):
         if client.is_paused():
             client.resume()
-            
         else:
             client.pause()
 
@@ -396,9 +390,7 @@ class Music(commands.Cog):
         description="clear all queues"
     )
     async def _clearqueue(self, ctx):
-        try:
-            client = ctx.guild.voice_client
-        except:
+        if discord.ChannelType.private:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
@@ -419,9 +411,7 @@ class Music(commands.Cog):
     )
     async def _volume(self, ctx, volume: int):
         """Change the volume of currently playing audio (values 0-250)."""
-        try:
-            client = ctx.guild.voice_client
-        except:
+        if discord.ChannelType.private:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
@@ -474,9 +464,7 @@ class Music(commands.Cog):
         description="currently playing song"
     )
     async def _nowplaying(self, ctx):
-        try:
-            client = ctx.guild.voice_client
-        except:
+        if discord.ChannelType.private:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
@@ -498,9 +486,7 @@ class Music(commands.Cog):
     )
     async def _skip(self, ctx):
         """Skips the currently playing song, or votes to skip it."""
-        try:
-            client = ctx.guild.voice_client
-        except:
+        if discord.ChannelType.private:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
@@ -565,6 +551,12 @@ class Music(commands.Cog):
     )
     async def _leave(self, ctx):
         """Leaves the voice channel, if currently in one."""
+        if discord.ChannelType.private:
+            emBed5 = discord.Embed(color=0xff0000)
+            emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
+            emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+            await ctx.send(content=None, embed=emBed5)
+            return
         voice_client = discord.utils.get(self.bot.voice_clients, guild=ctx.guild)
         if voice_client == None or not voice_client.is_connected():
             emBed6 = discord.Embed(color=0xff0000)
@@ -602,6 +594,7 @@ class Music(commands.Cog):
         await ctx.send(embed=emBed)
 
     @commands.command()
+    @commands.guild_only()
     async def ping(self, ctx):
         emBed = discord.Embed(color=0xF3F4F9)
         emBed.add_field(name='__**Pong! 🏓**__', value=f"👉 ping: {round(self.bot.latency * 1000)} ms 👈")
@@ -699,9 +692,6 @@ class Music(commands.Cog):
             client.pause()
 
     
-
-
-
     @commands.command(aliases=["vol", "v", "V"])
     @commands.guild_only()
     @commands.check(audio_playing)
