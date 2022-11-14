@@ -334,9 +334,9 @@ class Music(commands.Cog):
                 embed2 = discord.Embed(title=f'รายการเพลงที่ยังไม่ได้เล่น - ทั้งหมด {len(queue)}', description=fmt, color=0xC1E1C1)
                 await message.edit(embed=embed2)
             else:
-                await message.edit("The play queue is empty.")
+                await message.edit(content="The play queue is empty.")
         else:
-            await message.edit("**Not currently playing any audio.**")
+            await message.edit(content="**Not currently playing any audio.**")
 
     @cog_ext.cog_slash(
         name="resume_or_pause",
@@ -372,7 +372,7 @@ class Music(commands.Cog):
             client = ctx.guild.voice_client
             self.ctx = ctx
             self._pause_audio_slash(client)
-            await message.edit(".✅")
+            await message.edit(content=".✅")
         else:
             raise commands.CommandError(
                 "You need to be in the channel to do that.")
@@ -400,9 +400,9 @@ class Music(commands.Cog):
             """Clears the play queue without leaving the channel."""
             state = self.get_state(ctx.guild)
             state.playlist = []
-            await message.edit("clear all queues complete ✅")
+            await message.edit(content="clear all queues complete ✅")
         else:
-            await message.edit("**Not currently playing any audio.**")
+            await message.edit(content="**Not currently playing any audio.**")
 
     @cog_ext.cog_slash(
         name="volume",
@@ -471,10 +471,10 @@ class Music(commands.Cog):
         if client and client.channel and client.source:
             """Displays information about the current song."""
             state = self.get_state(ctx.guild)
-            await message.edit("**now playing**", embed=state.now_playing.get_embed())
+            await message.edit(content="**now playing**", embed=state.now_playing.get_embed())
             await self._add_reaction_controls(message)
         else:
-            await message.edit("**Not currently playing any audio.**")
+            await message.edit(content="**Not currently playing any audio.**")
 
 
     @cog_ext.cog_slash(
@@ -513,7 +513,7 @@ class Music(commands.Cog):
                 await message.edit(embed=emBed5, delete_after=10)
                 return
         except:
-            await message.edit("You need to be in the channel to do that.")
+            await message.edit(content="You need to be in the channel to do that.")
             return
                 
         
