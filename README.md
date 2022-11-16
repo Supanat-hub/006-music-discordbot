@@ -20,10 +20,10 @@
 "github_url"="None"
 ```
 4. install requirements.txt
-```sh
+```python
 pip install -r requirements.txt
 ```
 5. start bot
-```sh
+```python
 python -m musicbot
 ```
