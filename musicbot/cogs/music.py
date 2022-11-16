@@ -77,7 +77,6 @@ class Music(commands.Cog):
         self.config = config[__name__.split(".")[
             -1]]  # retrieve module name, find config entry
         self.states = {}
-        self.bot.add_listener(self.on_reaction_add, "on_reaction_add")
 
     def get_state(self, guild):
         """Gets the state for `guild`, creating it if it does not exist."""
@@ -86,6 +85,8 @@ class Music(commands.Cog):
         else:
             self.states[guild.id] = GuildState()
             return self.states[guild.id]
+
+            
 
     @cog_ext.cog_slash(
         name="donate",
@@ -202,7 +203,6 @@ class Music(commands.Cog):
                 await message.edit(content="There was an error downloading your song, **sorry.**", embed=None)
                 return
             await message.edit(content=None, embed=video.get_embed())
-            await self._add_reaction_controls(message)
         else:
             if ctx.author.voice is not None and ctx.author.voice.channel is not None:
                 channel = ctx.author.voice.channel
@@ -239,7 +239,6 @@ class Music(commands.Cog):
                 except:
                     pass
                 await message.edit(content=None, embed=video.get_embed())
-                await self._add_reaction_controls(message)
                 logging.info(f"Now playing '{video.title_playlist}'")
                 
             else:
@@ -292,7 +291,6 @@ class Music(commands.Cog):
                 return
             state.playlist.append(video)
             await message.edit(content=None, embed=video.get_embed())
-            await self._add_reaction_controls(message)
         else:
             if ctx.author.voice is not None and ctx.author.voice.channel is not None:
                 channel = ctx.author.voice.channel
@@ -305,7 +303,6 @@ class Music(commands.Cog):
                 await ctx.guild.change_voice_state(channel=channel, self_mute=False, self_deaf=True)
                 self._play_song(client, state, video)
                 await message.edit(content=None, embed=video.get_embed())
-                await self._add_reaction_controls(message)
                 logging.info(f"Now playing '{video.title}'")
             else:
                 raise commands.CommandError(
@@ -472,7 +469,6 @@ class Music(commands.Cog):
             """Displays information about the current song."""
             state = self.get_state(ctx.guild)
             await message.edit(content="**now playing**", embed=state.now_playing.get_embed())
-            await self._add_reaction_controls(message)
         else:
             await message.edit(content="**Not currently playing any audio.**")
 
@@ -769,7 +765,6 @@ class Music(commands.Cog):
         """Displays information about the current song."""
         state = self.get_state(ctx.guild)
         message = await ctx.send("**now playing**", embed=state.now_playing.get_embed())
-        await self._add_reaction_controls(message)
 
     @commands.command(aliases=["q", "playlist"])
     @commands.guild_only()
@@ -867,7 +862,6 @@ class Music(commands.Cog):
                 return
             state.playlist.append(video)
             message = await ctx.send(embed=video.get_embed())
-            await self._add_reaction_controls(message)
         else:
             if ctx.author.voice is not None and ctx.author.voice.channel is not None:
                 channel = ctx.author.voice.channel
@@ -881,42 +875,10 @@ class Music(commands.Cog):
                 await ctx.guild.change_voice_state(channel=channel, self_mute=False, self_deaf=True)
                 self._play_song(client, state, video)
                 message = await ctx.send("", embed=video.get_embed())
-                await self._add_reaction_controls(message)
                 logging.info(f"Now playing '{video.title}'")
             else:
                 raise commands.CommandError(
                     "You need to be in a voice channel to do that.")
-
-    async def on_reaction_add(self, reaction, user):
-        """Respods to reactions added to the bot's messages, allowing reactions to control playback."""
-        message = reaction.message
-        if user != self.bot.user and message.author == self.bot.user:
-            await message.remove_reaction(reaction, user)
-            if message.guild and message.guild.voice_client:
-                user_in_channel = user.voice and user.voice.channel and user.voice.channel == message.guild.voice_client.channel
-                permissions = message.channel.permissions_for(user)
-                guild = message.guild
-                state = self.get_state(guild)
-                if user_in_channel and state.is_requester(user):
-                    client = message.guild.voice_client
-                    if reaction.emoji == "⏯":
-                        # pause audio
-                        self._pause_audio(client)
-                    elif reaction.emoji == "⏭":
-                        # skip audio
-                        client.stop()
-                    elif reaction.emoji == "⏮":
-                        state.playlist.insert(
-                            0, state.now_playing
-                        )  # insert current song at beginning of playlist
-                        client.stop()  # skip ahead
-
-    async def _add_reaction_controls(self, message):
-        """Adds a 'control-panel' of reactions to a message that can be used to control the bot."""
-        CONTROLS = ["⏮", "⏯", "⏭"]
-        for control in CONTROLS:
-            await message.add_reaction(control)
-
 
 class GuildState:
     """Helper class managing per-guild state."""
