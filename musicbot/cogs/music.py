@@ -178,6 +178,14 @@ class Music(commands.Cog):
                 await asyncio.sleep(10)
                 await ctx.message.delete()
                 return 
+            if state.repeat == True:
+                emBed5 = discord.Embed(color=0xff0000)
+                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't add any song when loop is **on**")
+                emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+                await message.edit(content=None, embed=emBed5, delete_after=10)
+                await asyncio.sleep(10)
+                await ctx.message.delete()
+                return  
             try:
                 with youtube_dl.YoutubeDL(YTDL_OPTS) as ydl:
                     info = ydl.extract_info(url, download=False)
@@ -246,6 +254,56 @@ class Music(commands.Cog):
                     "You need to be in a voice channel to do that.")
 
     @cog_ext.cog_slash(
+        name="loop",
+        description="loop only one song."
+    )
+    async def _loop(self, ctx):
+        message = await ctx.send("**wait for it....**")
+        if message.channel.type == discord.ChannelType.private:
+            emBed5 = discord.Embed(color=0xff0000)
+            emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
+            emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+            await message.edit(content=None, embed=emBed5)
+            return
+        channel = discord.VoiceChannel = None
+        if not channel:
+            try:
+                channel = ctx.author.voice.channel
+            except AttributeError:
+                emBed5 = discord.Embed(color=0xff0000)
+                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='กรุณาเชื่อมต่อช่องเสียงก่อน')
+                await message.edit(content = None, embed=emBed5, delete_after=10)
+                await asyncio.sleep(10)
+                await ctx.message.delete()
+                return
+        voice_run = discord.utils.get(self.bot.voice_clients, guild=ctx.guild)
+        client = ctx.guild.voice_client
+        if client and client.channel:
+            if voice_run.channel != ctx.author.voice.channel:
+                emBed5 = discord.Embed(color=0xff0000)
+                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
+                emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+                await message.edit(content=None, embed=emBed5, delete_after=10)
+                await asyncio.sleep(10)
+                await ctx.message.delete()
+                return 
+        if client and client.channel and client.source:
+            state = self.get_state(ctx.guild)
+            mode = state.repeat
+            if mode == False:
+                state.repeat = True
+                await message.edit(content="loop is **On**", embed=None)
+                logging.info("Loop On ")
+            elif mode == True:
+                state.repeat = False
+                await message.edit(content="loop is **Off**", embed=None)
+                logging.info("Loop Off ")
+            return
+        else:
+            raise commands.CommandError("Not currently playing any audio.")
+        
+
+    @cog_ext.cog_slash(
         name="play",
         description="play song by url/name"
     )
@@ -278,6 +336,14 @@ class Music(commands.Cog):
             if voice_run.channel != ctx.author.voice.channel:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
+                emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+                await message.edit(content=None, embed=emBed5, delete_after=10)
+                await asyncio.sleep(10)
+                await ctx.message.delete()
+                return 
+            if state.repeat == True:
+                emBed5 = discord.Embed(color=0xff0000)
+                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't add any song when loop is **on**")
                 emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
                 await message.edit(content=None, embed=emBed5, delete_after=10)
                 await asyncio.sleep(10)
@@ -322,10 +388,12 @@ class Music(commands.Cog):
         client = ctx.guild.voice_client
         if client and client.channel and client.source:
             state = self.get_state(ctx.guild)
+            if state.repeat == True:
+                message = await message.edit(content="**now loop this**", embed=state.now_playing.get_embed())
+                return 
             queue = state.playlist
             # await ctx.send(embed=self._queue_text(state.playlist))
             if len(queue) > 0:
-                # message = [f"{len(queue)} songs in queue:"]
                 fmt = "\n".join(f"ฺ {index+1}. **{song.title}** (requested by **{song.requested_by.name}**)"for (index, song) in enumerate(queue))
                 # add individual songs
                 embed2 = discord.Embed(title=f'รายการเพลงที่ยังไม่ได้เล่น - ทั้งหมด {len(queue)}', description=fmt, color=0xC1E1C1)
@@ -464,6 +532,15 @@ class Music(commands.Cog):
             emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
             await message.edit(content=None, embed=emBed5)
             return
+        state = self.get_state(ctx.guild)
+        if state.repeat == True:
+            client = ctx.guild.voice_client
+            if client and client.channel and client.source:
+                """Displays information about the current song."""
+                await message.edit(content="**now loop this**", embed=state.now_playing.get_embed())
+            else:
+                await message.edit(content="**Not currently playing any audio.**")
+            return 
         client = ctx.guild.voice_client
         if client and client.channel and client.source:
             """Displays information about the current song."""
@@ -508,6 +585,14 @@ class Music(commands.Cog):
                 emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
                 await message.edit(embed=emBed5, delete_after=10)
                 return
+            elif state.repeat == True:
+                emBed5 = discord.Embed(color=0xff0000)
+                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't skip song when loop is **on**")
+                emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+                await message.edit(content=None, embed=emBed5, delete_after=10)
+                await asyncio.sleep(10)
+                await ctx.message.delete()
+                return 
         except:
             await message.edit(content="You need to be in the channel to do that.")
             return
@@ -565,7 +650,9 @@ class Music(commands.Cog):
         emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
         await message.edit(embed=emBed3)
         await client.disconnect()
+        logging.info("Loop Off ")
         state.playlist = []
+        state.repeat = False
         state.now_playing = None
 
 
@@ -647,14 +734,16 @@ class Music(commands.Cog):
             await ctx.send(embed=emBed5, delete_after=10)
             await asyncio.sleep(10)
             await ctx.message.delete()
-            return
+            return 
         client = ctx.guild.voice_client
         state = self.get_state(ctx.guild)
         emBed3 = discord.Embed(color=0xff0000)
         emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
         await ctx.send(embed=emBed3)
         await client.disconnect()
+        logging.info("Loop Off ")
         state.playlist = []
+        state.repeat = False
         state.now_playing = None
 
     @commands.command(aliases=["resume"])
@@ -734,6 +823,14 @@ class Music(commands.Cog):
             await asyncio.sleep(10)
             await ctx.message.delete()
             return
+        elif state.repeat == True:
+            emBed5 = discord.Embed(color=0xff0000)
+            emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't skip song when loop is **on**")
+            emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+            await ctx.send(content=None, embed=emBed5, delete_after=10)
+            await asyncio.sleep(10)
+            await ctx.message.delete()
+            return 
         emBed6 = discord.Embed(color=0xF3F4F9)
         emBed6.add_field(name='ข้ามเพลงแล้ว', value=(f'**`{ctx.author.name}`**: Skipped the song!'))
         await ctx.send(embed=emBed6)
@@ -746,6 +843,9 @@ class Music(commands.Cog):
             discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
 
         def after_playing(err):
+            if state.repeat == True:
+                self._play_song(client, state, song)
+                return
             if len(state.playlist) > 0:
                 next_song = state.playlist.pop(0)
                 self._play_song(client, state, next_song)
@@ -764,7 +864,11 @@ class Music(commands.Cog):
     async def nowplaying(self, ctx):
         """Displays information about the current song."""
         state = self.get_state(ctx.guild)
-        message = await ctx.send("**now playing**", embed=state.now_playing.get_embed())
+        if state.repeat == True:
+            message = await ctx.send("**now loop this**", embed=state.now_playing.get_embed())
+            return
+        else:
+            message = await ctx.send("**now playing**", embed=state.now_playing.get_embed())
 
     @commands.command(aliases=["q", "playlist"])
     @commands.guild_only()
@@ -772,10 +876,12 @@ class Music(commands.Cog):
     async def queue(self, ctx):
         """Display the current play queue."""
         state = self.get_state(ctx.guild)
+        if state.repeat == True:
+            message = await ctx.send("**now loop this**", embed=state.now_playing.get_embed())
+            return 
         queue = state.playlist
         # await ctx.send(embed=self._queue_text(state.playlist))
         if len(queue) > 0:
-            # message = [f"{len(queue)} songs in queue:"]
             fmt = "\n".join(f"ฺ {index+1}. **{song.title}** (requested by **{song.requested_by.name}**)"for (index, song) in enumerate(queue))
               # add individual songs
             embed2 = discord.Embed(title=f'รายการเพลงที่ยังไม่ได้เล่น - ทั้งหมด {len(queue)}', description=fmt, color=0xC1E1C1)
@@ -853,6 +959,14 @@ class Music(commands.Cog):
                 await asyncio.sleep(10)
                 await ctx.message.delete()
                 return 
+            if state.repeat == True:
+                emBed5 = discord.Embed(color=0xff0000)
+                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't add any song when loop is **on**")
+                emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+                await ctx.send(content=None, embed=emBed5, delete_after=10)
+                await asyncio.sleep(10)
+                await ctx.message.delete()
+                return 
             try:
                 video = Video(url, ctx.author)
             except youtube_dl.DownloadError as e:
@@ -888,6 +1002,7 @@ class GuildState:
         self.playlist = []
         self.skip_votes = set()
         self.now_playing = None
+        self.repeat = False
 
     def is_requester(self, user):
         return self.now_playing.requested_by == user
