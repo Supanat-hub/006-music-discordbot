@@ -88,9 +88,7 @@ class Music(commands.Cog):
 
     @commands.Cog.listener()
     async def on_voice_state_update(self, member, before, after):
-        client = member.guild.voice_client
         state = self.get_state(member.guild)
-        memids = []
         voice_state = member.guild.voice_client
         if member == self.bot.user:  #CATCH
             return
