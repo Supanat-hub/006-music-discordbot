@@ -107,7 +107,7 @@ class Music(commands.Cog):
             if voice_state is None:
                 # Exiting if the bot it's not connected to a voice channel
                 return
-            await asyncio.sleep(10)
+            await asyncio.sleep(5)
             if len(voice_state.channel.members) == 1:
                 logging.info("Loop Off ")
                 state.playlist = []
