@@ -86,7 +86,27 @@ class Music(commands.Cog):
             self.states[guild.id] = GuildState()
             return self.states[guild.id]
 
-            
+    @commands.Cog.listener()
+    async def on_voice_state_update(self, member, before, after):
+        client = member.guild.voice_client
+        state = self.get_state(member.guild)
+        memids = []
+        voice_state = member.guild.voice_client
+        if member == self.bot.user:  #CATCH
+            return
+        if after.channel is None: #User has left a voice channel
+            if voice_state is None:
+                # Exiting if the bot it's not connected to a voice channel
+                return 
+            if len(voice_state.channel.members) == 1:
+                logging.info("Loop Off ")
+                state.playlist = []
+                state.repeat = False
+                state.now_playing = None
+                await voice_state.disconnect()
+                logging.info("Disconnected no one in VC.")
+        else:
+            return
 
     @cog_ext.cog_slash(
         name="donate",
