@@ -103,6 +103,18 @@ class Music(commands.Cog):
                 state.now_playing = None
                 await voice_state.disconnect()
                 logging.info("Disconnected no one in VC.")
+        await asyncio.sleep(10)
+        if before.channel is not after.channel:
+            if voice_state is None:
+                # Exiting if the bot it's not connected to a voice channel
+                return 
+            if len(voice_state.channel.members) == 1:
+                logging.info("Loop Off ")
+                state.playlist = []
+                state.repeat = False
+                state.now_playing = None
+                await voice_state.disconnect()
+                logging.info("Disconnected no one in VC.")
         else:
             return
 
