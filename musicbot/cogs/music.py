@@ -131,6 +131,31 @@ class Music(commands.Cog):
         await ctx.send(content=None, embed=emBed)
 
     @cog_ext.cog_slash(
+        name="reset_bot",
+        description="reset stagement."
+    )
+    @commands.is_owner()
+    async def _resetbot(self, ctx):
+        message = await ctx.send("**wait for it....**")
+        if message.channel.type == discord.ChannelType.private:
+            emBed5 = discord.Embed(color=0xff0000)
+            emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't use this command in DM.")
+            emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+            await message.edit(content=None, embed=emBed5)
+            return
+        try:
+            client = ctx.guild.voice_client
+            await client.disconnect()
+        except:
+            pass
+        state = self.get_state(ctx.guild)
+        state.volume = 1.0
+        state.playlist = []
+        state.now_playing = None
+        state.repeat = False
+        await message.edit(content="**Done!**", embed=None)
+
+    @cog_ext.cog_slash(
         name="avatar",
         description="get user avater."
     )
@@ -207,7 +232,7 @@ class Music(commands.Cog):
                 await message.edit(content=None, embed=emBed5, delete_after=10)
                 await asyncio.sleep(10)
                 await ctx.message.delete()
-                return 
+                return  
             if state.repeat == True:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't add any song when loop is **on**")
@@ -544,7 +569,7 @@ class Music(commands.Cog):
             client = ctx.guild.voice_client
 
             state.volume = float(volume) / 100.0
-            await ctx.send("volume `change`")
+            await message.edit(content="volume `change`", embed=None)
             client.source.volume = state.volume  # update the AudioSource's volume to match
             
         else:
