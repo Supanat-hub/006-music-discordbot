@@ -10,6 +10,7 @@
 ```sh
 "token"="token" # the bot's token
 "prefix"="-" # prefix used to denote commands
+"app_id"="123456789" # Your application id
 
 [music]
 # Options for the music commands
