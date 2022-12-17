@@ -25,8 +25,6 @@ class Videoplaylist:
             video_format = video["formats"][0]
             self.stream_url = video_format["url"]
             self.uploader = playlist["uploader"] if "uploader" in video else ""
-            self.thumbnail = video[
-                "thumbnail"] if "thumbnail" in video else None
             self.requested_by = requested_by
 
     def _get_info(self, video_url):
@@ -49,7 +47,6 @@ class Videoplaylist:
         embed.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948800623741120513.gif")
         embed.set_footer(
             text=f"Requested by {self.requested_by.name}",
-            icon_url=self.requested_by.avatar_url)
-        if self.thumbnail:
-            embed.set_thumbnail(url="https://jobwherever.com/wp-content/uploads/2020/10/MAIN-1-2.jpg")
+            icon_url=self.requested_by.avatar)
+        embed.set_thumbnail(url="https://www.tubekarma.com/wp-content/uploads/2022/07/MAIN-1-2.jpg")
         return embed

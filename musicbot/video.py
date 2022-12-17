@@ -44,7 +44,7 @@ class Video:
         embed.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948800623741120513.gif")
         embed.set_footer(
             text=f"Requested by {self.requested_by.name}",
-            icon_url=self.requested_by.avatar_url)
+            icon_url=self.requested_by.avatar)
         if self.thumbnail:
             embed.set_thumbnail(url=self.thumbnail)
         return embed

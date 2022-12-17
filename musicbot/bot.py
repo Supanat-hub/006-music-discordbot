@@ -1,51 +1,48 @@
 import discord
 import logging
+import os
 import sys
 from discord.ext import commands, tasks
 from discord import Intents
-from discord.ext.commands import Bot
-from discord_slash import SlashCommand, SlashContext
+from discord import app_commands
 from .cogs import music, error, meta
-from . import config
+import aiohttp
 import asyncio
-
-
+from . import config
 cfg = config.load_config()
+cogs = [music.Music, error.CommandErrorHandler, meta.Meta]
+class Mybot(commands.Bot):
+    def __init__(self):
+        super().__init__(
+            command_prefix = cfg["prefix"],
+            intents = Intents.all(),
+            help_command=None,
+            application_id = 910345959056224257
+        )
+    
+    async def setup_hook(self):
+        # await bot.remove_cog("Meta")
+        # await bot.remove_cog("Music")
+        # await bot.remove_cog("CommandErrorHandler")
+        for cog in cogs:
+            await bot.add_cog(cog(bot, cfg))
+        logging.info(f"Cogs synced.")
+        await bot.tree.sync()
+        
+    async def on_ready(self):
+        status_task.start()
+        logging.info(f"Logged in as {bot.user}")
 
-bot = commands.Bot(command_prefix=cfg["prefix"], help_command=None)
-slash = SlashCommand(bot, sync_commands=True, sync_on_cog_reload=True)
-
-
-
+bot = Mybot()
 
 @bot.event
-async def on_ready():
-    logging.info(f"Logged in as {bot.user.name}")
-    status_task.start()
+async def on_guild_join(guild):
+    await bot.change_presence(activity=discord.Game(name=f"-help || {len(bot.guilds)} servers."))
 
 @tasks.loop()
 async def status_task():
         await bot.change_presence(activity=discord.Game(name=f"-help || {len(bot.guilds)} servers."))
         await asyncio.sleep(60)
 
-@bot.event
-async def on_guild_join(guild):
-    await bot.change_presence(activity=discord.Game(name=f"-help || {len(bot.guilds)} servers."))
-    
-
-
-COGS = [music.Music, error.CommandErrorHandler, meta.Meta]
-
-
-def add_cogs(bot):
-    for cog in COGS:
-        bot.add_cog(cog(bot, cfg))
-
 def run():
-    add_cogs(bot)
-    if cfg["token"] == "":
-        raise ValueError(
-            "No token has been provided. Please ensure that config.toml contains the bot token."
-        )
-        sys.exit(1)
     bot.run(cfg["token"])
