@@ -17,7 +17,7 @@ class Mybot(commands.Bot):
             command_prefix = cfg["prefix"],
             intents = Intents.all(),
             help_command=None,
-            application_id = 910345959056224257
+            application_id = cfg["app_id"]
         )
     
     async def setup_hook(self):

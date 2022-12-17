@@ -606,7 +606,7 @@ class Music(commands.Cog):
             await interaction.response.send_message(embed=emBed5, delete_after=10)
             return
         client = interaction.guild.voice_client
-        state = self.get_state(interaction.guild)
+        state = self.get_state(interaction.guild_id)
         emBed3 = discord.Embed(color=0xF3F4F9)
         emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
         await interaction.response.send_message(embed=emBed3)
@@ -674,7 +674,7 @@ class Music(commands.Cog):
             await ctx.message.delete()
             return 
         client = ctx.guild.voice_client
-        state = self.get_state(ctx.guild)
+        state = self.get_state(ctx.guild.id)
         emBed3 = discord.Embed(color=0xff0000)
         emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
         await ctx.send(embed=emBed3)
@@ -710,7 +710,7 @@ class Music(commands.Cog):
     # @commands.check(is_audio_requester)
     async def volume(self, ctx, volume: int):
         """Change the volume of currently playing audio (values 0-250)."""
-        state = self.get_state(ctx.guild)
+        state = self.get_state(ctx.guild.id)
 
         # make sure volume is nonnegative
         if volume < 0:
@@ -732,7 +732,7 @@ class Music(commands.Cog):
     @commands.guild_only()
     async def skip(self, ctx):
         """Skips the currently playing song, or votes to skip it."""
-        state = self.get_state(ctx.guild)
+        state = self.get_state(ctx.guild.id)
         client = ctx.guild.voice_client
         voice_run = discord.utils.get(self.bot.voice_clients, guild=ctx.guild)
         if voice_run == None:
@@ -800,7 +800,7 @@ class Music(commands.Cog):
     @commands.check(audio_playing)
     async def nowplaying(self, ctx):
         """Displays information about the current song."""
-        state = self.get_state(ctx.guild)
+        state = self.get_state(ctx.guild.id)
         if state.repeat == True:
             message = await ctx.send("**now loop this**", embed=state.now_playing.get_embed())
             return
@@ -812,7 +812,7 @@ class Music(commands.Cog):
     @commands.check(audio_playing)
     async def queue(self, ctx):
         """Display the current play queue."""
-        state = self.get_state(ctx.guild)
+        state = self.get_state(ctx.guild.id)
         if state.repeat == True:
             message = await ctx.send("**now loop this**", embed=state.now_playing.get_embed())
             return 
@@ -837,7 +837,7 @@ class Music(commands.Cog):
     # @commands.has_permissions(administrator=True)
     async def clearqueue(self, ctx):
         """Clears the play queue without leaving the channel."""
-        state = self.get_state(ctx.guild)
+        state = self.get_state(ctx.guild.id)
         state.playlist = []
         await ctx.send("clear all queues complete ✅")
 
@@ -848,7 +848,7 @@ class Music(commands.Cog):
     # @commands.has_permissions(administrator=True)
     async def jumpqueue(self, ctx, song: int, new_index: int):
         """Moves song at an index to `new_index` in queue."""
-        state = self.get_state(ctx.guild)  # get state for this guild
+        state = self.get_state(ctx.guild.id)  # get state for this guild
         if 1 <= song <= len(state.playlist) and 1 <= new_index:
             song = state.playlist.pop(song - 1)  # take song at index...
             state.playlist.insert(new_index - 1, song)  # and insert it.
@@ -862,7 +862,7 @@ class Music(commands.Cog):
     async def play(self, ctx, *, url):
         """Plays audio hosted at <url> (or performs a search for <url> and plays the first result)."""
         client = ctx.guild.voice_client
-        state = self.get_state(ctx.guild)  # get the guild's state
+        state = self.get_state(ctx.guild.id)  # get the guild's state
         channel = discord.VoiceChannel = None
         voice_run = discord.utils.get(self.bot.voice_clients, guild=ctx.guild)
         if not channel:

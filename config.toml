@@ -1,5 +1,6 @@
 "token"="token" # the bot's token
 "prefix"="-" # prefix used to denote commands
+"app_id"="910345959056224257"
 
 [music]
 # Options for the music commands
