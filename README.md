@@ -6,7 +6,7 @@
 **Follow this step by step**
 1. Download the release version
 2. unzip file
-3. edit token and prefix in config.toml
+3. edit token prefix and app id in config.toml
 ```sh
 "token"="token" # the bot's token
 "prefix"="-" # prefix used to denote commands
