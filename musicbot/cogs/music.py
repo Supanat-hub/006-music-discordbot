@@ -773,28 +773,6 @@ class Music(commands.Cog):
         await ctx.send(embed=emBed6)
         voice_run.stop()
 
-    def _play_song(self, client, state, song):
-        state.now_playing = song
-        state.skip_votes = set()  # clear skip votes
-        source = discord.PCMVolumeTransformer(
-            discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
-
-        def after_playing(err):
-            if state.repeat == True:
-                self._play_song(client, state, song)
-                return
-            if len(state.playlist) > 0:
-                next_song = state.playlist.pop(0)
-                self._play_song(client, state, next_song)
-            else:
-                if len(state.playlist) <= 0:
-                    asyncio.run_coroutine_threadsafe(client.disconnect(),
-                                                    self.bot.loop)
-                else:
-                    pass
-
-        client.play(source, after=after_playing)
-
     @commands.command(aliases=["np"])
     @commands.guild_only()
     @commands.check(audio_playing)
