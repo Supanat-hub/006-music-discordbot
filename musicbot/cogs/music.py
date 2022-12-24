@@ -1,5 +1,6 @@
 import asyncio
 from datetime import datetime
+import math
 from pytz import timezone
 import logging
 import discord
@@ -767,11 +768,26 @@ class Music(commands.Cog):
             await ctx.send(content=None, embed=emBed5, delete_after=10)
             await asyncio.sleep(10)
             await ctx.message.delete()
-            return 
-        emBed6 = discord.Embed(color=0xF3F4F9)
-        emBed6.add_field(name='ข้ามเพลงแล้ว', value=(f'**`{ctx.author.name}`**: Skipped the song!'))
-        await ctx.send(embed=emBed6)
-        voice_run.stop()
+            return
+        if ctx.channel.permissions_for(ctx.author).administrator or state.is_requester(ctx.author):
+            # immediately skip if requester or admin
+            emBed6 = discord.Embed(color=0xF3F4F9)
+            emBed6.add_field(name='ข้ามเพลงแล้ว', value=(f'**`{ctx.author.name}`**: Skipped the song!'))
+            await ctx.send(embed=emBed6)
+            voice_run.stop()
+            return
+        elif self.config["vote_skip"]:
+            # vote to skip song
+            channel = client.channel
+            self._vote_skip(channel, ctx.author)
+            # announce vote
+            users_in_channel = len([
+                member for member in channel.members if not member.bot
+            ])  # don't count bots
+            required_votes = math.ceil(self.config["vote_skip_ratio"] * users_in_channel)
+            await ctx.send(f"{ctx.author.mention} voted to skip ({len(state.skip_votes)}/{required_votes} votes)")
+        else:
+            raise commands.CommandError("Sorry, vote skipping is disabled.")
 
     @commands.command(aliases=["np"])
     @commands.guild_only()
@@ -819,22 +835,32 @@ class Music(commands.Cog):
         state.playlist = []
         await ctx.send("clear all queues complete ✅")
 
-    # need fix
+    @commands.command(aliases=["jq"])
+    @commands.guild_only()
+    @commands.check(audio_playing)
+    # @commands.has_permissions(administrator=True)
+    async def jumpqueue(self, ctx, song: int, new_index: int):
+        """Moves song at an index to `new_index` in queue."""
+        state = self.get_state(ctx.guild.id)  # get state for this guild
+        if 1 <= song <= len(state.playlist) and 1 <= new_index:
+            song = state.playlist.pop(song - 1)  # take song at index...
+            state.playlist.insert(new_index - 1, song)  # and insert it.
 
-    # @commands.command(aliases=["jq"])
-    # @commands.guild_only()
-    # @commands.check(audio_playing)
-    # # @commands.has_permissions(administrator=True)
-    # async def jumpqueue(self, ctx, song: int, new_index: int):
-    #     """Moves song at an index to `new_index` in queue."""
-    #     state = self.get_state(ctx.guild.id)  # get state for this guild
-    #     if 1 <= song <= len(state.playlist) and 1 <= new_index:
-    #         song = state.playlist.pop(song - 1)  # take song at index...
-    #         state.playlist.insert(new_index - 1, song)  # and insert it.
+            await ctx.send(self._queue_text(state.playlist))
+        else:
+            raise commands.CommandError("You must use a valid index.")
 
-    #         await ctx.send(self._queue_text(state.playlist))
-    #     else:
-    #         raise commands.CommandError("You must use a valid index.")
+    def _queue_text(self, queue):
+        """Returns a block of text describing a given song queue."""
+        if len(queue) > 0:
+            message = [f"{len(queue)} songs in queue:"]
+            message += [
+                f"  {index+1}. **{song.title}** (requested by **{song.requested_by.name}**)"
+                for (index, song) in enumerate(queue)
+            ]  # add individual songs
+            return "\n".join(message)
+        else:
+            return "The play queue is empty."
 
     @commands.command(aliases=["p"], brief="Plays audio from <url>.")
     @commands.guild_only()
@@ -898,6 +924,21 @@ class Music(commands.Cog):
             else:
                 raise commands.CommandError(
                     "You need to be in a voice channel to do that.")
+
+    def _vote_skip(self, channel, member):
+        """Register a vote for `member` to skip the song playing."""
+        logging.info(f"{member.name} votes to skip")
+        state = self.get_state(channel.guild.id)
+        state.skip_votes.add(member)
+        users_in_channel = len([
+            member for member in channel.members if not member.bot
+        ])  # don't count bots
+        if (float(len(state.skip_votes)) /
+                users_in_channel) >= self.config["vote_skip_ratio"]:
+            # enough members have voted to skip, so skip the song
+            logging.info(f"Enough votes, skipping...")
+            channel.guild.voice_client.stop()
+
 
     def _play_song(self, client, state, song):
         state.now_playing = song
