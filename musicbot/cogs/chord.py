@@ -7,6 +7,7 @@ from html2image import Html2Image
 import discord
 from discord import app_commands
 from discord.ext import commands
+import pyppeteer
 
 class Chord(commands.Cog):
     def __init__(self, bot: commands.Bot, config) -> None:
@@ -33,8 +34,20 @@ class Chord(commands.Cog):
         if url == "https://www.dochord.com/":
             await interaction.followup.send(content="Can't find this song.")
             return
-        hti = Html2Image(output_path='chord_img')
-        hti.screenshot_url(url=url ,output_file=f'{self.filename}.png', size=(1800, 3300))
+        # Launch a browser
+        browser = await pyppeteer.launch()
+        # Open a new page
+        page = await browser.newPage()
+        await page.setViewport({'width': 1800, 'height': 3300})
+        # Navigate to a website
+        await page.goto(url)
+        # Capture a screenshot of the page
+        screenshot = await page.screenshot()
+        # Save the screenshot to a file
+        with open(f'chord_img/{self.filename}.png', 'wb') as f:
+            f.write(screenshot)
+        # Close the browser
+        await browser.close()
         # Capture the image using OpenCV
         img = cv2.imread(f"chord_img/{self.filename}.png")
         # Convert the image to a Pillow image object
