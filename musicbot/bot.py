@@ -5,12 +5,12 @@ import sys
 from discord.ext import commands, tasks
 from discord import Intents
 from discord import app_commands
-from .cogs import music, error, meta, chord
+from .cogs import music, error, meta
 import aiohttp
 import asyncio
 from . import config
 cfg = config.load_config()
-cogs = [music.Music, error.CommandErrorHandler, meta.Meta, chord.Chord]
+cogs = [music.Music, error.CommandErrorHandler, meta.Meta]
 class Mybot(commands.Bot):
     def __init__(self):
         super().__init__(
