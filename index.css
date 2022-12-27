@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+.main_chord_content {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+.col-xs-12 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+p {
+    color: rgb(0, 0, 0);
+}
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+display: table;
+content: " ";
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    color: rgb(0, 157, 230);;
+    position: relative;
+    font-weight: 700;
+    display: inline-block;
+    left: 0;
+    width: 25px;
+    top: -18px;
+    margin-left: -25px;
+    text-align: right;
+    word-wrap: normal;
+}
+blockquote p span {
+    color: rgb(205, 147, 0);;
+    top: 0;
+    margin-left: 0;
+    font-size: 0.8rem;
+    word-wrap: normal;
+    width: auto;
+    margin: 0 3px;
+}
+blockquote p {
+    font-size: 0.8rem;
+}
+blockquote {
+    padding: 10px 20px;
+    font-size: 17.5px;
+    margin: 0 10px!important;
+    border-left: 0!important;
+}
+blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+.text-center {
+    text-align: center;
+}
