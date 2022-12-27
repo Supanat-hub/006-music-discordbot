@@ -33,31 +33,27 @@ class Chord(commands.Cog):
         if url == "https://www.dochord.com/":
             await interaction.followup.send(content="Can't find this song.")
             return
-        #name gennerate
-        suffix = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
         # Make a request to the webpage
         response = requests.get(url)
         # Parse the HTML of the webpage
         soup = BeautifulSoup(response.text, "html.parser")
         # Find the first `div` element with the class "row main_chord main_chord_content"
         div = soup.find("div", class_="row main_chord main_chord_content")
-        hiv = Html2Image(output_path="img")
         rp = str(div).replace("          ", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
-        rp = rp + '<link rel="stylesheet" href="index.css">'
-        pic = hiv.screenshot(html_str=rp,css_file="index.css" , size=(1200, 1400), save_as=f"{suffix}.png")
+        rp = rp + '<link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1JlGTCRiR1XieWm8Lf6WQftQUL1iXABLY">'
 
-        # Load the image
-        image = Image.open(f'img/{suffix}.png')
-        # Convert the image to RGBA format
-        image = image.convert('RGBA')
+        HCTI_API_ENDPOINT = "https://hcti.io/v1/image"
+        # Retrieve these from https://htmlcsstoimage.com/dashboard
+        HCTI_API_USER_ID = 'id'
+        HCTI_API_KEY = 'key'
 
-        # Get the bounding box of the non-transparent part of the image
-        bbox = image.getbbox()
+        data = { 'html': rp,
+                'css': "https://drive.google.com/uc?export=view&id=1JlGTCRiR1XieWm8Lf6WQftQUL1iXABLY",
+                'google_fonts': "Roboto" }
 
-        # Crop the image using the bounding box
-        cropped_image = image.crop(bbox)
-
-        # Save the cropped image
-        cropped_image.save(f'img/cropped_{suffix}.png')
-        await interaction.followup.send(content=f"**คอร์ด {song}**" ,file=discord.File(f"img/cropped_{suffix}.png"))
-    
+        image = requests.post(url = HCTI_API_ENDPOINT, data = data, auth=(HCTI_API_USER_ID, HCTI_API_KEY))
+        emBed = discord.Embed(title=f"**{song}**",url=image.json()['url'], description="ภาพคอร์ดเพลง", color=0xF3F4F9)
+        emBed.set_image(url=image.json()['url'])
+        emBed.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/1033702427892920331.gif")
+        await interaction.followup.send(embed=emBed)
+            

@@ -5,12 +5,12 @@ import sys
 from discord.ext import commands, tasks
 from discord import Intents
 from discord import app_commands
-from .cogs import music, error, meta
+from .cogs import music, error, meta, chord
 import aiohttp
 import asyncio
 from . import config
 cfg = config.load_config()
-cogs = [music.Music, error.CommandErrorHandler, meta.Meta]
+cogs = [music.Music, error.CommandErrorHandler, meta.Meta, chord.Chord]
 class Mybot(commands.Bot):
     def __init__(self):
         super().__init__(
@@ -23,6 +23,7 @@ class Mybot(commands.Bot):
     async def setup_hook(self):
         # await bot.remove_cog("Meta")
         # await bot.remove_cog("Music")
+        # await bot.remove_cog("Chord")
         # await bot.remove_cog("CommandErrorHandler")
         for cog in cogs:
             await bot.add_cog(cog(bot, cfg))
