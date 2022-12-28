@@ -3,8 +3,6 @@ from discord import app_commands
 from discord.ext import commands
 import requests
 from bs4 import BeautifulSoup
-from html2image import Html2Image
-from PIL import Image
 from urlextract import URLExtract
 import datetime
 import pdfcrowd
@@ -74,7 +72,7 @@ class Chord(commands.Cog):
             try:
                 suffix = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
                 # create the API client instance
-                client = pdfcrowd.HtmlToImageClient('SUPANAT_hub', '1dc23428d481e9d8fba238d39d2b29d7')
+                client = pdfcrowd.HtmlToImageClient('USER_ID', 'API_KEY')
 
                 # configure the conversion
                 client.setOutputFormat('png')
