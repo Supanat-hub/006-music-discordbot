@@ -587,6 +587,7 @@ class Music(commands.Cog):
         else:
             raise commands.CommandError(
                 "You need to be in the channel to do that.")
+    @app_commands.guild_only()
     @app_commands.command(
         name="leave",
         description="leave channel and clear queue"
