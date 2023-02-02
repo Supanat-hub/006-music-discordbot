@@ -41,7 +41,7 @@ class Video:
         """Makes an embed out of this Video's information."""
         embed = discord.Embed(
             title=f"{self.title}", description=self.uploader, url=self.video_url, color=0xF3F4F9)
-        embed.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948800623741120513.gif")
+        embed.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1UL1ZVdv4TitPaeshrvPf8xjZMTKffOgv")
         embed.set_footer(
             text=f"Requested by {self.requested_by.name}",
             icon_url=self.requested_by.avatar)
