@@ -11,6 +11,10 @@ from ..playlist import Videoplaylist
 import youtube_dl
 import urllib
 
+#url
+alert_url = "https://i.ibb.co/ykzmssp/aleart.gif"
+logo_bot = "https://i.ibb.co/6PmVgYx/logo-bot.png"
+
 YTDL_OPTS = {
     "default_search": "ytsearch",
     "format": "bestaudio/best",
@@ -147,7 +151,7 @@ class Music(commands.Cog):
         emBed.add_field(name="-cq", value="เพื่อล้างเพลงทั้งหมดในคิว", inline=False)
         #emBed.add_field(name="**ปล.**", value="หรือจะใช้ SlashCommand ก็ได้นะ", inline=False)
         emBed.add_field(name="**หมายเหตุ**", value="การใช้อีโมจิจะกดได้เฉพาะ`Requester`เพลงนั้นเท่านั้น", inline=False)
-        emBed.set_thumbnail(url="https://drive.google.com/uc?export=view&id=1U9XVlVYe6cDz_OxV8cb4H66z8iYUOqRT")
+        emBed.set_thumbnail(url=logo_bot)
         emBed.set_footer(text="Bot by SUPANAT hub", icon_url="https://yt3.ggpht.com/ytc/AKedOLTg33C3Bel5GklXFx7bG0C9UybfE05VfTzEh2rB=s900-c-k-c0x00ffffff-no-rj")
         await interaction.response.send_message(embed=emBed)
     @app_commands.command(
@@ -157,7 +161,7 @@ class Music(commands.Cog):
     async def _donate(self, interaction: discord.Interaction) -> None:
         emBed = discord.Embed(title="**Donate**",url="https://tmn.app.link/R1hfCx6fmub", description="ช่องทางการสนับสนุน", color=0xF3F4F9)
         emBed.add_field(name='1.True money', value='By this QR-CODE')
-        emBed.set_image(url="https://cdn.discordapp.com/attachments/927083092479467550/1033698275615838218/MyQR_2022-10-23_17.52.20.jpg")
+        emBed.set_image(url="https://i.ibb.co/DRbp7PD/QR-code-true.jpg")
         emBed.set_author(name="006 music",  icon_url="https://cdn.discordapp.com/emojis/1033702427892920331.gif")
         emBed.add_field(name='2.True money(Link)', value='Click the blue-title on top')
         await interaction.response.send_message(embed=emBed)
@@ -196,7 +200,7 @@ class Music(commands.Cog):
             if voice_run.channel != interaction.user.voice.channel:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.edit_original_response(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
@@ -204,7 +208,7 @@ class Music(commands.Cog):
             if state.repeat == True:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't add any song when loop is **on**")
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.edit_original_response(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
@@ -253,7 +257,7 @@ class Music(commands.Cog):
             else:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='This is not a playlist url.')
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.edit_original_response(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
@@ -261,7 +265,7 @@ class Music(commands.Cog):
         except:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='This is not a playlist url.')
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.edit_original_response(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
@@ -273,7 +277,7 @@ class Music(commands.Cog):
         else:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='This is not url.')
-            emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed5.set_author(name="006 music", icon_url=alert_url)
             await interaction.edit_original_response(content=None, embed=emBed5)
             await asyncio.sleep(10)
             await interaction.delete_original_response()
@@ -294,7 +298,7 @@ class Music(commands.Cog):
             if voice_run.channel != interaction.user.voice.channel:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.edit_original_response(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
@@ -302,7 +306,7 @@ class Music(commands.Cog):
             if state.repeat == True:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't add any song when loop is **on**")
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.edit_original_response(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
@@ -316,7 +320,7 @@ class Music(commands.Cog):
                     if d > 50:
                         emBed5 = discord.Embed(color=0xff0000)
                         emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='ไม่สามารถเล่นได้ เนื่องจากมีวิดีโอในเพลลิสต์มากกว่า 50 ')
-                        emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                        emBed5.set_author(name="006 music", icon_url=alert_url)
                         await interaction.edit_original_response(content=None, embed=emBed5)
                         await asyncio.sleep(10)
                         await interaction.delete_original_response()
@@ -328,7 +332,7 @@ class Music(commands.Cog):
                             if voice_run == None:
                                     emBed5 = discord.Embed(color=0xff0000)
                                     emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
-                                    emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                                    emBed5.set_author(name="006 music", icon_url=alert_url)
                                     await interaction.edit_original_response(content=None, embed=emBed5)
                                     state.playlist = []
                                     state.repeat = False
@@ -360,7 +364,7 @@ class Music(commands.Cog):
                     if d > 50:
                         emBed5 = discord.Embed(color=0xff0000)
                         emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='ไม่สามารถเล่นได้ เนื่องจากมีวิดีโอในเพลลิสต์มากกว่า 50 ')
-                        emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                        emBed5.set_author(name="006 music", icon_url=alert_url)
                         await interaction.edit_original_response(content=None, embed=emBed5)
                         await asyncio.sleep(10)
                         await interaction.delete_original_response()
@@ -380,7 +384,7 @@ class Music(commands.Cog):
                             if voice_run == None:
                                     emBed5 = discord.Embed(color=0xff0000)
                                     emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
-                                    emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                                    emBed5.set_author(name="006 music", icon_url=alert_url)
                                     await interaction.edit_original_response(content=None, embed=emBed5)
                                     state.playlist = []
                                     state.repeat = False
@@ -425,7 +429,7 @@ class Music(commands.Cog):
             if voice_run.channel != interaction.user.voice.channel:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.response.send_message(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
@@ -480,26 +484,26 @@ class Music(commands.Cog):
         if voice_run == None:
             emBed4 = discord.Embed(color=0xff0000)
             emBed4.add_field(name='เกิดข้อผิดพลาด T_T', value='บอทไม่ได้เชื่อมต่อกับช่องเสียงอยู่')
-            emBed4.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed4.set_author(name="006 music", icon_url=alert_url)
             await interaction.response.send_message(embed=emBed4, delete_after=5)
             return
         try:
             if voice_run.channel != interaction.user.voice.channel:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\nขณะนี้บอทกำลังอยู่ในช่อง{0}'.format(voice_run.channel))
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.response.send_message(embed=emBed5, delete_after=10)
                 return
             elif not voice_run.is_playing():
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='เพลงไม่ได้เล่นอยู่จึง ข้ามไม่ได้')
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.response.send_message(embed=emBed5, delete_after=10)
                 return
             elif state.repeat == True:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't skip song when loop is **on**")
-                emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.response.send_message(content=None, embed=emBed5, delete_after=10)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
@@ -525,14 +529,14 @@ class Music(commands.Cog):
         if voice_run == None:
             emBed4 = discord.Embed(color=0xff0000)
             emBed4.add_field(name='เกิดข้อผิดพลาด T_T', value='บอทไม่ได้เชื่อมต่อกับช่องเสียงอยู่')
-            emBed4.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed4.set_author(name="006 music", icon_url=alert_url)
             await interaction.response.send_message(embed=emBed4)
             return
 
         if voice_run.channel != interaction.user.voice.channel:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
-            emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed5.set_author(name="006 music", icon_url=alert_url)
             await interaction.response.send_message(embed=emBed5)
             return
         voice = interaction.user.voice
@@ -578,14 +582,14 @@ class Music(commands.Cog):
         if voice_run == None:
             emBed4 = discord.Embed(color=0xff0000)
             emBed4.add_field(name='เกิดข้อผิดพลาด T_T', value='บอทไม่ได้เชื่อมต่อกับช่องเสียงอยู่')
-            emBed4.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed4.set_author(name="006 music", icon_url=alert_url)
             await interaction.response.send_message(embed=emBed4)
             return
 
         if voice_run.channel != interaction.user.voice.channel:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
-            emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed5.set_author(name="006 music", icon_url=alert_url)
             await interaction.response.send_message(embed=emBed5)
             return
         voice = interaction.user.voice
@@ -620,13 +624,13 @@ class Music(commands.Cog):
         if voice_client == None or not voice_client.is_connected():
             emBed6 = discord.Embed(color=0xff0000)
             emBed6.add_field(name='เกิดข้อผิดพลาด T_T', value='บอทไม่ได้อยู่ในช่องเพลงใดๆ')
-            emBed6.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed6.set_author(name="006 music", icon_url=alert_url)
             await interaction.response.send_message(embed=emBed6, delete_after=5)
             return
         if voice_client.channel != interaction.user.voice.channel:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_client.channel))
-            emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed5.set_author(name="006 music", icon_url=alert_url)
             await interaction.response.send_message(embed=emBed5, delete_after=10)
             return
         client = interaction.guild.voice_client
@@ -671,7 +675,7 @@ class Music(commands.Cog):
         emBed.add_field(name="-cq", value="เพื่อล้างเพลงทั้งหมดในคิว", inline=False)
         #emBed.add_field(name="**ปล.**", value="หรือจะใช้ SlashCommand ก็ได้นะคะ", inline=False)
         emBed.add_field(name="**หมายเหตุ**", value="การใช้อีโมจิจะกดได้เฉพาะ`Requester`เพลงนั้นเท่านั้น", inline=False)
-        emBed.set_thumbnail(url="https://drive.google.com/uc?export=view&id=1U9XVlVYe6cDz_OxV8cb4H66z8iYUOqRT")
+        emBed.set_thumbnail(url=logo_bot)
         emBed.set_footer(text="Bot by SUPANAT hub", icon_url="https://yt3.ggpht.com/ytc/AKedOLTg33C3Bel5GklXFx7bG0C9UybfE05VfTzEh2rB=s900-c-k-c0x00ffffff-no-rj")
         await ctx.send(embed=emBed)
 
@@ -684,7 +688,7 @@ class Music(commands.Cog):
         if voice_client == None or not voice_client.is_connected():
             emBed6 = discord.Embed(color=0xff0000)
             emBed6.add_field(name='เกิดข้อผิดพลาด T_T', value='บอทไม่ได้อยู่ในช่องเพลงใดๆ')
-            emBed6.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed6.set_author(name="006 music", icon_url=alert_url)
             await ctx.send(embed=emBed6, delete_after=5)
             await asyncio.sleep(5)
             await ctx.message.delete()
@@ -692,7 +696,7 @@ class Music(commands.Cog):
         if voice_client.channel != ctx.author.voice.channel:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_client.channel))
-            emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed5.set_author(name="006 music", icon_url=alert_url)
             await ctx.send(embed=emBed5, delete_after=10)
             await asyncio.sleep(10)
             await ctx.message.delete()
@@ -762,7 +766,7 @@ class Music(commands.Cog):
         if voice_run == None:
             emBed4 = discord.Embed(color=0xff0000)
             emBed4.add_field(name='เกิดข้อผิดพลาด T_T', value='บอทไม่ได้เชื่อมต่อกับช่องเสียงอยู่')
-            emBed4.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed4.set_author(name="006 music", icon_url=alert_url)
             await ctx.send(embed=emBed4, delete_after=5)
             await asyncio.sleep(5)
             await ctx.message.delete()
@@ -771,7 +775,7 @@ class Music(commands.Cog):
         if voice_run.channel != ctx.author.voice.channel:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
-            emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed5.set_author(name="006 music", icon_url=alert_url)
             await ctx.send(embed=emBed5, delete_after=10)
             await asyncio.sleep(10)
             await ctx.message.delete()
@@ -779,7 +783,7 @@ class Music(commands.Cog):
         elif not voice_run.is_playing():
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='เพลงไม่ได้เล่นอยู่จึง ข้ามไม่ได้')
-            emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed5.set_author(name="006 music", icon_url=alert_url)
             await ctx.send(embed=emBed5, delete_after=10)
             await asyncio.sleep(10)
             await ctx.message.delete()
@@ -787,7 +791,7 @@ class Music(commands.Cog):
         elif state.repeat == True:
             emBed5 = discord.Embed(color=0xff0000)
             emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't skip song when loop is **on**")
-            emBed5.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1JDia0VXELuKrcKK3Zx47Z8nvmAfScUXo")
+            emBed5.set_author(name="006 music", icon_url=alert_url)
             await ctx.send(content=None, embed=emBed5, delete_after=10)
             await asyncio.sleep(10)
             await ctx.message.delete()
@@ -908,7 +912,7 @@ class Music(commands.Cog):
             if voice_run.channel != ctx.author.voice.channel:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
-                emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await ctx.send(embed=emBed5, delete_after=10)
                 await asyncio.sleep(10)
                 await ctx.message.delete()
@@ -916,7 +920,7 @@ class Music(commands.Cog):
             if state.repeat == True:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't add any song when loop is **on**")
-                emBed5.set_author(name="006 music", icon_url="https://cdn.discordapp.com/emojis/948836763919613974.gif")
+                emBed5.set_author(name="006 music", icon_url=alert_url)
                 await ctx.send(content=None, embed=emBed5, delete_after=10)
                 await asyncio.sleep(10)
                 await ctx.message.delete()

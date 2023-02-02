@@ -8,7 +8,7 @@ YTDL_OPTS = {
     "noplaylis": False,
     "extract_flat": "in_playlist"
 }
-
+musicrun_logo = "https://i.ibb.co/6s134j9/musicrun.gif"
 
 class Videoplaylist:
     """Class containing information about a particular video."""
@@ -44,7 +44,7 @@ class Videoplaylist:
         """Makes an embed out of this Video's information."""
         embed = discord.Embed(
             title=f"added {self.title_playlist} to playlist queue", description=self.uploader, url=self.video_url_playlist, color=0xF3F4F9)
-        embed.set_author(name="006 music", icon_url="https://drive.google.com/uc?export=view&id=1UL1ZVdv4TitPaeshrvPf8xjZMTKffOgv")
+        embed.set_author(name="006 music", icon_url=musicrun_logo)
         embed.set_footer(
             text=f"Requested by {self.requested_by.name}",
             icon_url=self.requested_by.avatar)
