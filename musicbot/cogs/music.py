@@ -251,7 +251,6 @@ class Music(commands.Cog):
         voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
         fullstring = url
         substring = "https://www.youtube.com/playlist"
-        finish = True
         try:
             if substring in fullstring:
                 pass
@@ -335,14 +334,13 @@ class Music(commands.Cog):
                                 voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
                                 check += 10
                                 if voice_run == None:
-                                    finish = False
+                                    state.finish = False
                                     break
-                            else:
-                                video = Videoplaylist(url, interaction.user, num_song=num_song)
-                                state.playlist.append(video)
-                                await interaction.edit_original_response(content=f"**added {time}/{d} song.**")
-                                time += 1
-                                num_song+=1
+                            video = Videoplaylist(url, interaction.user, num_song=num_song)
+                            state.playlist.append(video)
+                            await interaction.edit_original_response(content=f"**added {time}/{d} song.**")
+                            time += 1
+                            num_song+=1
             except youtube_dl.DownloadError as e:
                 logging.warn(f"Error downloading song: {e}")
                 await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
@@ -384,17 +382,16 @@ class Music(commands.Cog):
                                 voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
                                 check2 += 10
                                 if voice_run == None:
-                                    finish = False
+                                    state.finish = False
                                     break
-                            else:
-                                video = Videoplaylist(url, interaction.user, num_song=num_song)
-                                state.playlist.append(video)
-                                await interaction.edit_original_response(content=f"**added {time}/{d} song.**")
-                                time += 1
-                                num_song+=1
+                            video = Videoplaylist(url, interaction.user, num_song=num_song)
+                            state.playlist.append(video)
+                            await interaction.edit_original_response(content=f"**added {time}/{d} song.**")
+                            time += 1
+                            num_song+=1
                 except:
                     pass
-                if finish == True:
+                if state.finish == True:
                     await interaction.edit_original_response(content=None, embed=video.get_embed())
                     logging.info(f"Added : '{video.title_playlist}'")
                 else:
@@ -406,6 +403,7 @@ class Music(commands.Cog):
                     state.repeat = False
                     state.now_playing = None
                     logging.info(f"Fail to add : '{video.title_playlist}'")
+                    state.finish = True
                 
             else:
                 raise commands.CommandError(
@@ -1001,6 +999,7 @@ class GuildState:
         self.skip_votes = set()
         self.now_playing = None
         self.repeat = False
+        self.finish = True
 
     def is_requester(self, user):
         return self.now_playing.requested_by == user
