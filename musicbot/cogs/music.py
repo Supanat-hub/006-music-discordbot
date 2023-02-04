@@ -479,7 +479,7 @@ class Music(commands.Cog):
             queue = state.playlist
             # await ctx.send(embed=self._queue_text(state.playlist))
             if len(queue) > 0:
-                fmt = "\n".join(f"ฺ {index+1}. **{song.title}** (requested by **{song.requested_by.name}**)"for (index, song) in enumerate(queue))
+                fmt = "\n".join(f"- {index+1}. **{song.title}**"for (index, song) in enumerate(queue))
                 # add individual songs
                 embed2 = discord.Embed(title=f'รายการเพลงที่ยังไม่ได้เล่น - ทั้งหมด {len(queue)}', description=fmt, color=0xC1E1C1)
                 await interaction.response.send_message(embed=embed2)
@@ -855,7 +855,7 @@ class Music(commands.Cog):
         queue = state.playlist
         # await ctx.send(embed=self._queue_text(state.playlist))
         if len(queue) > 0:
-            fmt = "\n".join(f"ฺ {index+1}. **{song.title}** (requested by **{song.requested_by.name}**)"for (index, song) in enumerate(queue))
+            fmt = "\n".join(f"- {index+1}. **{song.title}**"for (index, song) in enumerate(queue))
               # add individual songs
             embed2 = discord.Embed(title=f'รายการเพลงที่ยังไม่ได้เล่น - ทั้งหมด {len(queue)}', description=fmt, color=0xC1E1C1)
             await ctx.send(embed=embed2)
