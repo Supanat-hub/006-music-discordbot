@@ -345,7 +345,19 @@ class Music(commands.Cog):
                 logging.warn(f"Error downloading song: {e}")
                 await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
                 return
-            await interaction.edit_original_response(content=None, embed=video.get_embed())
+            if state.finish == True:
+                    await interaction.edit_original_response(content=None, embed=video.get_embed())
+                    logging.info(f"Added : '{video.title_playlist}'")
+            else:
+                emBed5 = discord.Embed(color=0xff0000)
+                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
+                emBed5.set_author(name="006 music", icon_url=alert_url)
+                await interaction.edit_original_response(content=None, embed=emBed5)
+                state.playlist = []
+                state.repeat = False
+                state.now_playing = None
+                logging.info(f"Fail to add : '{video.title_playlist}'")
+                state.finish = True
         else:
             if interaction.user.voice is not None and interaction.user.voice.channel is not None:
                 channel = interaction.user.voice.channel

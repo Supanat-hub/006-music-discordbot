@@ -25,6 +25,8 @@ class Mybot(commands.Bot):
         # await bot.remove_cog("Music")
         # await bot.remove_cog("Chord")
         # await bot.remove_cog("CommandErrorHandler")
+        logging.info(f"Cogs syncing....")
+        await bot.tree.sync()
         for cog in cogs:
             await bot.add_cog(cog(bot, cfg))
         await bot.tree.sync()
