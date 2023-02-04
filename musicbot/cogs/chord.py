@@ -4,8 +4,6 @@ from discord.ext import commands
 import requests
 from bs4 import BeautifulSoup
 from urlextract import URLExtract
-import datetime
-import pdfcrowd
 
 class Chord(commands.Cog):
     def __init__(self, bot: commands.Bot, config) -> None:
@@ -69,20 +67,6 @@ class Chord(commands.Cog):
             print(rp)
             await interaction.followup.send(embed=emBed)
         except:
-            try:
-                suffix = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
-                # create the API client instance
-                client = pdfcrowd.HtmlToImageClient('USER_ID', 'API_KEY')
-
-                # configure the conversion
-                client.setOutputFormat('png')
-
-                # run the conversion and write the result to a file
-                client.convertStringToFile(rp, f"chord_img/{suffix}.png")
-                await interaction.followup.send(content=f"**{song}**\nใช้apiสำรอง เนื่องจากapiหลักเต็ม  \n`อาจทำให้มีบัคเล็กน้อย`", file=discord.File(f"chord_img/{suffix}.png"))
-            except pdfcrowd.Error as why:
-                # report the error
-                print('Pdfcrowd Error: {}\n'.format(why))
-                await interaction.followup.send(content="Sorry, the api has reached its limit for this month.")
-                return
+            await interaction.followup.send(content="Sorry, the api has reached its limit for this month.")
+            return
             
