@@ -48,5 +48,5 @@ class Videoplaylist:
         embed.set_footer(
             text=f"Requested by {self.requested_by.name}",
             icon_url=self.requested_by.avatar)
-        embed.set_thumbnail(url="https://drive.google.com/uc?export=view&id=1IyWjfzZ4XC3Ny8JAmdHaq8TonpnWqqd7")
+        embed.set_thumbnail(url="https://i.ibb.co/LPHd5Bp/yt-playlist-img.jpg")
         return embed

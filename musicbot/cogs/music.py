@@ -328,8 +328,12 @@ class Music(commands.Cog):
                     if "_type" in info and info["_type"] == "playlist":
                         await interaction.edit_original_response(content="**processing...**")
                         time = 1
+                        check = 5
                         for entry in info["entries"]:
-                            if voice_run == None:
+                            if time == check:
+                                voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
+                                check += 10
+                                if voice_run == None:
                                     emBed5 = discord.Embed(color=0xff0000)
                                     emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
                                     emBed5.set_author(name="006 music", icon_url=alert_url)
@@ -378,10 +382,14 @@ class Music(commands.Cog):
                         video = None
                         num_song = 1
                         time = 1
+                        check2 = 5
                     if "_type" in info and info["_type"] == "playlist":
                         await interaction.edit_original_response(content="**processing...**")
                         for entry in info["entries"]:
-                            if voice_run == None:
+                            if time == check2:
+                                voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
+                                check2 += 10
+                                if voice_run == None:
                                     emBed5 = discord.Embed(color=0xff0000)
                                     emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
                                     emBed5.set_author(name="006 music", icon_url=alert_url)
