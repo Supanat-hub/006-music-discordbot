@@ -22,12 +22,11 @@ class Chord(commands.Cog):
     async def _dochord(self, interaction: discord.Interaction, song: str):
         await interaction.response.defer()
         search_term = f"{song}+dochord"
-        url = f"https://www.google.com/search?q={search_term}+dochord&oq={search_term}&aqs=chrome.0.69i59l2j46i512j0i512l2j69i61l3.5781j0j1&sourceid=chrome&ie=UTF-8"
+        url = f"https://www.google.com/search?q={search_term}&ie=UTF-8"
         response = requests.get(url)
         content = response.text
         soup = BeautifulSoup(content, "html.parser")
-        # Each computer will use this value differently.
-        results = soup.find_all("a")[16]
+        results = soup.find_all("a")[16] # Each computer will use this value differently.
         extractor = URLExtract()
         urls = extractor.find_urls(str(results))
         url = str(urls[0]).replace("&amp", "")
@@ -86,7 +85,7 @@ class Chord(commands.Cog):
         await interaction.response.defer()
 
         search_term = f"{song}+chordzaa"
-        url = f"https://www.google.com/search?q={search_term}"
+        url = f"https://www.google.com/search?q={search_term}&ie=UTF-8"
         response = requests.get(url)
         content = response.text
         soup = BeautifulSoup(content, "html.parser")
