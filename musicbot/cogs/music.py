@@ -120,19 +120,21 @@ class Music(commands.Cog):
         name="reset_bot",
         description="reset stagement."
     )
-    @commands.is_owner()
     async def _resetbot(self, interaction: discord.Interaction):
-        try:
-            client = interaction.guild.voice_client
-            await client.disconnect()
-        except:
-            pass
-        state = self.get_state(interaction.guild_id)
-        state.volume = 1.0
-        state.playlist = []
-        state.now_playing = None
-        state.repeat = False
-        await interaction.response.send_message(content="**Done!**", embed=None)
+        if interaction.permissions.administrator :
+            try:
+                client = interaction.guild.voice_client
+                await client.disconnect()
+            except:
+                pass
+            state = self.get_state(interaction.guild_id)
+            state.volume = 1.0
+            state.playlist = []
+            state.now_playing = None
+            state.repeat = False
+            await interaction.response.send_message(content="**Done!**", embed=None, ephemeral=True)
+        else:
+            await interaction.response.send_message(content="**You must to be an adminstrator.!**", embed=None, ephemeral=True)
     @app_commands.command(
         name="help",
         description="show help command"
