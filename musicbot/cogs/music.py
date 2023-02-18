@@ -110,7 +110,7 @@ class Music(commands.Cog):
                 state.repeat = False
                 state.now_playing = None
                 await voice_state.disconnect()
-                logging.info("Disconnected no one in VC.")
+                logging.info("Disconnected no one in VC.")        
         else:
             return
     
@@ -657,6 +657,7 @@ class Music(commands.Cog):
         emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
         await interaction.response.send_message(embed=emBed3)
         await client.disconnect()
+        await client.cleanup()
         logging.info("Loop Off ")
         state.playlist = []
         state.repeat = False
@@ -1000,8 +1001,7 @@ class Music(commands.Cog):
                 self._play_song(client, state, next_song)
             else:
                 if len(state.playlist) <= 0:
-                    asyncio.run_coroutine_threadsafe(client.disconnect(),
-                                                    self.bot.loop)
+                    asyncio.run_coroutine_threadsafe(client.disconnect(),self.bot.loop)
                 else:
                     pass
         client.play(source, after=after_playing)
