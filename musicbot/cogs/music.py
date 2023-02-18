@@ -125,6 +125,7 @@ class Music(commands.Cog):
             try:
                 client = interaction.guild.voice_client
                 await client.disconnect()
+                await client.cleanup()
             except:
                 pass
             state = self.get_state(interaction.guild_id)
