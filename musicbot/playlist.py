@@ -43,7 +43,7 @@ class Videoplaylist:
     def get_embed(self):
         """Makes an embed out of this Video's information."""
         embed = discord.Embed(
-            title=f"added {self.title_playlist} to playlist queue", description=self.uploader, url=self.video_url_playlist, color=0xF3F4F9)
+            title=f"Playlist -> {self.title_playlist}", description=self.uploader, url=self.video_url_playlist, color=0xF3F4F9)
         embed.set_author(name="006 music", icon_url=musicrun_logo)
         embed.set_footer(
             text=f"Requested by {self.requested_by.name}",

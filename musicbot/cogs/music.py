@@ -143,7 +143,7 @@ class Music(commands.Cog):
     async def _help(self, interaction: discord.Interaction):
         emBed = discord.Embed(title="**006 music help**", description="All actailable bot command", color=0xF3F4F9)
         emBed.add_field(name="-help", value="เพื่อดูว่า ณ ตอนนี้มีคำสั่งอะไรบ้าง", inline=False)
-        emBed.add_field(name="-play + url หรือ ชื่อเพลง [ ย่อๆว่า : _p ]", value="เพื่อเล่นเพลง", inline=False)
+        emBed.add_field(name="-play + url หรือ ชื่อเพลง [ ย่อๆว่า : -p ]", value="เพื่อเล่นเพลง", inline=False)
         emBed.add_field(name="-skip [ ย่อๆว่า : -s ]", value="เพื่อข้ามเพลง", inline=False)
         emBed.add_field(name="-pause", value="เพื่อหยุดเล่นเพลงชั่วคราว/หรือเล่นเพลงต่อ", inline=False)
         emBed.add_field(name="-np", value="ดูเพลงที่กำลังเล่นอยู่", inline=False)
@@ -469,6 +469,32 @@ class Music(commands.Cog):
 
     @app_commands.guild_only()
     @app_commands.command(
+        name="nowplaying",
+        description="show currently playing song."
+    )
+    async def _nowplaying(self, interaction: discord.Interaction):
+        state = self.get_state(interaction.guild.id)
+        voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
+        if voice_run == None:
+            emBed4 = discord.Embed(color=0xff0000)
+            emBed4.add_field(name='เกิดข้อผิดพลาด T_T', value='บอทไม่ได้เชื่อมต่อกับช่องเสียงอยู่')
+            emBed4.set_author(name="006 music", icon_url=alert_url)
+            await interaction.response.send_message(embed=emBed4, delete_after=5)
+            return
+        if not voice_run.is_playing():
+            emBed5 = discord.Embed(color=0xff0000)
+            emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='เพลงไม่ได้เล่นอยู่')
+            emBed5.set_author(name="006 music", icon_url=alert_url)
+            await interaction.response.send_message(embed=emBed5, delete_after=10)
+            return
+        if state.repeat == True:
+            await interaction.response.send_message(content="**Now loop this**", embed=state.now_playing.get_embed())
+            return
+        else:
+            await interaction.response.send_message(content="**Now playing**", embed=state.now_playing.get_embed())
+
+    @app_commands.guild_only()
+    @app_commands.command(
         name="queue",
         description="show songs queue."
     )
@@ -683,7 +709,7 @@ class Music(commands.Cog):
     async def help(self, ctx):
         emBed = discord.Embed(title="**006 music help**", description="All actailable bot command", color=0xF3F4F9)
         emBed.add_field(name="-help", value="เพื่อดูว่า ณ ตอนนี้มีคำสั่งอะไรบ้าง", inline=False)
-        emBed.add_field(name="-play + url หรือ ชื่อเพลง [ ย่อๆว่า : _p ]", value="เพื่อเล่นเพลง", inline=False)
+        emBed.add_field(name="-play + url หรือ ชื่อเพลง [ ย่อๆว่า : -p ]", value="เพื่อเล่นเพลง", inline=False)
         emBed.add_field(name="-skip [ ย่อๆว่า : -s ]", value="เพื่อข้ามเพลง", inline=False)
         emBed.add_field(name="-pause", value="เพื่อหยุดเล่นเพลงชั่วคราว/หรือเล่นเพลงต่อ", inline=False)
         emBed.add_field(name="-np", value="ดูเพลงที่กำลังเล่นอยู่", inline=False)
@@ -901,9 +927,7 @@ class Music(commands.Cog):
         if len(queue) > 0:
             message = [f"{len(queue)} songs in queue:"]
             message += [
-                f"  {index+1}. **{song.title}** (requested by **{song.requested_by.name}**)"
-                for (index, song) in enumerate(queue)
-            ]  # add individual songs
+                f"  {index+1}. **{song.title}**)"for (index, song) in enumerate(queue)]  # add individual songs
             return "\n".join(message)
         else:
             return "The play queue is empty."
