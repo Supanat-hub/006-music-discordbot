@@ -165,7 +165,7 @@ class Music(commands.Cog):
         emBed = discord.Embed(title="**Donate**",url="https://tmn.app.link/R1hfCx6fmub", description="ช่องทางการสนับสนุน", color=0xF3F4F9)
         emBed.add_field(name='1.True money', value='By this QR-CODE')
         emBed.set_image(url="https://i.ibb.co/DRbp7PD/QR-code-true.jpg")
-        emBed.set_author(name="006 music",  icon_url="https://cdn.discordapp.com/emojis/1033702427892920331.gif")
+        emBed.set_author(name="006 music",  icon_url="https://i.ibb.co/bzYLcyp/money-fly.gif")
         emBed.add_field(name='2.True money(Link)', value='Click the blue-title on top')
         await interaction.response.send_message(embed=emBed)
     @app_commands.command(
