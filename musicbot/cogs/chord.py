@@ -26,10 +26,10 @@ class Chord(commands.Cog):
         response = requests.get(url)
         content = response.text
         soup = BeautifulSoup(content, "html.parser")
-        results = soup.find_all("a")[16] # Each computer will use this value differently.
+        results = soup.find_all("a")
         extractor = URLExtract()
         urls = extractor.find_urls(str(results))
-        url = str(urls[0]).replace("&amp", "")
+        url = str(urls[1]).replace("&amp", "")
         if url == "https://www.dochord.com/":
             await interaction.followup.send(content="Can't find this song.")
             return
@@ -91,10 +91,10 @@ class Chord(commands.Cog):
         soup = BeautifulSoup(content, "html.parser")
         
         try:
-            results = soup.find_all("a")[16] # Each computer will use this value differently.
+            results = soup.find_all("a")
             extractor = URLExtract()
             urls = extractor.find_urls(str(results))
-            url = str(urls[0]).replace(".html&amp", ".html")
+            url = str(urls[1]).replace("&amp", "")
             url = url.replace("%25", "%")
         except:
             await interaction.followup.send(content="Can't find this, Try again later.")
