@@ -23,6 +23,7 @@ pdfcrowd = "*"
 toml = "*"
 pytz = "*"
 urllib3 = "*"
+yt-dlp = "*"
 
 [dev-packages]
 autopep8 = "*"
