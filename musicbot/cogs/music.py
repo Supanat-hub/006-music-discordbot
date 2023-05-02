@@ -494,6 +494,28 @@ class Music(commands.Cog):
 
     @app_commands.guild_only()
     @app_commands.command(
+        name="delete",
+        description="delete song in queue."
+    )
+    async def _detete(self, interaction: discord.Interaction, number: int):
+        client = interaction.guild.voice_client
+        if client and client.channel and client.source:
+            state = self.get_state(interaction.guild_id)
+            num = (number - 1)
+            if num < 0:
+                await interaction.response.send_message(content="**No such song in queue**")
+                return
+            try:
+                state.playlist.pop(num)
+                await interaction.response.send_message(content=f"**Deleted song No.{number}**")
+            except:
+                await interaction.response.send_message(content=f"**Don't have song No.{number} in queue**")
+                return
+        else:
+            await interaction.response.send_message(content="**Not currently playing any audio.**")
+        
+    @app_commands.guild_only()
+    @app_commands.command(
         name="queue",
         description="show songs queue."
     )
