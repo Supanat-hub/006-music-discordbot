@@ -506,10 +506,13 @@ class Music(commands.Cog):
                 await interaction.response.send_message(content="**No such song in queue**")
                 return
             try:
+                queue = state.playlist
+                delete = f"**{queue[num].title}**"
                 state.playlist.pop(num)
-                await interaction.response.send_message(content=f"**Deleted song No.{number}**")
-            except:
+                await interaction.response.send_message(content=f"**Deleted{delete}**")
+            except ValueError:
                 await interaction.response.send_message(content=f"**Don't have song No.{number} in queue**")
+                logging.info(f"{ValueError}")
                 return
         else:
             await interaction.response.send_message(content="**Not currently playing any audio.**")
