@@ -93,24 +93,24 @@ class Music(commands.Cog):
                 # Exiting if the bot it's not connected to a voice channel
                 return 
             if len(voice_state.channel.members) == 1:
-                logging.info("Loop Off ")
+                logging.info(f"Loop Off | In : {member.guild.name} Id :{member.guild.id}")
                 state.playlist = []
                 state.repeat = False
                 state.now_playing = None
                 await voice_state.disconnect()
-                logging.info("Disconnected no one in VC.")
+                logging.info(f"Disconnected no one in VC. | In : {member.guild.name} Id :{member.guild.id}")
         if before.channel is not after.channel: # Change voice channel.
             if voice_state is None:
                 # Exiting if the bot it's not connected to a voice channel
                 return
             await asyncio.sleep(5)
             if len(voice_state.channel.members) == 1:
-                logging.info("Loop Off ")
+                logging.info(f"Loop Off | In : {member.guild.name} Id :{member.guild.id}")
                 state.playlist = []
                 state.repeat = False
                 state.now_playing = None
                 await voice_state.disconnect()
-                logging.info("Disconnected no one in VC.")        
+                logging.info(f"Disconnected no one in VC. | In : {member.guild.name} Id :{member.guild.id}")        
         else:
             return
     
@@ -218,7 +218,7 @@ class Music(commands.Cog):
             try:
                 video = Video(url, interaction.user)
             except youtube_dl.DownloadError as e:
-                logging.warn(f"Error downloading song: {e}")
+                logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
                 return
             state.playlist.append(video)
@@ -235,7 +235,7 @@ class Music(commands.Cog):
                 await interaction.guild.change_voice_state(channel=channel, self_mute=False, self_deaf=True)
                 self._play_song(client, state, video)
                 await interaction.edit_original_response(content=None, embed=video.get_embed())
-                logging.info(f"Now playing '{video.title}'")
+                logging.info(f"Now playing '{video.title}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
             else:
                 raise commands.CommandError(
                     "You need to be in a voice channel to do that.")
@@ -344,12 +344,12 @@ class Music(commands.Cog):
                             time += 1
                             num_song+=1
             except youtube_dl.DownloadError as e:
-                logging.warn(f"Error downloading song: {e}")
+                logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
                 return
             if state.finish == True:
                     await interaction.edit_original_response(content=None, embed=video.get_embed())
-                    logging.info(f"Added : '{video.title_playlist}'")
+                    logging.info(f"Added : '{video.title_playlist}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
             else:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
@@ -358,7 +358,7 @@ class Music(commands.Cog):
                 state.playlist = []
                 state.repeat = False
                 state.now_playing = None
-                logging.info(f"Fail to add : '{video.title_playlist}'")
+                logging.info(f"Fail to add : '{video.title_playlist}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 state.finish = True
         else:
             if interaction.user.voice is not None and interaction.user.voice.channel is not None:
@@ -407,7 +407,7 @@ class Music(commands.Cog):
                     pass
                 if state.finish == True:
                     await interaction.edit_original_response(content=None, embed=video.get_embed())
-                    logging.info(f"Added : '{video.title_playlist}'")
+                    logging.info(f"Added : '{video.title_playlist}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 else:
                     emBed5 = discord.Embed(color=0xff0000)
                     emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
@@ -416,7 +416,7 @@ class Music(commands.Cog):
                     state.playlist = []
                     state.repeat = False
                     state.now_playing = None
-                    logging.info(f"Fail to add : '{video.title_playlist}'")
+                    logging.info(f"Fail to add : '{video.title_playlist}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
                     state.finish = True
                 
             else:
@@ -457,11 +457,11 @@ class Music(commands.Cog):
             if mode == False:
                 state.repeat = True
                 await interaction.response.send_message(content="loop **On**", embed=None)
-                logging.info("Loop On ")
+                logging.info(f"Loop On | In : {interaction.guild.name} Id :{interaction.guild_id}")
             elif mode == True:
                 state.repeat = False
                 await interaction.response.send_message(content="loop **Off**", embed=None)
-                logging.info("Loop Off ")
+                logging.info(f"Loop Off | In : {interaction.guild.name} Id :{interaction.guild_id}")
             return
         else:
             raise commands.CommandError("Not currently playing any audio.")
@@ -512,7 +512,7 @@ class Music(commands.Cog):
                 await interaction.response.send_message(content=f"**Deleted{delete}**")
             except ValueError:
                 await interaction.response.send_message(content=f"**Don't have song No.{number} in queue**")
-                logging.info(f"{ValueError}")
+                logging.info(f"{ValueError} | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 return
         else:
             await interaction.response.send_message(content="**Not currently playing any audio.**")
@@ -708,7 +708,7 @@ class Music(commands.Cog):
         await interaction.response.send_message(embed=emBed3)
         await client.disconnect()
         await client.cleanup()
-        logging.info("Loop Off ")
+        logging.info(f"Loop Off | In : {interaction.guild.name} Id :{interaction.guild_id}")
         state.playlist = []
         state.repeat = False
         state.now_playing = None
@@ -775,7 +775,7 @@ class Music(commands.Cog):
         emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
         await ctx.send(embed=emBed3)
         await client.disconnect()
-        logging.info("Loop Off ")
+        logging.info(f"Loop Off | In : {ctx.guild.name} Id :{ctx.guild.id}")
         state.playlist = []
         state.repeat = False
         state.now_playing = None
@@ -994,7 +994,7 @@ class Music(commands.Cog):
             try:
                 video = Video(url, ctx.author)
             except youtube_dl.DownloadError as e:
-                logging.warn(f"Error downloading song: {e}")
+                logging.warn(f"Error downloading song: {e} | In : {ctx.guild.name} Id :{ctx.guild.id}")
                 await ctx.send(
                     "There was an error downloading your song, **sorry.**")
                 return
@@ -1013,7 +1013,7 @@ class Music(commands.Cog):
                 await ctx.guild.change_voice_state(channel=channel, self_mute=False, self_deaf=True)
                 self._play_song(client, state, video)
                 message = await ctx.send("", embed=video.get_embed())
-                logging.info(f"Now playing '{video.title}'")
+                logging.info(f"Now playing '{video.title}' | In : {ctx.guild.name} Id :{ctx.guild.id}")
             else:
                 raise commands.CommandError(
                     "You need to be in a voice channel to do that.")
@@ -1029,7 +1029,7 @@ class Music(commands.Cog):
         if (float(len(state.skip_votes)) /
                 users_in_channel) >= self.config["vote_skip_ratio"]:
             # enough members have voted to skip, so skip the song
-            logging.info(f"Enough votes, skipping...")
+            logging.info(f"Enough votes, skipping... | In : {member.guild.name} Id :{member.guild.id}")
             channel.guild.voice_client.stop()
 
 
