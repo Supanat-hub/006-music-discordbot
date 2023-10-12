@@ -707,7 +707,7 @@ class Music(commands.Cog):
         emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
         await interaction.response.send_message(embed=emBed3)
         await client.disconnect()
-        await client.cleanup()
+        client.cleanup()
         logging.info(f"Loop Off | In : {interaction.guild.name} Id :{interaction.guild_id}")
         state.playlist = []
         state.repeat = False
