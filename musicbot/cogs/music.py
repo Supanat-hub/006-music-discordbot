@@ -8,7 +8,7 @@ from discord import app_commands
 from discord.ext import commands
 from ..video import Video
 from ..playlist import Videoplaylist
-import youtube_dl
+from youtube import youtube_dl
 import urllib
 
 #url

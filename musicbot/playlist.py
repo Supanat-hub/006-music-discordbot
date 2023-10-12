@@ -1,4 +1,4 @@
-import youtube_dl as ytdl
+from youtube import youtube_dl as ytdl
 import discord
 
 YTDL_OPTS = {
