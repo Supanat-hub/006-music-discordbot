@@ -509,7 +509,7 @@ class Music(commands.Cog):
                 queue = state.playlist
                 delete = f"**{queue[num].title}**"
                 state.playlist.pop(num)
-                await interaction.response.send_message(content=f"**Deleted{delete}**")
+                await interaction.response.send_message(content=f"**Deleted** : {delete}")
             except ValueError:
                 await interaction.response.send_message(content=f"**Don't have song No.{number} in queue**")
                 logging.info(f"{ValueError} | In : {interaction.guild.name} Id :{interaction.guild_id}")
