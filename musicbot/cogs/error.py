@@ -19,7 +19,7 @@ class CommandErrorHandler(commands.Cog):
 
         if isinstance(error, commands.CommandNotFound):
             return await ctx.send(
-                f"That command does not exist. Please use `{self.bot.command_prefix}help` for a list of commands."
+                f"That command does not exist. Please use `/help` for a list of commands."
             )
 
         if isinstance(error, commands.CommandError):

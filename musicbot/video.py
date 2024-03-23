@@ -1,46 +1,47 @@
-from youtube import youtube_dl as ytdl
+import yt_dlp as ytdl
 import discord
 
 YTDL_OPTS = {
     "default_search": "ytsearch",
     "format": "bestaudio/best",
     "quiet": True,
-    "noplaylis": False,
-    "extract_flat": "in_playlist"
+    "noplaylist": False,
+    "extract_flat": "in_playlist",
+    "no_warnings": True,
+    "postprocessors": [{
+        "key": "FFmpegExtractAudio",
+        "preferredcodec": "m4a",
+        "preferredquality": "192",
+    }],
 }
 musicrun_logo = "https://i.ibb.co/6s134j9/musicrun.gif"
 
 class Video:
     """Class containing information about a particular video."""
 
+    ydl = ytdl.YoutubeDL(YTDL_OPTS)  # Reuse YoutubeDL instance
+
     def __init__(self, url_or_search, requested_by):
         """Plays audio from (or searches for) a URL."""
-        with ytdl.YoutubeDL(YTDL_OPTS) as ydl:
-            video = self._get_info(url_or_search)
-            video_format = video["formats"][0]
-            self.stream_url = video_format["url"]
-            self.video_url = video["webpage_url"]
-            self.title = video["title"]
-            self.uploader = video["uploader"] if "uploader" in video else ""
-            self.thumbnail = video[
-                "thumbnail"] if "thumbnail" in video else None
-            self.requested_by = requested_by
+        video = self._get_info(url_or_search)
+        self.stream_url = video["url"]
+        self.video_url = video["webpage_url"]
+        self.title = video["title"]
+        self.uploader = video.get("uploader", "")
+        self.thumbnail = video.get("thumbnail")
+        self.requested_by = requested_by
 
     def _get_info(self, video_url):
-        with ytdl.YoutubeDL(YTDL_OPTS) as ydl:
-            info = ydl.extract_info(video_url, download=False)
-            video = None
-            if "_type" in info and info["_type"] == "playlist":
-                return self._get_info(
-                    info["entries"][0]["url"])  # get info for first video
-            else:
-                video = info
-            return video
+        info = self.ydl.extract_info(video_url, download=False)
+        if info.get("_type") == "playlist":
+            return self._get_info(info["entries"][0]["url"])  # get info for first video
+        else:
+            return info
 
     def get_embed(self):
         """Makes an embed out of this Video's information."""
         embed = discord.Embed(
-            title=f"{self.title}", description=self.uploader, url=self.video_url, color=0xF3F4F9)
+            title=self.title, description=self.uploader, url=self.video_url, color=0xF3F4F9)
         embed.set_author(name="006 music", icon_url=musicrun_logo)
         embed.set_footer(
             text=f"Requested by {self.requested_by.name}",

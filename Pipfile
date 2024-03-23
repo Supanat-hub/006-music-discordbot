@@ -4,15 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-discord = "==2.1.0"
-"discord.py" = {version = "==2.2.2", extras = ["voice"]}
+discord = "==2.3.2"
+"discord.py" = {version = "==2.3.2", extras = ["voice"]}
 discord-py-slash-command = "==4.2.1"
-pytz = "==2022.7.1"
-youtube-dl = "==2021.12.17"
+pytz = "==2024.1"
+youtube-dl = "*"
 requests = "*"
 beautifulsoup4 = "==4.9.3"
 urlextract = "==1.8.0"
 toml = "==0.10.2"
+yt-dlp = "*"
 
 [dev-packages]
 

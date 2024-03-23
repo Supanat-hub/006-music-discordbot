@@ -1,0 +1,1033 @@
+[2024-03-23 18:59:58,502] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 18:59:59,435] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:00:00,113] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:00:00,997] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 07d8c2ca7abe53e97038d4aa0835098b).
+[2024-03-23 19:00:03,047] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:01:15,270] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:01:15,270] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:01:15,769] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:04:16,713] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:04:28,013] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:04:28,933] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:04:29,366] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:04:30,216] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: bba3b5c83ea7474fabde91f43a8c6c28).
+[2024-03-23 19:04:32,385] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:04:44,833] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:04:44,833] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:04:45,337] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:06:50,455] INFO [discord.player._kill_process:206] ffmpeg process 4116 successfully terminated with return code of 0.
+[2024-03-23 19:06:50,457] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 19:06:50,517] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:09:48,457] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:09:49,272] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:09:49,697] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:09:50,554] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 576c206d45e6b3a01fdd2a086a3e0ecf).
+[2024-03-23 19:09:52,708] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:10:25,654] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:10:25,654] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:10:26,164] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:10:26,605] INFO [root._play_song:752] playing : Promethazine - SARAN X  BlackHeart X Pondering (OFFICIAL MV) vc : <discord.voice_client.VoiceClient object at 0x000001842AC9EC50>
+[2024-03-23 19:14:24,771] INFO [discord.player._kill_process:206] ffmpeg process 3416 successfully terminated with return code of 0.
+[2024-03-23 19:16:29,465] INFO [discord.player._kill_process:206] ffmpeg process 3532 successfully terminated with return code of 0.
+[2024-03-23 19:16:29,465] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 19:16:29,518] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:17:16,939] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:17:17,780] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:17:18,217] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:17:19,026] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: eb2226f05fcee7796d6203eff204bf4b).
+[2024-03-23 19:17:21,229] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:18:00,317] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:18:00,322] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:18:00,869] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:22:42,355] INFO [discord.player._kill_process:206] ffmpeg process 14168 successfully terminated with return code of 0.
+[2024-03-23 19:23:04,512] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:23:11,861] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:23:12,692] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:23:13,242] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:23:14,061] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 734572f39ee426e8840790662f7c02e5).
+[2024-03-23 19:23:16,093] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:23:34,815] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:23:34,816] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:23:35,337] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:25:13,563] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 195, in _play
+    await self.send_channel_error(interaction, voice_client.channel)
+AttributeError: 'Music' object has no attribute 'send_channel_error'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: AttributeError: 'Music' object has no attribute 'send_channel_error'
+[2024-03-23 19:28:51,206] INFO [discord.player._kill_process:206] ffmpeg process 7272 successfully terminated with return code of 0.
+[2024-03-23 19:28:51,208] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 19:28:51,263] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:33:56,206] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:33:57,038] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:33:57,484] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:33:58,295] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 9500e9dcbe1d714e4b0659ab7518a1b2).
+[2024-03-23 19:34:00,331] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:34:20,320] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:34:20,321] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:34:20,836] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:34:21,249] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 235, in _play
+    self._play_song(client, state, video)
+UnboundLocalError: local variable 'state' referenced before assignment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: UnboundLocalError: local variable 'state' referenced before assignment
+[2024-03-23 19:36:14,653] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:36:24,519] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:36:25,420] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:36:25,933] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:36:26,793] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 0e57fb5b365a659db20e1dc3a7ae0749).
+[2024-03-23 19:36:28,872] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:36:45,410] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:36:45,411] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:36:45,912] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:36:46,297] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 236, in _play
+    self._play_song(client, state, video)
+UnboundLocalError: local variable 'state' referenced before assignment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: UnboundLocalError: local variable 'state' referenced before assignment
+[2024-03-23 19:39:23,090] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:39:29,454] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:39:30,395] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:39:30,994] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:39:31,958] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 4dea55ce34686d173c85edbbc3409cef).
+[2024-03-23 19:39:34,076] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:39:47,176] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:39:47,176] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:39:47,681] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:41:52,806] INFO [discord.player._kill_process:206] ffmpeg process 540 successfully terminated with return code of 0.
+[2024-03-23 19:41:52,807] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 19:41:52,872] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:48:13,693] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:48:14,594] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:48:15,049] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:48:16,048] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: efc7805a07b339234b2875a3341f6799).
+[2024-03-23 19:48:18,122] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:49:07,046] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:49:07,046] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:49:07,563] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:49:07,992] INFO [root._play_song:750] playing : SARAN X BlackHeart - มากกว่ารัก (REMIX VERSION) vc : <discord.voice_client.VoiceClient object at 0x000001F73E6BEB60>
+[2024-03-23 19:51:12,693] INFO [root._play_song:750] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x000001F73E6BEB60>
+[2024-03-23 19:51:12,694] INFO [discord.player._kill_process:206] ffmpeg process 9748 successfully terminated with return code of 0.
+[2024-03-23 19:54:26,409] INFO [discord.player._kill_process:206] ffmpeg process 8848 successfully terminated with return code of 0.
+[2024-03-23 19:54:26,410] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 19:54:26,466] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:57:07,058] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:57:07,908] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:57:08,514] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:57:09,522] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: d642235c91b9f24b0931b70e1e4f6d9d).
+[2024-03-23 19:57:11,577] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:57:22,829] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:57:22,829] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:57:23,336] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:57:23,770] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 235, in _play
+    self._play_song(client, state, video)
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 749, in _play_song
+    discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
+AttributeError: 'Video' object has no attribute 'stream_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: AttributeError: 'Video' object has no attribute 'stream_url'
+[2024-03-23 19:58:28,830] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 19:58:50,867] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 19:58:51,674] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 19:58:52,307] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 19:58:53,106] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: fd74512df1f61687104388b468d042d8).
+[2024-03-23 19:58:55,150] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 19:59:10,451] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 19:59:10,451] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 19:59:10,954] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 19:59:11,348] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 235, in _play
+    self._play_song(client, state, video)
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 749, in _play_song
+    discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
+AttributeError: 'Video' object has no attribute 'stream_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: AttributeError: 'Video' object has no attribute 'stream_url'
+[2024-03-23 20:00:04,752] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:00:14,632] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:00:15,653] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:00:16,323] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:00:17,195] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: adcadcf983c42bf50d6c10c12d60970d).
+[2024-03-23 20:00:19,245] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:00:29,357] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:00:29,358] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:00:29,855] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:00:30,230] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 235, in _play
+    self._play_song(client, state, video)
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 749, in _play_song
+    discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
+AttributeError: 'Video' object has no attribute 'stream_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: AttributeError: 'Video' object has no attribute 'stream_url'
+[2024-03-23 20:02:39,631] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:02:40,500] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:02:40,985] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:02:41,832] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: ef8dc4464a2be642e95d0b64231dd7e0).
+[2024-03-23 20:02:43,973] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:02:58,339] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:02:58,340] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:02:59,558] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:02:59,974] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 235, in _play
+    self._play_song(client, state, video)
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 749, in _play_song
+    discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
+AttributeError: 'Video' object has no attribute 'stream_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: AttributeError: 'Video' object has no attribute 'stream_url'
+[2024-03-23 20:05:35,046] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:05:40,853] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:05:41,686] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:05:42,206] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:05:43,089] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 11ae09fe73c5e24ff675212d6325b424).
+[2024-03-23 20:05:45,233] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:05:56,255] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1367, in _decrypt_signature
+    return func(s)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1266, in <lambda>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1266, in <genexpr>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\YoutubeDL.py", line 815, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\YoutubeDL.py", line 836, in __extract_info
+    ie_result = ie.extract(url)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\common.py", line 534, in extract
+    ie_result = self._real_extract(url)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1641, in _real_extract
+    signature = self._decrypt_signature(sc['s'][0], video_id, player_url)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1370, in _decrypt_signature
+    raise ExtractorError(
+youtube_dl.utils.ExtractorError: Signature extraction failed: Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1367, in _decrypt_signature
+    return func(s)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1266, in <lambda>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1266, in <genexpr>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+TypeError: string indices must be integers
+ (caused by TypeError('string indices must be integers')); please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 231, in _play
+    await video.fetch_info()
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\video.py", line 27, in fetch_info
+    self.video_info = await loop.run_in_executor(None, self._get_info, self.url_or_search)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\video.py", line 32, in _get_info
+    return self._get_info(info["entries"][0]["url"])  # get info for first video
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\video.py", line 30, in _get_info
+    info = ydl.extract_info(video_url, download=False)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\YoutubeDL.py", line 808, in extract_info
+    return self.__extract_info(url, ie, download, extra_info, process)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\YoutubeDL.py", line 824, in wrapper
+    self.report_error(compat_str(e), e.format_traceback())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\YoutubeDL.py", line 628, in report_error
+    self.trouble(error_message, tb)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\YoutubeDL.py", line 598, in trouble
+    raise DownloadError(message, exc_info)
+youtube_dl.utils.DownloadError: ERROR: Signature extraction failed: Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1367, in _decrypt_signature
+    return func(s)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1266, in <lambda>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1266, in <genexpr>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+TypeError: string indices must be integers
+ (caused by TypeError('string indices must be integers')); please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: DownloadError: ERROR: Signature extraction failed: Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1367, in _decrypt_signature
+    return func(s)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1266, in <lambda>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\youtube_dl\extractor\youtube.py", line 1266, in <genexpr>
+    return lambda s: ''.join(s[i] for i in cache_spec)
+TypeError: string indices must be integers
+ (caused by TypeError('string indices must be integers')); please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
+[2024-03-23 20:06:33,066] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:06:33,886] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:06:34,335] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:06:35,205] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: f043313a731e9531d184adfa55bab4ec).
+[2024-03-23 20:06:37,321] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:06:54,148] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:06:54,149] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:06:54,650] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:06:55,023] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 237, in _play
+    self._play_song(client, state, video)
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 751, in _play_song
+    discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
+AttributeError: 'Video' object has no attribute 'stream_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: AttributeError: 'Video' object has no attribute 'stream_url'
+[2024-03-23 20:08:48,560] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:08:53,799] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:08:54,698] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:08:55,150] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:08:55,995] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: f564eff0d5564e303d4b623af7630b43).
+[2024-03-23 20:08:58,142] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:09:06,396] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 230, in _play
+    video = await Video(search, interaction.user)
+TypeError: __init__() should return None, not 'coroutine'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: __init__() should return None, not 'coroutine'
+[2024-03-23 20:11:06,061] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:11:06,968] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:11:07,486] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:11:08,354] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: b560142c356b618bdeef5da59f437579).
+[2024-03-23 20:11:10,494] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:11:18,514] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 230, in _play
+    video = await Video(search, interaction.user)
+TypeError: __init__() should return None, not 'coroutine'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: __init__() should return None, not 'coroutine'
+[2024-03-23 20:16:07,418] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:16:08,364] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:16:08,848] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:16:09,656] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 55edc0d91fc35e099b05da9100c6d738).
+[2024-03-23 20:16:11,718] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:16:37,864] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 230, in _play
+    video = await Video(search, interaction.user)
+TypeError: object Video can't be used in 'await' expression
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: object Video can't be used in 'await' expression
+[2024-03-23 20:17:19,108] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:17:20,064] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:17:20,610] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:17:21,397] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 108a353c07b2ab8323c7d2d6c72f8a0c).
+[2024-03-23 20:17:23,435] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:17:35,926] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 231, in _play
+    await video.fetch_info()
+AttributeError: 'Video' object has no attribute 'fetch_info'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: AttributeError: 'Video' object has no attribute 'fetch_info'
+[2024-03-23 20:18:01,032] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:18:01,864] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:18:02,402] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:18:03,231] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: fca6cdbe2695642f3cb80d58f0837101).
+[2024-03-23 20:18:05,432] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:18:29,954] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:18:29,955] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:18:30,488] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:18:30,910] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x000001B2EF2AD450>
+[2024-03-23 20:21:25,792] INFO [root._play_song:750] playing : Jeremy Zucker - comethru (Official Video) vc : <discord.voice_client.VoiceClient object at 0x000001B2EF2AD450>
+[2024-03-23 20:21:25,862] INFO [discord.player._kill_process:206] ffmpeg process 13600 successfully terminated with return code of 0.
+[2024-03-23 20:23:08,394] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:23:16,950] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:23:17,806] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:23:18,268] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:23:19,234] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 4d4d92d8e11601a9494c4698923b3554).
+[2024-03-23 20:23:21,299] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:24:04,871] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:24:04,871] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:24:05,372] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:24:05,804] INFO [root._play_song:750] playing : 2NE1 - 내가 제일 잘 나가(I AM THE BEST) M/V vc : <discord.voice_client.VoiceClient object at 0x0000018BDA080A00>
+[2024-03-23 20:24:38,887] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x0000018BDA080A00>
+[2024-03-23 20:24:38,898] INFO [discord.player._kill_process:202] ffmpeg process 9480 has not terminated. Waiting to terminate...
+[2024-03-23 20:24:38,905] INFO [discord.player._kill_process:204] ffmpeg process 9480 should have terminated with a return code of 1.
+[2024-03-23 20:26:13,390] INFO [discord.player._kill_process:202] ffmpeg process 6912 has not terminated. Waiting to terminate...
+[2024-03-23 20:26:13,391] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:28:50,241] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:28:51,160] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:28:51,686] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:28:52,463] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 2dec157fa147ee14193af3d297255d1f).
+[2024-03-23 20:28:54,656] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:29:10,512] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:29:10,513] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:29:11,018] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:29:11,451] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x000002541162F3A0>
+[2024-03-23 20:29:13,298] INFO [discord.player._kill_process:206] ffmpeg process 13008 successfully terminated with return code of 4294967274.
+[2024-03-23 20:29:13,299] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:29:13,356] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:31:18,272] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:31:19,295] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:31:19,863] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:31:20,655] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: b2eeaea124ad15d8826d5f696f6e6da5).
+[2024-03-23 20:31:22,828] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:31:38,228] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:31:38,229] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:31:38,740] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:31:39,159] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x000002FDB6247580>
+[2024-03-23 20:31:40,680] INFO [discord.player._kill_process:206] ffmpeg process 10984 successfully terminated with return code of 4294967274.
+[2024-03-23 20:31:40,681] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:31:40,744] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:33:03,418] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:33:04,330] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:33:04,938] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:33:05,759] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 0851afe9d466c8dc271818cbd1856301).
+[2024-03-23 20:33:07,875] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:33:22,429] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:33:22,430] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:33:22,949] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:33:23,365] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x000001F1EFDDF4F0>
+[2024-03-23 20:33:24,396] INFO [discord.player._kill_process:206] ffmpeg process 10832 successfully terminated with return code of 4294967274.
+[2024-03-23 20:33:24,398] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:33:24,455] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:33:44,039] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:33:44,885] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:33:45,425] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:33:46,262] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: f14a5dc609233807314c88f19d057f61).
+[2024-03-23 20:33:48,306] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:34:05,487] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:34:05,488] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:34:05,993] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:34:06,383] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x0000017EC82EF940>
+[2024-03-23 20:34:06,575] INFO [discord.player._kill_process:206] ffmpeg process 3940 successfully terminated with return code of 4294967274.
+[2024-03-23 20:34:06,576] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:34:06,636] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:34:35,116] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:34:36,070] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:34:36,506] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:34:37,548] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 1e5639c4adbc6ee4e999233211efe569).
+[2024-03-23 20:34:39,668] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:35:00,297] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:35:00,298] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:35:00,821] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:35:01,240] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x000001A35B943E50>
+[2024-03-23 20:35:01,416] INFO [discord.player._kill_process:206] ffmpeg process 10024 successfully terminated with return code of 4294967274.
+[2024-03-23 20:35:01,418] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:35:01,472] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:45:14,771] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:45:15,602] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:45:16,066] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:45:16,945] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: b841432561e101878ce01ff338e049e6).
+[2024-03-23 20:45:18,981] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:45:45,016] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:45:45,017] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:45:45,571] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:45:46,011] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x0000022F8AA7BE20>
+[2024-03-23 20:45:46,922] INFO [discord.player._kill_process:206] ffmpeg process 11152 successfully terminated with return code of 4294967274.
+[2024-03-23 20:45:46,923] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:45:46,982] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:46:56,519] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:46:57,355] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:46:57,824] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:46:58,692] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 434ff4be6c271772374f83ee8ccc755a).
+[2024-03-23 20:47:00,817] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:47:15,704] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:47:15,704] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:47:16,896] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:47:17,300] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x00000276CEF5BA90>
+[2024-03-23 20:47:17,478] INFO [discord.player._kill_process:206] ffmpeg process 5804 successfully terminated with return code of 4294967274.
+[2024-03-23 20:47:17,480] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:47:17,536] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:49:14,748] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:49:15,641] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:49:16,262] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:49:17,052] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 1700f11e4d2af6fd5818d67a2f69147a).
+[2024-03-23 20:49:19,183] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:49:45,612] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:49:45,612] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:49:46,120] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:49:46,512] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x000001EDC4A5D900>
+[2024-03-23 20:51:03,151] INFO [root._play_song:750] playing : Jeremy Zucker - comethru (Official Video) vc : <discord.voice_client.VoiceClient object at 0x000001EDC4A5D900>
+[2024-03-23 20:51:03,152] INFO [discord.player._kill_process:202] ffmpeg process 14824 has not terminated. Waiting to terminate...
+[2024-03-23 20:51:03,165] INFO [discord.player._kill_process:204] ffmpeg process 14824 should have terminated with a return code of 1.
+[2024-03-23 20:51:55,271] INFO [root._play_song:750] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x000001EDC4A5D900>
+[2024-03-23 20:51:55,273] INFO [discord.player._kill_process:202] ffmpeg process 8480 has not terminated. Waiting to terminate...
+[2024-03-23 20:51:55,286] INFO [discord.player._kill_process:204] ffmpeg process 8480 should have terminated with a return code of 1.
+[2024-03-23 20:53:39,423] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:53:39,447] INFO [discord.player._kill_process:202] ffmpeg process 14396 has not terminated. Waiting to terminate...
+[2024-03-23 20:53:39,454] INFO [discord.player._kill_process:204] ffmpeg process 14396 should have terminated with a return code of 1.
+[2024-03-23 20:53:39,487] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:53:39,487] INFO [root._leave:709] Loop Off | In : ɢᴏᴏᴅ ʙᴏʏ. Id :861822386986024980
+[2024-03-23 20:53:54,828] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:53:55,683] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:53:56,200] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:53:57,018] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: aadeb494acf3952a6b39da7a7e3e4392).
+[2024-03-23 20:53:59,124] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:54:09,988] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:54:09,988] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:54:10,512] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:54:10,924] INFO [root._play_song:750] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x00000168CD15A9B0>
+[2024-03-23 20:54:11,794] INFO [discord.player._kill_process:206] ffmpeg process 9320 successfully terminated with return code of 4294967274.
+[2024-03-23 20:54:11,795] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:54:11,848] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:54:30,846] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:54:31,758] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:54:32,297] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:54:33,098] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 53f372a9d8cdc29a54a61323515f54e2).
+[2024-03-23 20:54:35,211] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:54:49,767] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:54:49,767] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:54:50,268] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:54:50,974] INFO [root._play_song:750] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x000001699418AC80>
+[2024-03-23 20:55:48,127] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:56:03,740] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:56:04,812] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:56:05,296] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:56:06,067] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 9c4203dbb87a30199a6457ca9b681f8f).
+[2024-03-23 20:56:08,114] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:56:36,244] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:56:36,245] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:56:36,789] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:56:37,186] INFO [root._play_song:750] playing : Jeremy Zucker - comethru (Official Video) vc : <discord.voice_client.VoiceClient object at 0x00000225DC203430>
+[2024-03-23 20:56:37,321] INFO [discord.player._kill_process:206] ffmpeg process 10808 successfully terminated with return code of 4294967274.
+[2024-03-23 20:56:37,323] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:56:37,379] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:57:00,547] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:57:01,441] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:57:01,974] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:57:02,814] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 12f38c365dfe75eda7e0fbe58d587bb1).
+[2024-03-23 20:57:04,972] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:57:21,282] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:57:21,283] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:57:21,788] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:57:22,186] INFO [root._play_song:750] playing : Jeremy Zucker - comethru (Official Video) vc : <discord.voice_client.VoiceClient object at 0x0000023966DBAAA0>
+[2024-03-23 20:57:22,331] INFO [discord.player._kill_process:206] ffmpeg process 13204 successfully terminated with return code of 4294967274.
+[2024-03-23 20:57:22,333] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:57:22,390] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:57:41,399] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:57:42,356] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:57:42,893] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:57:43,649] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 2a45fcc181a234b6c9feb6b449bafb7f).
+[2024-03-23 20:57:45,704] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:58:05,605] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:58:05,606] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:58:06,109] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:58:06,527] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x00000212A583BAF0>
+[2024-03-23 20:58:07,895] INFO [discord.player._kill_process:206] ffmpeg process 1784 successfully terminated with return code of 4294967274.
+[2024-03-23 20:58:07,896] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 20:58:07,955] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 20:58:40,175] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 20:58:40,995] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 20:58:41,554] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 20:58:42,326] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 0bf84bd587b7874ca5bef0c3e1d99f73).
+[2024-03-23 20:58:44,374] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 20:58:59,559] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 20:58:59,560] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 20:59:00,067] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 20:59:00,476] INFO [root._play_song:750] playing : Promethazine - SARAN X  BlackHeart X Pondering (OFFICIAL MV) vc : <discord.voice_client.VoiceClient object at 0x000002AB010D27D0>
+[2024-03-23 21:02:58,590] INFO [discord.player._kill_process:206] ffmpeg process 12116 successfully terminated with return code of 0.
+[2024-03-23 21:02:58,591] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:02:58,652] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:12:27,049] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:12:27,050] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:12:27,548] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:12:28,062] INFO [root._play_song:750] playing : แช่ง : B-King [Official MV] vc : <discord.voice_client.VoiceClient object at 0x000002AB012030D0>
+[2024-03-23 21:12:28,588] INFO [discord.player._kill_process:206] ffmpeg process 13568 successfully terminated with return code of 4294967274.
+[2024-03-23 21:12:28,590] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:12:28,646] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:12:57,814] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:12:57,814] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:12:58,311] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:12:58,707] INFO [root._play_song:750] playing : แช่ง : B-King [Official MV] vc : <discord.voice_client.VoiceClient object at 0x000002AB010DC1C0>
+[2024-03-23 21:12:58,947] INFO [discord.player._kill_process:206] ffmpeg process 13484 successfully terminated with return code of 4294967274.
+[2024-03-23 21:12:58,949] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:12:59,006] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:13:11,733] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:13:11,739] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:13:12,251] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:13:12,662] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x000002AB00E7DF90>
+[2024-03-23 21:13:52,039] INFO [root._play_song:750] playing : [Official MV] มือลั่น - แจ๊ส สปุ๊กนิค ปาปิยอง กุ๊กกุ๊ก [ JSPKK ] vc : <discord.voice_client.VoiceClient object at 0x000002AB00E7DF90>
+[2024-03-23 21:13:52,040] INFO [discord.player._kill_process:202] ffmpeg process 13216 has not terminated. Waiting to terminate...
+[2024-03-23 21:13:52,050] INFO [discord.player._kill_process:204] ffmpeg process 13216 should have terminated with a return code of 1.
+[2024-03-23 21:13:52,240] INFO [discord.player._kill_process:206] ffmpeg process 1704 successfully terminated with return code of 4294967274.
+[2024-03-23 21:13:52,242] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:13:52,302] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:19:28,309] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 21:19:29,204] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 21:19:29,781] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 21:19:30,555] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 718a221ceaf5b52998857cb85255c58a).
+[2024-03-23 21:19:32,615] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 21:19:45,029] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:19:45,030] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:19:45,556] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:19:45,980] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x0000015CB4427AF0>
+[2024-03-23 21:20:13,654] INFO [root._play_song:750] playing : [Official MV] มือลั่น - แจ๊ส สปุ๊กนิค ปาปิยอง กุ๊กกุ๊ก [ JSPKK ] vc : <discord.voice_client.VoiceClient object at 0x0000015CB4427AF0>
+[2024-03-23 21:20:13,655] INFO [discord.player._kill_process:202] ffmpeg process 7460 has not terminated. Waiting to terminate...
+[2024-03-23 21:20:13,662] INFO [discord.player._kill_process:204] ffmpeg process 7460 should have terminated with a return code of 1.
+[2024-03-23 21:20:14,495] INFO [discord.player._kill_process:206] ffmpeg process 13040 successfully terminated with return code of 4294967274.
+[2024-03-23 21:20:14,497] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:20:14,551] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:20:38,181] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:20:38,182] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:20:38,684] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:20:39,076] INFO [root._play_song:750] playing : [Official MV] มือลั่น - แจ๊ส สปุ๊กนิค ปาปิยอง กุ๊กกุ๊ก [ JSPKK ] vc : <discord.voice_client.VoiceClient object at 0x0000015CB44279D0>
+[2024-03-23 21:20:39,386] INFO [discord.player._kill_process:206] ffmpeg process 9028 successfully terminated with return code of 4294967274.
+[2024-03-23 21:20:39,387] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:20:39,447] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:23:39,752] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 21:23:40,767] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 21:23:41,255] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 21:23:42,122] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 0dedf1acb41e57ab18a974be456a5420).
+[2024-03-23 21:23:44,301] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 21:24:07,987] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 229, in _play
+    video = Video(search, interaction.user)
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\video.py", line 28, in __init__
+    self.stream_url = self._get_stream_url(video_format)
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\video.py", line 47, in _get_stream_url
+    for fmt in video_format["formats"]:
+KeyError: 'formats'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: KeyError: 'formats'
+[2024-03-23 21:25:33,282] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 21:25:34,173] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 21:25:34,705] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 21:25:35,540] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: e5569fcc994a99e921e0ebc418688493).
+[2024-03-23 21:25:37,601] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 21:25:55,299] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:25:55,300] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:25:55,810] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:25:56,274] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x0000018D815E93C0>
+[2024-03-23 21:25:56,333] INFO [discord.player._kill_process:206] ffmpeg process 13328 successfully terminated with return code of 4294967274.
+[2024-03-23 21:25:56,334] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:25:56,391] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:28:10,567] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 21:28:11,443] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 21:28:11,906] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 21:28:12,812] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: f89c04e27f4f4321e3c86fd68a4d613b).
+[2024-03-23 21:28:14,860] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 21:28:29,841] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:28:29,842] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:28:30,384] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:28:30,829] INFO [root._play_song:750] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x0000028C4AAF2AA0>
+[2024-03-23 21:28:57,455] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:28:57,458] INFO [discord.player._kill_process:202] ffmpeg process 15064 has not terminated. Waiting to terminate...
+[2024-03-23 21:28:57,462] INFO [discord.player._kill_process:204] ffmpeg process 15064 should have terminated with a return code of 1.
+[2024-03-23 21:28:57,514] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:28:57,514] INFO [root._leave:709] Loop Off | In : ɢᴏᴏᴅ ʙᴏʏ. Id :861822386986024980
+[2024-03-23 21:29:07,994] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:29:07,001] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:29:07,500] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:29:07,892] INFO [root._play_song:750] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x0000028C4AAF2AA0>
+[2024-03-23 21:31:18,032] INFO [root._play_song:750] playing : [Official MV] มือลั่น - แจ๊ส สปุ๊กนิค ปาปิยอง กุ๊กกุ๊ก [ JSPKK ] vc : <discord.voice_client.VoiceClient object at 0x0000028C4AAF2AA0>
+[2024-03-23 21:31:18,038] INFO [discord.player._kill_process:202] ffmpeg process 4920 has not terminated. Waiting to terminate...
+[2024-03-23 21:31:18,044] INFO [discord.player._kill_process:204] ffmpeg process 4920 should have terminated with a return code of 1.
+[2024-03-23 21:37:01,873] INFO [discord.player._kill_process:206] ffmpeg process 11028 successfully terminated with return code of 0.
+[2024-03-23 21:37:01,875] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 21:37:01,929] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 21:39:49,880] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 21:39:50,797] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 21:39:51,457] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 21:39:52,310] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: aa786f02c8350f635eeda3aca8a8a9e1).
+[2024-03-23 21:39:55,125] INFO [root.on_ready:37] Logged in as 006 music#6847
+[2024-03-23 21:41:12,574] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 21:41:13,414] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 21:42:14,199] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 21:42:15,161] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: c2a7513747f223b0b90334d2ab437f15).
+[2024-03-23 21:42:17,803] INFO [root.on_ready:37] Logged in as 006 music#6847
+[2024-03-23 21:45:04,649] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 21:45:04,650] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 21:45:05,815] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 21:45:06,266] INFO [root._play_song:750] playing : รวมเพลงSARANล่าสุด รวมเพลงแร็พเพราะๆ | ฉันยังยู่,Promethazine,ไม่มีเหมือนเขา vc : <discord.voice_client.VoiceClient object at 0x00000195DDD3DED0>
+[2024-03-23 22:15:23,151] INFO [discord.player._kill_process:202] ffmpeg process 12036 has not terminated. Waiting to terminate...
+[2024-03-23 22:15:23,152] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 22:15:23,155] INFO [discord.player._kill_process:204] ffmpeg process 12036 should have terminated with a return code of 1.
+[2024-03-23 22:15:31,450] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 22:15:32,329] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 22:15:33,304] WARNING [discord.http.request:707] We are being rate limited. PUT https://discord.com/api/v10/applications/880982026314985523/commands responded with 429. Retrying in 370.41 seconds.
+[2024-03-23 22:15:59,470] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 22:16:00,326] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 22:16:00,683] WARNING [discord.http.request:707] We are being rate limited. PUT https://discord.com/api/v10/applications/880982026314985523/commands responded with 429. Retrying in 1.97 seconds.
+[2024-03-23 22:16:03,067] WARNING [discord.http.request:707] We are being rate limited. PUT https://discord.com/api/v10/applications/880982026314985523/commands responded with 429. Retrying in 340.65 seconds.
+[2024-03-23 22:16:31,934] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 22:16:32,718] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 22:16:33,311] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 22:16:34,111] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 1a6b89dd9b5fbe9915613955d97629bf).
+[2024-03-23 22:16:36,253] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 22:16:52,161] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 22:16:52,162] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 22:16:52,661] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 22:16:53,112] INFO [root._play_song:1047] playing : Nicky Youre, dazy - Sunroof (Official Music Video) vc : <discord.voice_client.VoiceClient object at 0x00000227D437B910>
+[2024-03-23 22:18:07,961] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play-playlist'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 344, in _playplaylist
+    video = Videoplaylist(url, interaction.user, num_song=num_song)
+TypeError: Videoplaylist.__init__() got an unexpected keyword argument 'num_song'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play-playlist' raised an exception: TypeError: Videoplaylist.__init__() got an unexpected keyword argument 'num_song'
+[2024-03-23 22:19:47,987] INFO [discord.player._kill_process:206] ffmpeg process 10236 successfully terminated with return code of 0.
+[2024-03-23 22:19:47,991] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 22:19:48,048] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 22:22:18,945] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 22:22:19,876] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 22:22:20,544] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 22:22:21,346] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: caa2c820db74e7f3c2082455cee3c81c).
+[2024-03-23 22:22:23,388] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 22:22:36,069] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 22:22:36,070] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 22:22:36,580] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 22:22:36,996] INFO [root._play_song:1047] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x0000016CBFBC6E60>
+[2024-03-23 22:23:39,788] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play-playlist'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 412, in _playplaylist
+    await interaction.edit_original_response(content=None, embed=video.get_embed())
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\playlist.py", line 44, in get_embed
+    title=f"Playlist -> {self.title_playlist}", description=self.uploader, url=self.video_url_playlist, color=0xF3F4F9)
+AttributeError: 'Videoplaylist' object has no attribute 'title_playlist'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play-playlist' raised an exception: AttributeError: 'Videoplaylist' object has no attribute 'title_playlist'
+[2024-03-23 22:25:50,728] INFO [root._play_song:1047] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x0000016CBFBC6E60>
+[2024-03-23 22:25:50,729] INFO [discord.player._kill_process:206] ffmpeg process 13884 successfully terminated with return code of 0.
+[2024-03-23 22:27:33,416] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 22:27:39,352] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 22:27:40,224] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 22:27:41,685] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 22:27:42,549] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 56e74798a8fcf9b5fdad662b7ce98303).
+[2024-03-23 22:27:44,705] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 22:28:07,708] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 22:28:07,708] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 22:28:08,211] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 22:28:08,659] INFO [root._play_song:1047] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x000001D6D4DBDD80>
+[2024-03-23 22:28:55,362] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'queue'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 541, in _queue
+    await interaction.response.send_message(embed=embed2)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\interactions.py", line 801, in send_message
+    await adapter.create_interaction_response(
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\webhook\async_.py", line 219, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'queue' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[2024-03-23 22:29:02,519] ERROR [discord.app_commands.tree.on_error:798] Ignoring exception in command 'play-playlist'
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\cogs\music.py", line 412, in _playplaylist
+    await interaction.edit_original_response(content=None, embed=video.get_embed())
+  File "C:\Users\12pon\Desktop\fiutter\006-music-discordbot\musicbot\playlist.py", line 45, in get_embed
+    title=f"Playlist -> {self.title_playlist}", description=self.uploader, url=self.video_url_playlist, color=0xF3F4F9)
+AttributeError: 'Videoplaylist' object has no attribute 'video_url_playlist'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play-playlist' raised an exception: AttributeError: 'Videoplaylist' object has no attribute 'video_url_playlist'
+[2024-03-23 22:31:22,382] INFO [root._play_song:1047] playing : D GERRARD - รถไฟบนฟ้า (Galaxy Express) [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x000001D6D4DBDD80>
+[2024-03-23 22:31:22,396] INFO [discord.player._kill_process:206] ffmpeg process 13444 successfully terminated with return code of 0.
+[2024-03-23 22:34:54,756] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-23 22:35:05,036] INFO [discord.client.login:603] logging in using static token
+[2024-03-23 22:35:05,885] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-23 22:35:06,350] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-23 22:35:07,153] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 284646fe55e11950fee17f9c1257607f).
+[2024-03-23 22:35:09,330] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-23 22:35:23,092] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-23 22:35:23,093] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-23 22:35:23,604] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore4197.discord.media
+[2024-03-23 22:35:24,032] INFO [root._play_song:1047] playing : D GERRARD - เอี๊ยด (Eaaaddd) Feat. เบลล์ นิภาดา  [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 22:36:18,562] INFO [root._playplaylist:413] Added : 'D Gerrard Official MV' | In : ɢᴏᴏᴅ ʙᴏʏ. Id :861822386986024980
+[2024-03-23 22:38:37,750] INFO [root._play_song:1047] playing : D GERRARD - รถไฟบนฟ้า (Galaxy Express) [Official Music Video] vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 22:38:37,754] INFO [discord.player._kill_process:206] ffmpeg process 8480 successfully terminated with return code of 0.
+[2024-03-23 22:42:58,998] INFO [root._play_song:1047] playing : แหลม สมพล - ร้องไปกับฟ้า Ft.D GERRARD Official MV Ost.4Kings2 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 22:42:59,002] INFO [discord.player._kill_process:206] ffmpeg process 8536 successfully terminated with return code of 0.
+[2024-03-23 22:47:27,599] INFO [root._play_song:1047] playing : D GERRARD - Paradise Online【Official MV】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 22:47:27,599] INFO [discord.player._kill_process:206] ffmpeg process 3180 successfully terminated with return code of 0.
+[2024-03-23 22:52:26,918] INFO [root._play_song:1047] playing : D GERRARD - หัวใจ (The Reason Why I Live) ft.Patrickananda 【Official MV】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 22:52:26,919] INFO [discord.player._kill_process:206] ffmpeg process 2228 successfully terminated with return code of 0.
+[2024-03-23 22:57:34,840] INFO [root._play_song:1047] playing : D GERRARD - รักรักรักรักรักรักรัก (Talk Less)【Official MV】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 22:57:34,842] INFO [discord.player._kill_process:206] ffmpeg process 14484 successfully terminated with return code of 0.
+[2024-03-23 23:02:12,478] INFO [root._play_song:1047] playing : D GERRARD - LUXURY【Official MV】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:02:12,478] INFO [discord.player._kill_process:206] ffmpeg process 13764 successfully terminated with return code of 0.
+[2024-03-23 23:06:40,633] INFO [root._play_song:1047] playing : D GERRARD - โลกคู่ขนาน (Isekai)【Official MV】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:06:40,634] INFO [discord.player._kill_process:206] ffmpeg process 3220 successfully terminated with return code of 0.
+[2024-03-23 23:12:18,187] INFO [root._play_song:1047] playing : D GERRARD - GALAXY ft. Kob The X Factor 【Official Video】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:12:18,188] INFO [discord.player._kill_process:206] ffmpeg process 13508 successfully terminated with return code of 0.
+[2024-03-23 23:16:46,586] INFO [root._play_song:1047] playing : D GERRARD - ไม่เหมือนใคร (Unique) 【4K Official Video】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:16:46,588] INFO [discord.player._kill_process:206] ffmpeg process 11116 successfully terminated with return code of 0.
+[2024-03-23 23:21:46,494] INFO [root._play_song:1047] playing : D GERRARD - รู้อยู่【Official MV】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:21:46,495] INFO [discord.player._kill_process:206] ffmpeg process 10744 successfully terminated with return code of 0.
+[2024-03-23 23:27:10,775] INFO [root._play_song:1047] playing : D GERRARD - เวทมนตร์ (Magic)【Official MV】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:27:10,778] INFO [discord.player._kill_process:206] ffmpeg process 4736 successfully terminated with return code of 0.
+[2024-03-23 23:31:43,769] INFO [root._play_song:1047] playing : D GERRARD - นักวิทยาศาสตร์ (Scientist)【Official MV】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:31:43,770] INFO [discord.player._kill_process:206] ffmpeg process 15208 successfully terminated with return code of 0.
+[2024-03-23 23:36:14,524] INFO [root._play_song:1047] playing : D GERRARD - ถามให้ชัวร์ (FEAT. RUZZY TATTOO COLOUR) 【Official Music Video】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:36:14,525] INFO [discord.player._kill_process:206] ffmpeg process 10912 successfully terminated with return code of 0.
+[2024-03-23 23:41:25,594] INFO [root._play_song:1047] playing : คำมั่น - D GERRARD FEAT. AMMY THE BOTTOM BLUES【Official Music Video】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:41:25,595] INFO [discord.player._kill_process:206] ffmpeg process 1052 successfully terminated with return code of 0.
+[2024-03-23 23:46:10,635] INFO [root._play_song:1047] playing : D GERRARD - ช่อดอกไม้ (Bouquet of Flower) Feat.BEN LUSS【Lyric Video】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:46:10,636] INFO [discord.player._kill_process:206] ffmpeg process 7652 successfully terminated with return code of 0.
+[2024-03-23 23:49:35,075] INFO [root._play_song:1047] playing : D Gerrard - ไม่เหมือนใคร [ UNIQUE ] ft. Fatmonkey M.O.E vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:49:35,075] INFO [discord.player._kill_process:206] ffmpeg process 10524 successfully terminated with return code of 0.
+[2024-03-23 23:53:33,127] INFO [root._play_song:1047] playing : D GERRARD - กลับบ้าน (Home) feat.KOB FLATBOY 【Official Music Video 】 vc : <discord.voice_client.VoiceClient object at 0x0000024523F2CEE0>
+[2024-03-23 23:53:33,128] INFO [discord.player._kill_process:206] ffmpeg process 13496 successfully terminated with return code of 0.
+[2024-03-23 23:59:33,193] INFO [discord.player._kill_process:206] ffmpeg process 13244 successfully terminated with return code of 0.
+[2024-03-23 23:59:33,195] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-23 23:59:33,248] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-24 00:50:55,360] ERROR [discord.client.connect:710] Attempting a reconnect in 0.00s
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2024-03-24 00:50:56,111] INFO [discord.gateway.received_message:566] Shard ID None has successfully RESUMED session 284646fe55e11950fee17f9c1257607f.
+[2024-03-24 01:37:51,777] ERROR [discord.client.connect:710] Attempting a reconnect in 0.06s
+Traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\site-packages\discord\gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2024-03-24 01:37:52,543] INFO [discord.gateway.received_message:566] Shard ID None has successfully RESUMED session 284646fe55e11950fee17f9c1257607f.
+[2024-03-24 02:47:21,435] INFO [discord.gateway.received_message:566] Shard ID None has successfully RESUMED session 284646fe55e11950fee17f9c1257607f.
+[2024-03-24 04:01:03,396] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-24 04:01:03,396] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-24 04:01:03,929] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore2573.discord.media
+[2024-03-24 04:01:04,354] INFO [root._play_song:1047] playing : ไม่เหมือนใคร - D GERRARD | คนอย่างผมน่ะมีคนเดียวในโลก! | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x00000245253CD2D0>
+[2024-03-24 04:01:26,253] INFO [root._playplaylist:413] Added : 'รวมเพลง D GERRARD | ดี เจอร์ราร์ด' | In : ɢᴏᴏᴅ ʙᴏʏ. Id :861822386986024980
+[2024-03-24 04:03:16,827] INFO [discord.gateway.received_message:566] Shard ID None has successfully RESUMED session 284646fe55e11950fee17f9c1257607f.
+[2024-03-24 04:04:37,111] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-24 04:04:43,781] INFO [discord.client.login:603] logging in using static token
+[2024-03-24 04:04:44,690] INFO [root.setup_hook:28] Cogs syncing....
+[2024-03-24 04:04:45,217] INFO [root.setup_hook:33] Cogs synced.
+[2024-03-24 04:04:46,032] INFO [discord.gateway.received_message:561] Shard ID None has connected to Gateway (Session ID: 005587f0fc9a69142271291de6c4644b).
+[2024-03-24 04:04:48,242] INFO [root.on_ready:37] Logged in as SH-007#9108
+[2024-03-24 04:05:16,126] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-24 04:05:16,126] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-24 04:05:16,627] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore2573.discord.media
+[2024-03-24 04:05:17,019] INFO [root._play_song:1048] playing : ไม่เหมือนใคร - D GERRARD | คนอย่างผมน่ะมีคนเดียวในโลก! | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07EC43220>
+[2024-03-24 04:05:42,890] INFO [root._playplaylist:414] Added : 'รวมเพลง D GERRARD | ดี เจอร์ราร์ด' | In : ɢᴏᴏᴅ ʙᴏʏ. Id :861822386986024980
+[2024-03-24 04:07:33,266] INFO [discord.voice_client.poll_voice_ws:469] Disconnecting from voice normally, close code 1000.
+[2024-03-24 04:07:33,267] INFO [discord.voice_client.voice_disconnect:346] The voice handshake is being terminated for Channel ID 861822386986024986 (Guild ID 861822386986024980)
+[2024-03-24 04:07:57,266] INFO [discord.voice_client.connect:371] Connecting to voice...
+[2024-03-24 04:07:57,267] INFO [discord.voice_client.prepare_handshake:353] Starting voice handshake... (connection attempt 1)
+[2024-03-24 04:07:57,772] INFO [discord.voice_client.finish_handshake:357] Voice handshake complete. Endpoint found singapore2573.discord.media
+[2024-03-24 04:07:58,189] INFO [root._play_song:1048] playing : ไม่เหมือนใคร - D GERRARD | คนอย่างผมน่ะมีคนเดียวในโลก! | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:08:20,885] INFO [root._playplaylist:414] Added : 'รวมเพลง D GERRARD | ดี เจอร์ราร์ด' | In : ɢᴏᴏᴅ ʙᴏʏ. Id :861822386986024980
+[2024-03-24 04:08:42,927] INFO [root._play_song:1048] playing : นักวิทยาศาสตร์ - D GERRARD | ลบล้างทุกทฤษฎีความรัก | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:08:42,928] INFO [discord.player._kill_process:202] ffmpeg process 1960 has not terminated. Waiting to terminate...
+[2024-03-24 04:08:42,939] INFO [discord.player._kill_process:204] ffmpeg process 1960 should have terminated with a return code of 1.
+[2024-03-24 04:12:42,201] INFO [root._play_song:1048] playing : โลกคู่ขนาน - D GERRARD | อยากพาเธอหนีไปให้แสนไกล~ | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:12:42,202] INFO [discord.player._kill_process:206] ffmpeg process 5904 successfully terminated with return code of 0.
+[2024-03-24 04:18:10,805] INFO [root._play_song:1048] playing : เวทมนตร์ - D GERRARD | ให้มันลืม ลืมว่าเคยมีใจให้เธอ! | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:18:10,851] INFO [discord.player._kill_process:206] ffmpeg process 13704 successfully terminated with return code of 0.
+[2024-03-24 04:21:47,191] INFO [root._play_song:1048] playing : GALAXY - D GERRARD | Come with me to our galaxy | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:21:47,192] INFO [discord.player._kill_process:202] ffmpeg process 1104 has not terminated. Waiting to terminate...
+[2024-03-24 04:21:47,202] INFO [discord.player._kill_process:204] ffmpeg process 1104 should have terminated with a return code of 1.
+[2024-03-24 04:26:40,992] INFO [root._play_song:1048] playing : นักวิทยาศาตร์ (Scientist) - D GERRARD | THE SOLO vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:26:40,993] INFO [discord.player._kill_process:206] ffmpeg process 8108 successfully terminated with return code of 0.
+[2024-03-24 04:30:27,181] INFO [root._play_song:1048] playing : รู้อยู่ - D GERRARD | THE SOLO vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:30:27,182] INFO [discord.player._kill_process:206] ffmpeg process 1856 successfully terminated with return code of 0.
+[2024-03-24 04:35:09,218] INFO [root._play_song:1048] playing : นักวิทยาศาสตร์ - D GERRARD | ลบล้างทุกทฤษฎีความรัก | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:35:09,219] INFO [discord.player._kill_process:206] ffmpeg process 14112 successfully terminated with return code of 0.
+[2024-03-24 04:39:08,501] INFO [root._play_song:1048] playing : โลกคู่ขนาน - D GERRARD | อยากพาเธอหนีไปให้แสนไกล~ | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:39:08,502] INFO [discord.player._kill_process:206] ffmpeg process 3840 successfully terminated with return code of 0.
+[2024-03-24 04:44:38,173] INFO [root._play_song:1048] playing : เวทมนตร์ - D GERRARD | ให้มันลืม ลืมว่าเคยมีใจให้เธอ! | Songtopia Livehouse vc : <discord.voice_client.VoiceClient object at 0x000001F07FFB4280>
+[2024-03-24 04:44:38,184] INFO [discord.player._kill_process:206] ffmpeg process 1144 successfully terminated with return code of 0.

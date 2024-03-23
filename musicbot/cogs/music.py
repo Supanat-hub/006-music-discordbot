@@ -1,6 +1,7 @@
 import asyncio
 from datetime import datetime
 import math
+import sys
 from pytz import timezone
 import logging
 import discord
@@ -8,7 +9,7 @@ from discord import app_commands
 from discord.ext import commands
 from ..video import Video
 from ..playlist import Videoplaylist
-from youtube import youtube_dl
+import yt_dlp as youtube_dl
 import urllib
 
 #url
@@ -19,8 +20,14 @@ YTDL_OPTS = {
     "default_search": "ytsearch",
     "format": "bestaudio/best",
     "quiet": True,
-    "yesplaylis": True,
-    "extract_flat": "in_playlist"
+    "noplaylist": False,
+    "extract_flat": "in_playlist",
+    "no_warnings": True,
+    "postprocessors": [{
+        "key": "FFmpegExtractAudio",
+        "preferredcodec": "m4a",
+        "preferredquality": "192",
+    }],
 }
 
 FFMPEG_BEFORE_OPTS = '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5'
@@ -181,29 +188,27 @@ class Music(commands.Cog):
     )
     async def _play(self, interaction: discord.Interaction, search: str):
         """Plays audio hosted at <url> (or performs a search for <url> and plays the first result)."""
-        message = await interaction.response.send_message("**wait for it....**")
-        url = search
-        client = interaction.guild.voice_client
+        await interaction.response.defer()
         state = self.get_state(interaction.guild_id)  # get the guild's state
         channel = discord.VoiceChannel = None
-        voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
         if not channel:
             try:
                 channel = interaction.user.voice.channel
             except AttributeError:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='กรุณาเชื่อมต่อช่องเสียงก่อน')
-                await interaction.edit_original_response(content=None, embed=emBed5)
+                await interaction.followup.send(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
                 return
-
+        client = interaction.guild.voice_client
         if client and client.channel:
+            voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
             if voice_run.channel != interaction.user.voice.channel:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='คุณไม่ได้อยู่ช่องเดียวกับบอทจึงไม่สามารถใช้คำสั่งนี้ได้\n- ขณะนี้บอทกำลังอยู่ในช่อง **{0}**'.format(voice_run.channel))
                 emBed5.set_author(name="006 music", icon_url=alert_url)
-                await interaction.edit_original_response(content=None, embed=emBed5)
+                await interaction.followup.send(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
                 return 
@@ -211,31 +216,30 @@ class Music(commands.Cog):
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value="Can't add any song when loop is **on**")
                 emBed5.set_author(name="006 music", icon_url=alert_url)
-                await interaction.edit_original_response(content=None, embed=emBed5)
+                await interaction.followup.send(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
                 return 
             try:
-                video = Video(url, interaction.user)
+                video = Video(search, interaction.user)
             except youtube_dl.DownloadError as e:
                 logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
-                await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
+                await interaction.followup.send(content="There was an error downloading your song, **sorry.**", embed=None)
                 return
             state.playlist.append(video)
-            await interaction.edit_original_response(content=None, embed=video.get_embed())
+            await interaction.followup.send(content=None, embed=video.get_embed())
         else:
             if interaction.user.voice is not None and interaction.user.voice.channel is not None:
                 channel = interaction.user.voice.channel
                 try:
-                    video = Video(url, interaction.user)
+                    video = Video(search, interaction.user)
                 except youtube_dl.DownloadError as e:
-                    await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
+                    await interaction.followup.send(content="There was an error downloading your song, **sorry.**", embed=None)
                     return
                 client = await channel.connect()
                 await interaction.guild.change_voice_state(channel=channel, self_mute=False, self_deaf=True)
                 self._play_song(client, state, video)
-                await interaction.edit_original_response(content=None, embed=video.get_embed())
-                logging.info(f"Now playing '{video.title}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
+                await interaction.followup.send(content=None, embed=video.get_embed())
             else:
                 raise commands.CommandError(
                     "You need to be in a voice channel to do that.")
@@ -246,13 +250,13 @@ class Music(commands.Cog):
     )
     async def _playplaylist(self, interaction: discord.Interaction, url: str):
         """Plays audio hosted at <url> (or performs a search for <url> and plays the first result)."""
-        message = await interaction.response.send_message("**wait for it....**")
+        await interaction.response.send_message("**wait for it....**")
         client = interaction.guild.voice_client
         state = self.get_state(interaction.guild_id)  # get the guild's state
         channel = discord.VoiceChannel = None
         voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
         fullstring = url
-        substring = "https://www.youtube.com/playlist"
+        substring = "youtube.com/playlist"
         try:
             if substring in fullstring:
                 pass
@@ -810,6 +814,7 @@ class Music(commands.Cog):
 
         # make sure volume is nonnegative
         if volume < 0:
+            await ctx.send(f"Set volume to **0**")
             volume = 0
 
         max_vol = self.config["max_volume"]
@@ -817,11 +822,13 @@ class Music(commands.Cog):
             # clamp volume to [0, max_vol]
             if volume > max_vol:
                 volume = max_vol
+                await ctx.send(f"Set volume to **{max_vol}**")
+            else:
+                await ctx.send(f"Set volume to {volume}")
 
         client = ctx.guild.voice_client
 
         state.volume = float(volume) / 100.0
-        await ctx.send("✅ฺ")
         client.source.volume = state.volume  # update the AudioSource's volume to match
 
     @commands.command(aliases=["s"])
@@ -1038,6 +1045,12 @@ class Music(commands.Cog):
         state.skip_votes = set()  # clear skip votes
         source = discord.PCMVolumeTransformer(
             discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
+        logging.info(f"playing : {song.title} vc : {client}")
+#         print(f'''------------------------------------------------
+#     song.stream_url = {song.stream_url}
+# -------------------------------------------------
+#               '''
+#               )
 
         def after_playing(err):
             if state.repeat == True:
