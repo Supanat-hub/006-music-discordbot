@@ -19,9 +19,12 @@
 "vote_skip_ratio"=0.5 # the minimum ratio of votes needed to skip a song
 
 ```
-4. install requirements.txt
+4. install lib and start pipenv shell
 ```python
-pip install -r requirements.txt
+pipenv install
+```
+```python
+pipenv shell
 ```
 5. start bot
 ```python
