@@ -118,3 +118,18 @@ class Chord(commands.Cog):
         except:
             await interaction.followup.send(content="Can't find this, Try again later.")
             return
+    @commands.guild_only()
+    @commands.command(
+        name="tap",
+        description="tap guitar for song."
+    )
+    async def _tap(self, interaction: discord.Interaction, song: str):
+        await interaction.response.defer()
+
+        search_term = f"chordtaps {song}"
+        url = f"https://www.google.com/search?q={search_term}&ie=UTF-8"
+        response = requests.get(url)
+        content = response.text
+        soup = BeautifulSoup(content, "html.parser")
+        print(soup)
+        await interaction.followup.send("done.")

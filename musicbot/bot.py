@@ -26,7 +26,7 @@ class Mybot(commands.Bot):
         # await bot.remove_cog("Chord")
         # await bot.remove_cog("CommandErrorHandler")
         logging.info(f"Cogs syncing....")
-        await bot.tree.sync() #dumb way to sync but worked.
+        # await bot.tree.sync()         #dumb way to sync but worked.
         for cog in cogs:
             await bot.add_cog(cog(bot, cfg))
         await bot.tree.sync()
@@ -47,5 +47,11 @@ async def status_task():
         await bot.change_presence(activity=discord.Game(name=f"-help || {len(bot.guilds)} servers."))
         await asyncio.sleep(60)
 
+@app_commands.context_menu(name="get user avatar.")
+async def avatar(interaction: discord.Interaction, user: discord.User):
+    embedd = discord.Embed(title=f"avatar", description=f'- {user.mention}')
+    embedd.set_image(url=user.avatar.url)
+    await interaction.response.send_message(embed=embedd)
+bot.tree.add_command(avatar)
 def run():
-    bot.run(cfg["token"])
+    bot.run(cfg["token"], reconnect=True)
