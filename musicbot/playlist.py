@@ -8,6 +8,7 @@ YTDL_OPTS = {
     "noplaylist": False,
     "extract_flat": "in_playlist",
     "no_warnings": True,
+    "cookiefile": "cookies.txt",
     "postprocessors": [{
         "key": "FFmpegExtractAudio",
         "preferredcodec": "m4a",
