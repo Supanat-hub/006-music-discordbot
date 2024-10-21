@@ -2,6 +2,7 @@ import yt_dlp as ytdl
 import discord
 
 YTDL_OPTS = {
+    "cookiefile": "cookies.txt",
     "default_search": "ytsearch",
     "format": "bestaudio/best",
     "quiet": True,
@@ -21,6 +22,13 @@ class Video:
 
     ydl = ytdl.YoutubeDL(YTDL_OPTS)  # Reuse YoutubeDL instance
 
+    def _get_info(self, video_url):
+        info = self.ydl.extract_info(video_url, download=False)
+        if info.get("_type") == "playlist":
+            return self._get_info(info["entries"][0]["url"])  # get info for first video
+        else:
+            return info
+        
     def __init__(self, url_or_search, requested_by):
         """Plays audio from (or searches for) a URL."""
         video = self._get_info(url_or_search)
@@ -31,12 +39,7 @@ class Video:
         self.thumbnail = video.get("thumbnail")
         self.requested_by = requested_by
 
-    def _get_info(self, video_url):
-        info = self.ydl.extract_info(video_url, download=False)
-        if info.get("_type") == "playlist":
-            return self._get_info(info["entries"][0]["url"])  # get info for first video
-        else:
-            return info
+    
 
     def get_embed(self):
         """Makes an embed out of this Video's information."""

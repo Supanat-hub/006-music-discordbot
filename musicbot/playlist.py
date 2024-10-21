@@ -2,13 +2,13 @@ import yt_dlp as ytdl
 import discord
 
 YTDL_OPTS = {
+    "cookiefile": "cookies.txt",
     "default_search": "ytsearch",
     "format": "bestaudio/best",
     "quiet": True,
     "noplaylist": False,
     "extract_flat": "in_playlist",
     "no_warnings": True,
-    "cookiefile": "cookies.txt",
     "postprocessors": [{
         "key": "FFmpegExtractAudio",
         "preferredcodec": "m4a",
