@@ -5,9 +5,9 @@ name = "pypi"
 
 [packages]
 discord = "==2.3.2"
-"discord.py" = {version = "==2.3.2", extras = ["voice"]}
+"discord.py" = {extras = ["voice"], version = "*"}
 discord-py-slash-command = "==4.2.1"
-pytz = "==2024.1"
+pytz = "*"
 youtube-dl = "*"
 requests = "*"
 beautifulsoup4 = "==4.9.3"

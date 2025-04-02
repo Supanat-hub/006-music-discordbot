@@ -2,6 +2,7 @@
 **This is 006music's source code.**<br>
 - It's free to use.
 - If you want to continue developing it, yes you can.
+- Music player work on youtube, soundcloud, youtube-music, etc.
 ## Getting Started
 **Follow this step by step**
 1. Download the release version
