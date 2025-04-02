@@ -161,7 +161,7 @@ class Music(commands.Cog):
         emBed.add_field(name="-cq", value="เพื่อล้างเพลงทั้งหมดในคิว", inline=False)
         emBed.add_field(name="**หรือจะใช้ SlashCommand ก็ได้นะ**", value="SlashCommand(/) Supported", inline=False)
         emBed.set_thumbnail(url=logo_bot)
-        emBed.set_footer(text="Dev. SUPANAT_hub", icon_url="https://i1.sndcdn.com/avatars-UrODnvlRAOkdT0Rc-U89uhA-t200x200.jpg")
+        emBed.set_footer(text="Dev. SUPANAT_hub", icon_url="https://i.ibb.co/nMCC4Dhs/avatars-Ur-ODnvl-RAOkd-T0-Rc-U89uh-A-t200x200.jpg")
         await interaction.response.send_message(embed=emBed)
     @app_commands.command(
         name = "donate",
@@ -748,7 +748,7 @@ class Music(commands.Cog):
         emBed.add_field(name="-cq", value="เพื่อล้างเพลงทั้งหมดในคิว", inline=False)
         emBed.add_field(name="**หรือจะใช้ SlashCommand ก็ได้นะ**", value="SlashCommand(/) Supported", inline=False)
         emBed.set_thumbnail(url=logo_bot)
-        emBed.set_footer(text="Dev. SUPANAT_hub", icon_url="hhttps://i1.sndcdn.com/avatars-UrODnvlRAOkdT0Rc-U89uhA-t200x200.jpg")
+        emBed.set_footer(text="Dev. SUPANAT_hub", icon_url="https://i1.sndcdn.com/avatars-UrODnvlRAOkdT0Rc-U89uhA-t200x200.jpg")
         await ctx.send(embed=emBed)
 
     @commands.command(aliases=["stop", "l", "L"])
