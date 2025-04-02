@@ -133,3 +133,6 @@ class Chord(commands.Cog):
         soup = BeautifulSoup(content, "html.parser")
         print(soup)
         await interaction.followup.send("done.")
+async def setup(bot):
+    config = bot.config
+    await bot.add_cog(Chord(bot, config))

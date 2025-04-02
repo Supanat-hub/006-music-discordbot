@@ -1065,6 +1065,11 @@ class Music(commands.Cog):
                 else:
                     pass
         client.play(source, after=after_playing)
+
+async def setup(bot):
+    config = bot.config  # ดึง config จาก bot
+    await bot.add_cog(Music(bot, config))  # ส่ง config ไปให้ Music
+
 class GuildState:
     """Helper class managing per-guild state."""
 

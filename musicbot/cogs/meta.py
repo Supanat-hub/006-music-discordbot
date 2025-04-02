@@ -23,3 +23,6 @@ class Meta(commands.Cog):
     @commands.command()
     async def text_test(self, ctx):
         await ctx.send("<a:C_U_M:967790150094561310>")
+async def setup(bot):
+    config = bot.config
+    await bot.add_cog(Meta(bot, config))

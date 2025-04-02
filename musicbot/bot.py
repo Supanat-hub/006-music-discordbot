@@ -1,40 +1,40 @@
 import discord
 import logging
-import os
-import sys
-from discord.ext import commands, tasks
-from discord import Intents
-from discord import app_commands
-from .cogs import music, error, meta, chord
-import aiohttp
 import asyncio
+from discord.ext import commands, tasks
+from discord import Intents, app_commands
+from .cogs import music, error, meta, chord
 from . import config
+
 cfg = config.load_config()
-cogs = [music.Music, error.CommandErrorHandler, meta.Meta, chord.Chord]
+# cogs = [music.Music, error.CommandErrorHandler, meta.Meta, chord.Chord]
+
 class Mybot(commands.Bot):
     def __init__(self):
         super().__init__(
-            command_prefix = cfg["prefix"],
-            intents = Intents.all(),
+            command_prefix=cfg["prefix"],
+            intents=Intents.all(),
             help_command=None,
-            application_id = cfg["app_id"]
+            application_id=cfg["app_id"]
         )
-    
+        self.synced = False  # ป้องกันการ sync ซ้ำ
+        self.config = config.load_config()
+
     async def setup_hook(self):
-        # await bot.remove_cog("Meta")
-        # await bot.remove_cog("Music")
-        # await bot.remove_cog("Chord")
-        # await bot.remove_cog("CommandErrorHandler")
-        logging.info(f"Cogs syncing....")
-        # await bot.tree.sync()         #dumb way to sync but worked.
+        logging.info("Loading Cogs...")
+        cogs = ["musicbot.cogs.music", "musicbot.cogs.meta", "musicbot.cogs.error", "musicbot.cogs.chord"]  # รายชื่อ Cog
         for cog in cogs:
-            await bot.add_cog(cog(bot, cfg))
-        await bot.tree.sync()
-        logging.info(f"Cogs synced.")
-        
+            await self.load_extension(cog)
+            # await self.add_cog(cog(self, cfg))
+        logging.info("Cogs Loaded.")
+
     async def on_ready(self):
+        if not self.synced:
+            await self.tree.sync()
+            self.synced = True
+            logging.info("Commands synced.")
         status_task.start()
-        logging.info(f"Logged in as {bot.user}")
+        logging.info(f"Logged in as {self.user}")
 
 bot = Mybot()
 
@@ -42,16 +42,17 @@ bot = Mybot()
 async def on_guild_join(guild):
     await bot.change_presence(activity=discord.Game(name=f"-help || {len(bot.guilds)} servers."))
 
-@tasks.loop()
+@tasks.loop(seconds=60)
 async def status_task():
-        await bot.change_presence(activity=discord.Game(name=f"-help || {len(bot.guilds)} servers."))
-        await asyncio.sleep(60)
+    await bot.change_presence(activity=discord.Game(name=f"-help || {len(bot.guilds)} servers."))
 
-@app_commands.context_menu(name="get user avatar.")
+@app_commands.context_menu(name="Get User Avatar")
 async def avatar(interaction: discord.Interaction, user: discord.User):
-    embedd = discord.Embed(title=f"avatar", description=f'- {user.mention}')
-    embedd.set_image(url=user.avatar.url)
-    await interaction.response.send_message(embed=embedd)
+    embed = discord.Embed(title="Avatar", description=f"- {user.mention}")
+    embed.set_image(url=user.avatar.url)
+    await interaction.response.send_message(embed=embed)
+
 bot.tree.add_command(avatar)
+
 def run():
     bot.run(cfg["token"], reconnect=True)

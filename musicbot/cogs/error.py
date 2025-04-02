@@ -32,3 +32,6 @@ class CommandErrorHandler(commands.Cog):
         logging.warn("\n" + "".join(
             traceback.format_exception(
                 type(error), error, error.__traceback__)))
+async def setup(bot):
+    config = bot.config
+    await bot.add_cog(CommandErrorHandler(bot, config))
