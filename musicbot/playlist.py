@@ -4,7 +4,7 @@ import discord
 YTDL_OPTS = {
     "cookiefile": "cookies.txt",
     "default_search": "ytsearch",
-    "format": "bestaudio/best",
+    "format": "bestaudio[ext=m4a]",
     "quiet": True,
     "noplaylist": False,
     "extract_flat": "in_playlist",
@@ -12,8 +12,10 @@ YTDL_OPTS = {
     "postprocessors": [{
         "key": "FFmpegExtractAudio",
         "preferredcodec": "m4a",
-        "preferredquality": "192",
+        "preferredquality": "128",
     }],
+    "socket_timeout": 10,
+    "retries": 3,
 }
 
 musicrun_logo = "https://i.ibb.co/6s134j9/musicrun.gif"
