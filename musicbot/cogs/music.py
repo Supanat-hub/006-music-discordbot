@@ -8,7 +8,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 from ..video import Video
-from ..playlist import Videoplaylist
+from ..un_use.playlist import Videoplaylist
 import yt_dlp as youtube_dl
 import urllib
 
@@ -74,6 +74,11 @@ def timetz(*args):
 tz = timezone('Asia/Bangkok') #time zone list https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568
 logging.Formatter.converter = timetz
 
+def make_progress_bar(current, total, tag='Downloading', bar_length=10):
+    filled_length = int(bar_length * current // total)
+    bar = '🟦' * filled_length + '⬜' * (bar_length - filled_length)
+    percent = int(100 * current / total)
+    return f"**{tag}**\n{bar} `{current}/{total} ({percent}%)`"
 
 class Music(commands.Cog):
     def __init__(self, bot: commands.Bot, config) -> None:
@@ -321,8 +326,8 @@ class Music(commands.Cog):
                 with youtube_dl.YoutubeDL(YTDL_OPTS) as ydl:
                     info = ydl.extract_info(url, download=False)
                     video = None
-                    num_song = 0
-                    d = len(info['entries'])
+                    entries = info["entries"]
+                    d = len(entries)
                     if d > 50:
                         emBed5 = discord.Embed(color=0xff0000)
                         emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='ไม่สามารถเล่นได้ เนื่องจากมีวิดีโอในเพลลิสต์มากกว่า 50 ')
@@ -333,27 +338,30 @@ class Music(commands.Cog):
                         return
                     if "_type" in info and info["_type"] == "playlist":
                         await interaction.edit_original_response(content="**processing...**")
-                        time = 1
-                        check = 5
-                        for entry in info["entries"]:
-                            if time == check:
-                                voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
-                                check += 10
-                                if voice_run == None:
-                                    state.finish = False
-                                    break
-                            video = Videoplaylist(url, interaction.user, num_song=num_song)
-                            state.playlist.append(video)
-                            await interaction.edit_original_response(content=f"**added {time}/{d} song.**")
-                            time += 1
-                            num_song+=1
+                        itac = interaction.user
+                        success = 0
+                        fail = 0
+                        for i, entry in enumerate(entries):
+                            video_url = entry.get('webpage_url') or entry.get('url')
+                            if not video_url:
+                                continue
+                            try:
+                                video = await asyncio.to_thread(Video, video_url, itac)
+                                state.playlist.append(video)
+                                success += 1
+                            except Exception as e:
+                                logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
+                                fail += 1
+                                continue
+                            if (i+1) % 2 == 0 or (i+1) == d:
+                                bar = make_progress_bar(i+1, d)
+                                await interaction.edit_original_response(content=f"{bar} เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}")
             except youtube_dl.DownloadError as e:
                 logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
                 return
             if state.finish == True:
-                    await interaction.edit_original_response(content=None, embed=video.get_embed())
-                    logging.info(f"Added : '{video.title_playlist}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
+                    await interaction.edit_original_response(content=f"**เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}**", embed=state.playlist[0].get_embed())
             else:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
@@ -362,7 +370,6 @@ class Music(commands.Cog):
                 state.playlist = []
                 state.repeat = False
                 state.now_playing = None
-                logging.info(f"Fail to add : '{video.title_playlist}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 state.finish = True
         else:
             if interaction.user.voice is not None and interaction.user.voice.channel is not None:
@@ -374,7 +381,8 @@ class Music(commands.Cog):
                     return
                 with youtube_dl.YoutubeDL(YTDL_OPTS) as ydl:
                     info = ydl.extract_info(url, download=False)
-                    d = len(info['entries'])
+                    entries = info["entries"]
+                    d = len(entries)
                     if d > 50:
                         emBed5 = discord.Embed(color=0xff0000)
                         emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='ไม่สามารถเล่นได้ เนื่องจากมีวิดีโอในเพลลิสต์มากกว่า 50 ')
@@ -389,29 +397,33 @@ class Music(commands.Cog):
                 try:
                     with youtube_dl.YoutubeDL(YTDL_OPTS) as ydl:
                         info = ydl.extract_info(url, download=False)
+                        entries = info["entries"]
+                        d = len(entries)
                         video = None
-                        num_song = 1
-                        time = 1
-                        check2 = 5
                     if "_type" in info and info["_type"] == "playlist":
                         await interaction.edit_original_response(content="**processing...**")
-                        for entry in info["entries"]:
-                            if time == check2:
-                                voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
-                                check2 += 10
-                                if voice_run == None:
-                                    state.finish = False
-                                    break
-                            video = Videoplaylist(url, interaction.user, num_song=num_song)
-                            state.playlist.append(video)
-                            await interaction.edit_original_response(content=f"**added {time}/{d} song.**")
-                            time += 1
-                            num_song+=1
+                        itac = interaction.user
+                        success = 1
+                        fail = 0
+                        for i, entry in enumerate(entries[1:], start=1):
+                            video_url = entry.get('webpage_url') or entry.get('url')
+                            if not video_url:
+                                continue
+                            try:
+                                video = await asyncio.to_thread(Video, video_url, itac)
+                                state.playlist.append(video)
+                                success += 1
+                            except Exception as e:
+                                logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
+                                fail += 1
+                                continue
+                            if (i+1) % 2 == 0 or (i+1) == d:
+                                bar = make_progress_bar(i+1, d)
+                                await interaction.edit_original_response(content=f"{bar} เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}")
                 except:
                     pass
                 if state.finish == True:
-                    await interaction.edit_original_response(content=None, embed=video.get_embed())
-                    logging.info(f"Added : '{video.title_playlist}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
+                    await interaction.edit_original_response(content=f"**เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}**", embed=state.now_playing.get_embed())
                 else:
                     emBed5 = discord.Embed(color=0xff0000)
                     emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
@@ -420,7 +432,6 @@ class Music(commands.Cog):
                     state.playlist = []
                     state.repeat = False
                     state.now_playing = None
-                    logging.info(f"Fail to add : '{video.title_playlist}' | In : {interaction.guild.name} Id :{interaction.guild_id}")
                     state.finish = True
                 
             else:
