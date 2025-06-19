@@ -184,7 +184,9 @@ class Music(commands.Cog):
         description="get user avater."
     )
     async def _avatar(self, interaction: discord.Interaction, member: discord.Member):
-        await interaction.response.send_message(f'{str(member.avatar)}')
+        embed = discord.Embed(title="Avatar", description=f"- {member.mention}")
+        embed.set_image(url=member.avatar.url)
+        await interaction.response.send_message(embed=embed)
     
     @app_commands.guild_only()
     @app_commands.command(
@@ -350,14 +352,14 @@ class Music(commands.Cog):
                                 state.playlist.append(video)
                                 success += 1
                             except Exception as e:
-                                logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
+                                logging.error(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
                                 fail += 1
                                 continue
                             if (i+1) % 2 == 0 or (i+1) == d:
                                 bar = make_progress_bar(i+1, d)
                                 await interaction.edit_original_response(content=f"{bar} เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}")
             except youtube_dl.DownloadError as e:
-                logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
+                logging.error(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
                 return
             if state.finish == True:
