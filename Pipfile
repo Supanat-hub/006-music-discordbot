@@ -10,10 +10,11 @@ discord-py-slash-command = "==4.2.1"
 pytz = "*"
 youtube-dl = "*"
 requests = "*"
-beautifulsoup4 = "==4.9.3"
 urlextract = "==1.8.0"
 toml = "==0.10.2"
 yt-dlp = "*"
+aiohttp = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 

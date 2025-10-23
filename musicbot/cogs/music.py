@@ -1,16 +1,15 @@
 import asyncio
 from datetime import datetime
 import math
-import sys
 from pytz import timezone
 import logging
 import discord
 from discord import app_commands
 from discord.ext import commands
 from ..video import Video
-from ..un_use.playlist import Videoplaylist
 import yt_dlp as youtube_dl
 import urllib
+from ..utils.lyrics_scraper import get_lyrics, split_artist_title, chunk_text
 
 #url
 alert_url = "https://i.ibb.co/ykzmssp/aleart.gif"
@@ -250,6 +249,26 @@ class Music(commands.Cog):
             else:
                 raise commands.CommandError(
                     "You need to be in a voice channel to do that.")
+            
+    @app_commands.guild_only()
+    @app_commands.command(name="lyrics", description="ดึงเนื้อเพลงจากชื่อเพลงที่ระบุ")
+    async def lyrics(self, interaction: discord.Interaction, song: str):
+        """ผู้ใช้พิมพ์ชื่อเพลงเข้ามา เช่น 'Ariana Grande - pov'"""
+        await interaction.response.defer(thinking=True)
+        # พยายามแยก artist–title จากข้อความที่ผู้ใช้กรอก
+        artist, title = split_artist_title(song, fallback_artist="Unknown")
+        text = await get_lyrics(artist, title)
+        if not text:
+            await interaction.followup.send(f"หาเนื้อเพลงไม่เจอสำหรับ **{artist} – {title}** 😢")
+            return
+
+        for i, part in enumerate(chunk_text(text, limit=3900), start=1):
+            embed = discord.Embed(
+                title=f"เนื้อเพลง: {artist} – {title}" + (f" (ส่วน {i})" if i > 1 else ""),
+                description=part, color=0xF3F4F9
+            )
+            await interaction.followup.send(embed=embed)
+    
     @app_commands.guild_only()
     @app_commands.command(
         name="play-playlist",
