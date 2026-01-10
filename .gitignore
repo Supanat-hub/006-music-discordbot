@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+env/
+venv/
+Pipfile.lock
+
+# Configuration & Secrets 
+config.toml
+.env
+cookies.txt
+
+# Logs
+*.log
