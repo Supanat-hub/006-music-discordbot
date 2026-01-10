@@ -76,48 +76,48 @@ class Chord(commands.Cog):
             await interaction.followup.send(content="Sorry, the api has reached its limit for this month.")
             return
 
-    @app_commands.guild_only()
-    @app_commands.command(
-        name="lyrics",
-        description="Lyrics for song."
-    )
-    async def _lyrics(self, interaction: discord.Interaction, song: str):
-        await interaction.response.defer()
+    # @app_commands.guild_only()
+    # @app_commands.command(
+    #     name="lyrics",
+    #     description="Lyrics for song."
+    # )
+    # async def _lyrics(self, interaction: discord.Interaction, song: str):
+    #     await interaction.response.defer()
 
-        search_term = f"{song}+chordzaa"
-        url = f"https://www.google.com/search?q={search_term}&ie=UTF-8"
-        response = requests.get(url)
-        content = response.text
-        soup = BeautifulSoup(content, "html.parser")
+    #     search_term = f"{song}+chordzaa"
+    #     url = f"https://www.google.com/search?q={search_term}&ie=UTF-8"
+    #     response = requests.get(url)
+    #     content = response.text
+    #     soup = BeautifulSoup(content, "html.parser")
         
-        try:
-            results = soup.find_all("a")
-            extractor = URLExtract()
-            urls = extractor.find_urls(str(results))
-            url = str(urls[1]).replace("&amp", "")
-            url = url.replace("%25", "%")
-        except:
-            await interaction.followup.send(content="Can't find this, Try again later.")
-            return
-        if url == "https://www.chordzaa.com/":
-            await interaction.followup.send(content="Can't find this song.")
-            return
-        response = requests.get(url)
-        soup = BeautifulSoup(response.text, "html.parser")
-        basename = "lyrics"
-        suffix = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
-        filename = "_".join([basename, suffix])
-        try:
-            text = soup.find("div", id="lyric_r")
-            text = str(text)
-            retag = re.compile('<.*?>')
-            output = retag.sub("", text)
-            with open(f"txt/{filename}.txt", "w", encoding="utf-8") as f:
-                    f.write(output)
-            await interaction.followup.send(file=discord.File(f"txt/{filename}.txt"))
-        except:
-            await interaction.followup.send(content="Can't find this, Try again later.")
-            return
+    #     try:
+    #         results = soup.find_all("a")
+    #         extractor = URLExtract()
+    #         urls = extractor.find_urls(str(results))
+    #         url = str(urls[1]).replace("&amp", "")
+    #         url = url.replace("%25", "%")
+    #     except:
+    #         await interaction.followup.send(content="Can't find this, Try again later.")
+    #         return
+    #     if url == "https://www.chordzaa.com/":
+    #         await interaction.followup.send(content="Can't find this song.")
+    #         return
+    #     response = requests.get(url)
+    #     soup = BeautifulSoup(response.text, "html.parser")
+    #     basename = "lyrics"
+    #     suffix = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
+    #     filename = "_".join([basename, suffix])
+    #     try:
+    #         text = soup.find("div", id="lyric_r")
+    #         text = str(text)
+    #         retag = re.compile('<.*?>')
+    #         output = retag.sub("", text)
+    #         with open(f"txt/{filename}.txt", "w", encoding="utf-8") as f:
+    #                 f.write(output)
+    #         await interaction.followup.send(file=discord.File(f"txt/{filename}.txt"))
+    #     except:
+    #         await interaction.followup.send(content="Can't find this, Try again later.")
+    #         return
     @commands.guild_only()
     @commands.command(
         name="tap",

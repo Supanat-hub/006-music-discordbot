@@ -12,9 +12,10 @@ youtube-dl = "*"
 requests = "*"
 urlextract = "==1.8.0"
 toml = "==0.10.2"
-yt-dlp = "*"
 aiohttp = "*"
 beautifulsoup4 = "*"
+youtube-dlp = "*"
+yt-dlp = "*"
 
 [dev-packages]
 

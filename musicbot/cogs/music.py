@@ -16,20 +16,22 @@ alert_url = "https://i.ibb.co/ykzmssp/aleart.gif"
 logo_bot = "https://i.ibb.co/6PmVgYx/logo-bot.png"
 
 YTDL_OPTS = {
-    "default_search": "ytsearch",
+    "no_check_certificate": True,
+    "restrictfilenames": True,
+    "outtmpl": "%(extractor)s-%(id)s-%(title)s.%(ext)s",
+    "cookiefile": "cookies.txt",
+    "default_search": "auto",
     "format": "bestaudio/best",
     "quiet": True,
-    "noplaylist": False,
+    "noplaylist": True,
     "extract_flat": "in_playlist",
     "no_warnings": True,
-    "postprocessors": [{
-        "key": "FFmpegExtractAudio",
-        "preferredcodec": "m4a",
-        "preferredquality": "192",
-    }],
+    "source_address": "0.0.0.0",
+    "socket_timeout": 10,
+    "retries": 3,
 }
 
-FFMPEG_BEFORE_OPTS = '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5'
+FFMPEG_BEFORE_OPTS = '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5 -probesize 10M'
 """
 Command line options to pass to `ffmpeg` before the `-i`.
 
@@ -93,6 +95,61 @@ class Music(commands.Cog):
             self.states[guild] = GuildState()
             return self.states[guild]
 
+    async def _play_next(self, ctx, state):
+        """ฟังก์ชันสำหรับเตรียมเพลงถัดไป (Lazy Load) แล้วส่งไปเล่น"""
+        if len(state.playlist) > 0:
+            song = state.playlist.pop(0)
+            
+            try:
+                logging.info(f"🔄 Refreshing link for: {song.title}")
+                await song.refresh_stream_url(self.bot.loop)
+                self._play_song(ctx.guild.voice_client, state, song)
+                
+            except Exception as e:
+                logging.error(f"Error refreshing song {song.title}: {e}")
+                await ctx.send(f"⚠️ เล่นเพลง {song.title} ไม่ได้ (Link Error) กำลังข้าม...", delete_after=10)
+                await self._play_next(ctx, state)
+        else:
+            logging.info("Queue finished.")
+
+
+    def _play_song(self, client, state, song):
+        # สร้าง Source
+        source = discord.PCMVolumeTransformer(
+            discord.FFmpegPCMAudio(
+                song.stream_url, 
+                before_options=FFMPEG_BEFORE_OPTS,
+                options='-vn'
+            ),
+            volume=state.volume
+        )
+
+        def after_playing(err):
+            if err:
+                logging.error(f"Player error: {err}")
+            
+            # กรณี Loop เพลงเดิม
+            if state.repeat:
+                # ถ้า Loop ก็ต้องเรียกผ่าน Task เหมือนกัน (เผื่อลิงก์หมดอายุระหว่าง Loop)
+                coro = song.refresh_stream_url(self.bot.loop)
+                future = asyncio.run_coroutine_threadsafe(coro, self.bot.loop)
+                try:
+                    future.result() # รอให้ Refresh เสร็จ
+                    self._play_song(client, state, song)
+                except Exception:
+                    # ถ้า Refresh ไม่ผ่านตอน Loop ให้ข้าม
+                    asyncio.run_coroutine_threadsafe(self._play_next(client.guild, state), self.bot.loop)
+                return
+
+            # กรณีเล่นเพลงถัดไป
+            asyncio.run_coroutine_threadsafe(
+                self._play_next(client.guild, state), 
+                self.bot.loop
+            )
+
+        client.play(source, after=after_playing)
+        logging.info(f"▶️ Now playing: {song.title}")
+
     @commands.Cog.listener()
     async def on_voice_state_update(self, member, before, after):
         state = self.get_state(member.guild.id)
@@ -147,26 +204,6 @@ class Music(commands.Cog):
             await interaction.response.send_message(content="**Done!**", embed=None, ephemeral=True)
         else:
             await interaction.response.send_message(content="**You must to be an adminstrator.!**", embed=None, ephemeral=True)
-    @app_commands.command(
-        name="help",
-        description="show help command"
-    )
-    async def _help(self, interaction: discord.Interaction):
-        emBed = discord.Embed(title="**006 music help**", description="All actailable bot command", color=0xF3F4F9)
-        emBed.add_field(name="-help", value="เพื่อดูว่า ณ ตอนนี้มีคำสั่งอะไรบ้าง", inline=False)
-        emBed.add_field(name="-play + url หรือ ชื่อเพลง [ ย่อๆว่า : -p ]", value="เพื่อเล่นเพลง", inline=False)
-        emBed.add_field(name="-skip [ ย่อๆว่า : -s ]", value="เพื่อข้ามเพลง", inline=False)
-        emBed.add_field(name="-pause", value="เพื่อหยุดเล่นเพลงชั่วคราว/หรือเล่นเพลงต่อ", inline=False)
-        emBed.add_field(name="-np", value="ดูเพลงที่กำลังเล่นอยู่", inline=False)
-        emBed.add_field(name="-v + ค่าความดัง 0 ถึง 250", value="เพื่อเพิ่ม/ลดเสียง", inline=False)
-        emBed.add_field(name="-leave [ ย่อๆว่า : -l ]", value="เพื่อให้บอทออกจากช่อง", inline=False)
-        emBed.add_field(name="-bug", value="ช่องทาง report bug มาที่ผู้สร้าง", inline=False)
-        emBed.add_field(name="-queue", value="เพื่อดูคิวเพลง", inline=False)
-        emBed.add_field(name="-cq", value="เพื่อล้างเพลงทั้งหมดในคิว", inline=False)
-        emBed.add_field(name="**หรือจะใช้ SlashCommand ก็ได้นะ**", value="SlashCommand(/) Supported", inline=False)
-        emBed.set_thumbnail(url=logo_bot)
-        emBed.set_footer(text="Dev. SUPANAT_hub", icon_url="https://i.ibb.co/nMCC4Dhs/avatars-Ur-ODnvl-RAOkd-T0-Rc-U89uh-A-t200x200.jpg")
-        await interaction.response.send_message(embed=emBed)
     @app_commands.command(
         name = "donate",
         description = "Donate server charge."
@@ -227,18 +264,20 @@ class Music(commands.Cog):
                 await interaction.delete_original_response()
                 return 
             try:
-                video = Video(search, interaction.user)
+                video = await Video.create(search, interaction.user, self.bot.loop)
             except youtube_dl.DownloadError as e:
                 logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
                 await interaction.followup.send(content="There was an error downloading your song, **sorry.**", embed=None)
                 return
             state.playlist.append(video)
+            if not client.is_playing():
+                await self._play_next(interaction, state)
             await interaction.followup.send(content=None, embed=video.get_embed())
         else:
             if interaction.user.voice is not None and interaction.user.voice.channel is not None:
                 channel = interaction.user.voice.channel
                 try:
-                    video = Video(search, interaction.user)
+                    video = await Video.create(search, interaction.user, self.bot.loop)
                 except youtube_dl.DownloadError as e:
                     await interaction.followup.send(content="There was an error downloading your song, **sorry.**", embed=None)
                     return
@@ -765,24 +804,6 @@ class Music(commands.Cog):
         emBed.add_field(name='__**Pong! 🏓**__', value=f"👉 ping: {round(self.bot.latency * 1000)} ms 👈")
         await ctx.send(embed=emBed)
 
-    @commands.command(aliases=["h", "H"])
-    async def help(self, ctx):
-        emBed = discord.Embed(title="**006 music help**", description="All actailable bot command", color=0xF3F4F9)
-        emBed.add_field(name="-help", value="เพื่อดูว่า ณ ตอนนี้มีคำสั่งอะไรบ้าง", inline=False)
-        emBed.add_field(name="-play + url หรือ ชื่อเพลง [ ย่อๆว่า : -p ]", value="เพื่อเล่นเพลง", inline=False)
-        emBed.add_field(name="-skip [ ย่อๆว่า : -s ]", value="เพื่อข้ามเพลง", inline=False)
-        emBed.add_field(name="-pause", value="เพื่อหยุดเล่นเพลงชั่วคราว/หรือเล่นเพลงต่อ", inline=False)
-        emBed.add_field(name="-np", value="ดูเพลงที่กำลังเล่นอยู่", inline=False)
-        emBed.add_field(name="-v + ค่าความดัง 0 ถึง 250", value="เพื่อเพิ่ม/ลดเสียง", inline=False)
-        emBed.add_field(name="-leave [ ย่อๆว่า : -l ]", value="เพื่อให้บอทออกจากช่อง", inline=False)
-        emBed.add_field(name="-bug", value="ช่องทาง report bug มาที่ผู้สร้าง", inline=False)
-        emBed.add_field(name="-queue", value="เพื่อดูคิวเพลง", inline=False)
-        emBed.add_field(name="-cq", value="เพื่อล้างเพลงทั้งหมดในคิว", inline=False)
-        emBed.add_field(name="**หรือจะใช้ SlashCommand ก็ได้นะ**", value="SlashCommand(/) Supported", inline=False)
-        emBed.set_thumbnail(url=logo_bot)
-        emBed.set_footer(text="Dev. SUPANAT_hub", icon_url="https://i1.sndcdn.com/avatars-UrODnvlRAOkdT0Rc-U89uhA-t200x200.jpg")
-        await ctx.send(embed=emBed)
-
     @commands.command(aliases=["stop", "l", "L"])
     @commands.guild_only()
     # @commands.has_permissions(administrator=True)
@@ -1031,7 +1052,7 @@ class Music(commands.Cog):
                 await ctx.message.delete()
                 return 
             try:
-                video = Video(url, ctx.author)
+                video = await Video.create(url, ctx.author, self.bot.loop)
             except youtube_dl.DownloadError as e:
                 logging.warn(f"Error downloading song: {e} | In : {ctx.guild.name} Id :{ctx.guild.id}")
                 await ctx.send(
@@ -1043,7 +1064,7 @@ class Music(commands.Cog):
             if ctx.author.voice is not None and ctx.author.voice.channel is not None:
                 channel = ctx.author.voice.channel
                 try:
-                    video = Video(url, ctx.author)
+                    video = await Video.create(url, ctx.author, self.bot.loop)
                 except youtube_dl.DownloadError as e:
                     await ctx.send(
                         "There was an error downloading your song, **sorry.**")
@@ -1070,33 +1091,6 @@ class Music(commands.Cog):
             # enough members have voted to skip, so skip the song
             logging.info(f"Enough votes, skipping... | In : {member.guild.name} Id :{member.guild.id}")
             channel.guild.voice_client.stop()
-
-
-    def _play_song(self, client, state, song):
-        state.now_playing = song
-        state.skip_votes = set()  # clear skip votes
-        source = discord.PCMVolumeTransformer(
-            discord.FFmpegPCMAudio(song.stream_url, before_options=FFMPEG_BEFORE_OPTS), volume=state.volume)
-        logging.info(f"playing : {song.title} vc : {client}")
-#         print(f'''------------------------------------------------
-#     song.stream_url = {song.stream_url}
-# -------------------------------------------------
-#               '''
-#               )
-
-        def after_playing(err):
-            if state.repeat == True:
-                self._play_song(client, state, song)
-                return
-            if len(state.playlist) > 0:
-                next_song = state.playlist.pop(0)
-                self._play_song(client, state, next_song)
-            else:
-                if len(state.playlist) <= 0:
-                    asyncio.run_coroutine_threadsafe(client.disconnect(),self.bot.loop)
-                else:
-                    pass
-        client.play(source, after=after_playing)
 
 async def setup(bot):
     config = bot.config  # ดึง config จาก bot
