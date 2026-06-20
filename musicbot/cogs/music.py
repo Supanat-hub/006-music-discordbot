@@ -109,16 +109,17 @@ class Music(commands.Cog):
                 
             except Exception as e:
                 logging.error(f"Error refreshing song {song.title}: {e}")
-                if state.text_channel:
-                    try:
-                        await state.text_channel.send(f"⚠️ เล่นเพลง {song.title} ไม่ได้ (Link Error) กำลังข้าม...", delete_after=10)
-                    except Exception:
-                        pass
+                # if state.text_channel:
+                #     try:
+                #         # await state.text_channel.send(f"⚠️ เล่นเพลง {song.title} ไม่ได้ (Link Error) กำลังข้าม...", delete_after=10)
+                #         pass
+                #     except Exception:
+                #         pass
                 await self._play_next(ctx, state)
         else:
             state.now_playing = None
-            logging.info("Queue finished.")
-
+            await ctx.guild.voice_client.disconnect()
+            logging.info("Queue finished so disconnected.")
 
     def _play_song(self, client, state, song):
         state.now_playing = song

@@ -1,0 +1,687 @@
+[2026-06-20 22:55:49,265] INFO [root._play_next:106] 🔄 Refreshing link for: SARAN - อารัมภบท (Official Music Video)
+[2026-06-20 22:55:49,265] INFO [discord.player._kill_process:278] ffmpeg process 3792 successfully terminated with return code of 0.
+[2026-06-20 22:55:50,583] INFO [root._play_song:159] ▶️ Now playing: SARAN - อารัมภบท (Official Music Video)
+[2026-06-20 22:59:12,589] INFO [discord.player._kill_process:278] ffmpeg process 14248 successfully terminated with return code of 0.
+[2026-06-20 22:59:12,590] INFO [root._play_next:120] Queue finished.
+[2026-06-20 23:21:49,847] INFO [discord.gateway.received_message:584] Shard ID None has successfully RESUMED session d8114d31eb7150b47661d3650cd410c9.
+[2026-06-20 23:43:08,456] INFO [root._play_next:106] 🔄 Refreshing link for: Plazedez - ไม่อยาก (Not Ready) | Official Audio
+[2026-06-20 23:43:09,975] INFO [root._play_song:159] ▶️ Now playing: Plazedez - ไม่อยาก (Not Ready) | Official Audio
+[2026-06-20 23:45:53,433] INFO [discord.player._kill_process:278] ffmpeg process 6096 successfully terminated with return code of 0.
+[2026-06-20 23:45:53,433] INFO [root._play_next:120] Queue finished.
+[2026-06-20 23:49:25,249] INFO [discord.voice_state._voice_disconnect:636] The voice handshake is being terminated for Channel ID 949180602907762758 (Guild ID 861822386986024980)
+[2026-06-20 23:50:47,828] INFO [discord.client.login:670] logging in using static token
+[2026-06-20 23:50:48,743] INFO [root.setup_hook:25] Loading Cogs...
+[2026-06-20 23:50:50,985] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.music
+[2026-06-20 23:50:51,000] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.meta
+[2026-06-20 23:50:51,006] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.error
+[2026-06-20 23:50:51,075] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.chord
+[2026-06-20 23:50:51,075] INFO [root.setup_hook:35] Setup complete.
+[2026-06-20 23:50:52,102] INFO [discord.gateway.received_message:579] Shard ID None has connected to Gateway (Session ID: 7f0fd4efbe6d3c48df3f24791473bd02).
+[2026-06-20 23:50:54,525] INFO [root.on_ready:38] Logged in as 006 music#6847 (ID: 880982026314985523)
+[2026-06-20 23:51:16,048] INFO [discord.voice_state._connect:497] Connecting to voice...
+[2026-06-20 23:51:16,048] INFO [discord.voice_state._inner_connect:470] Starting voice handshake... (connection attempt 1)
+[2026-06-20 23:51:16,576] INFO [discord.voice_state._inner_connect:479] Voice handshake complete. Endpoint found: c-sin11-ed24ec42.discord.media:443
+[2026-06-20 23:51:16,963] INFO [discord.voice_state._connect:503] Voice connection complete.
+[2026-06-20 23:51:16,976] INFO [root._play_song:159] ▶️ Now playing: SARAN X BlackHeart - มากกว่ารัก (REMIX VERSION)
+[2026-06-20 23:53:21,653] INFO [discord.player._kill_process:278] ffmpeg process 10792 successfully terminated with return code of 0.
+[2026-06-20 23:53:21,653] INFO [discord.voice_state._voice_disconnect:636] The voice handshake is being terminated for Channel ID 949180602907762758 (Guild ID 861822386986024980)
+[2026-06-20 23:53:21,990] INFO [root._play_next:121] Queue finished so disconnected.
+[2026-06-21 00:07:43,629] INFO [discord.gateway.received_message:584] Shard ID None has successfully RESUMED session 7f0fd4efbe6d3c48df3f24791473bd02.
+[2026-06-21 00:37:32,274] INFO [discord.client.login:670] logging in using static token
+[2026-06-21 00:38:07,140] INFO [discord.client.login:670] logging in using static token
+[2026-06-21 00:38:14,985] INFO [root.setup_hook:25] Loading Cogs...
+[2026-06-21 00:38:15,586] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.music
+[2026-06-21 00:38:15,589] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.meta
+[2026-06-21 00:38:15,589] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.error
+[2026-06-21 00:38:15,606] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.chord
+[2026-06-21 00:38:15,606] INFO [root.setup_hook:35] Setup complete.
+[2026-06-21 00:38:16,604] INFO [discord.gateway.received_message:579] Shard ID None has connected to Gateway (Session ID: 9c75efa1166a6ebd7bc5507b509b25fb).
+[2026-06-21 00:38:19,171] INFO [root.on_ready:38] Logged in as 006 music#6847 (ID: 880982026314985523)
+[2026-06-21 02:00:28,872] INFO [discord.gateway.received_message:584] Shard ID None has successfully RESUMED session 9c75efa1166a6ebd7bc5507b509b25fb.
+[2026-06-21 02:17:28,905] INFO [discord.client.login:670] logging in using static token
+[2026-06-21 02:19:47,032] INFO [discord.client.login:670] logging in using static token
+[2026-06-21 02:19:47,868] INFO [root.setup_hook:25] Loading Cogs...
+[2026-06-21 02:19:48,474] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.music
+[2026-06-21 02:19:48,477] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.meta
+[2026-06-21 02:19:48,478] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.error
+[2026-06-21 02:19:48,494] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.chord
+[2026-06-21 02:19:48,495] INFO [root.setup_hook:35] Setup complete.
+[2026-06-21 02:19:49,468] INFO [discord.gateway.received_message:579] Shard ID None has connected to Gateway (Session ID: 73b55f5949843ba979f5a626e36e91b7).
+[2026-06-21 02:19:52,072] INFO [root.on_ready:38] Logged in as 006 music#6847 (ID: 880982026314985523)
+[2026-06-21 02:20:19,106] INFO [discord.voice_state._connect:497] Connecting to voice...
+[2026-06-21 02:20:19,106] INFO [discord.voice_state._inner_connect:470] Starting voice handshake... (connection attempt 1)
+[2026-06-21 02:20:19,670] INFO [discord.voice_state._inner_connect:479] Voice handshake complete. Endpoint found: c-sin06-f34b8fa5.discord.media:2053
+[2026-06-21 02:20:20,061] INFO [discord.voice_state._connect:503] Voice connection complete.
+[2026-06-21 02:20:20,070] INFO [root._play_song:159] ▶️ Now playing: SARAN X BlackHeart - มากกว่ารัก (REMIX VERSION)
+[2026-06-21 02:22:24,755] INFO [discord.player._kill_process:278] ffmpeg process 11056 successfully terminated with return code of 0.
+[2026-06-21 02:22:24,755] INFO [discord.voice_state._voice_disconnect:636] The voice handshake is being terminated for Channel ID 1051524974801854477 (Guild ID 1051524973493239859)
+[2026-06-21 02:22:25,031] INFO [root._play_next:121] Queue finished so disconnected.
+[2026-06-21 02:24:35,381] ERROR [root._playplaylist:438] Error extracting playlist: [0;31mERROR:[0m [youtube] AF0WcktfkwA: Private video. Sign in if you've been granted access to this video. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+[2026-06-21 02:25:34,923] ERROR [discord.app_commands.tree.on_error:819] Ignoring exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\cogs\music.py", line 242, in _play
+    await interaction.response.defer()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\interactions.py", line 892, in defer
+    response = await adapter.create_interaction_response(
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\webhook\async_.py", line 224, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+[2026-06-21 02:25:46,120] INFO [discord.voice_state._connect:497] Connecting to voice...
+[2026-06-21 02:25:46,120] INFO [discord.voice_state._inner_connect:470] Starting voice handshake... (connection attempt 1)
+[2026-06-21 02:25:47,193] INFO [discord.voice_state._inner_connect:479] Voice handshake complete. Endpoint found: c-sin06-f34b8fa5.discord.media:2053
+[2026-06-21 02:25:47,576] INFO [discord.voice_state._connect:503] Voice connection complete.
+[2026-06-21 02:25:47,582] INFO [root._play_song:159] ▶️ Now playing: [พากย์ไทย] Oblivion Battery ตอนที่ 1【Ani-One Thailand】
+[2026-06-21 02:26:02,277] INFO [root._play_next:106] 🔄 Refreshing link for: [พากย์ไทย] Oblivion Battery ตอนที่ 2【Ani-One Thailand】
+[2026-06-21 02:26:02,277] INFO [discord.player._kill_process:267] ffmpeg process 13688 has not terminated. Waiting to terminate...
+[2026-06-21 02:26:03,113] INFO [root._play_song:159] ▶️ Now playing: [พากย์ไทย] Oblivion Battery ตอนที่ 2【Ani-One Thailand】
+[2026-06-21 02:26:13,406] INFO [discord.voice_state._voice_disconnect:636] The voice handshake is being terminated for Channel ID 1051524974801854477 (Guild ID 1051524973493239859)
+[2026-06-21 02:26:13,408] INFO [root._play_next:106] 🔄 Refreshing link for: [พากย์ไทย] Oblivion Battery ตอนที่ 3【Ani-One Thailand】
+[2026-06-21 02:26:13,408] INFO [discord.player._kill_process:267] ffmpeg process 17352 has not terminated. Waiting to terminate...
+[2026-06-21 02:26:13,725] INFO [root.leave:838] Loop Off | In : test 006music bot Id :1051524973493239859
+[2026-06-21 02:26:14,231] ERROR [root._play_next:111] Error refreshing song [พากย์ไทย] Oblivion Battery ตอนที่ 3【Ani-One Thailand】: 'NoneType' object has no attribute 'play'
+[2026-06-21 02:26:14,656] INFO [discord.player._kill_process:267] ffmpeg process 17036 has not terminated. Waiting to terminate...
+[2026-06-21 02:26:51,505] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:27:01,519] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:27:11,530] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:27:21,543] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 40 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:27:31,559] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 50 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:27:41,564] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 60 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:27:51,570] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 70 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:28:01,575] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 80 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:28:11,587] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 90 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:28:21,592] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 100 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:28:31,594] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 110 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:28:41,595] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 120 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:28:51,600] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 130 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:29:01,605] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 140 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:29:11,614] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 150 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:29:21,623] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 160 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:29:31,623] WARNING [discord.gateway.run:194] Shard ID None heartbeat blocked for more than 170 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\__main__.py", line 23, in <module>
+    bot.run()
+  File "C:\Users\12pon\Desktop\GitClone\006-music-discordbot\musicbot\bot.py", line 92, in run
+    bot.run(CFG["token"], reconnect=True)
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\client.py", line 933, in run
+    asyncio.run(runner())
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1910, in _run_once
+    handle = None  # Needed to break cycles when an exception occurs.
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 119, in __del__
+    self.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 753, in cleanup
+    self.original.cleanup()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 320, in cleanup
+    self._kill_process()
+  File "C:\Users\12pon\.virtualenvs\006-music-discordbot-2RH6pvIb\lib\site-packages\discord\player.py", line 269, in _kill_process
+    proc.communicate()
+  File "C:\Users\12pon\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1141, in communicate
+    stdout = self.stdout.read()
+
+[2026-06-21 02:29:50,074] INFO [discord.client.login:670] logging in using static token
+[2026-06-21 02:29:51,638] INFO [root.setup_hook:25] Loading Cogs...
+[2026-06-21 02:29:52,198] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.music
+[2026-06-21 02:29:52,200] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.meta
+[2026-06-21 02:29:52,202] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.error
+[2026-06-21 02:29:52,216] INFO [root.setup_hook:30] Loaded extension: musicbot.cogs.chord
+[2026-06-21 02:29:52,216] INFO [root.setup_hook:35] Setup complete.
+[2026-06-21 02:29:53,068] INFO [discord.gateway.received_message:579] Shard ID None has connected to Gateway (Session ID: 41ed0a2ab83b2cf56002d81d88bf7a1b).
+[2026-06-21 02:29:55,721] INFO [root.on_ready:38] Logged in as 006 music#6847 (ID: 880982026314985523)
+[2026-06-21 02:30:11,013] INFO [discord.voice_state._connect:497] Connecting to voice...
+[2026-06-21 02:30:11,013] INFO [discord.voice_state._inner_connect:470] Starting voice handshake... (connection attempt 1)
+[2026-06-21 02:30:11,617] INFO [discord.voice_state._inner_connect:479] Voice handshake complete. Endpoint found: c-sin06-f34b8fa5.discord.media:2053
+[2026-06-21 02:30:12,028] INFO [discord.voice_state._connect:503] Voice connection complete.
+[2026-06-21 02:30:12,037] INFO [root._play_song:160] ▶️ Now playing: SARAN X BlackHeart - มากกว่ารัก (REMIX VERSION)
+[2026-06-21 02:31:05,660] INFO [root._play_next:106] 🔄 Refreshing link for: [พากย์ไทย] Oblivion Battery ตอนที่ 1【Ani-One Thailand】
+[2026-06-21 02:31:05,660] INFO [discord.player._kill_process:267] ffmpeg process 16892 has not terminated. Waiting to terminate...
+[2026-06-21 02:31:05,865] INFO [discord.player._kill_process:272] ffmpeg process 16892 should have terminated with a return code of 1.
+[2026-06-21 02:31:06,613] INFO [root._play_song:160] ▶️ Now playing: [พากย์ไทย] Oblivion Battery ตอนที่ 1【Ani-One Thailand】
+[2026-06-21 02:31:13,563] INFO [root._play_next:106] 🔄 Refreshing link for: [พากย์ไทย] Oblivion Battery ตอนที่ 2【Ani-One Thailand】
+[2026-06-21 02:31:13,563] INFO [discord.player._kill_process:267] ffmpeg process 15076 has not terminated. Waiting to terminate...
+[2026-06-21 02:31:14,495] INFO [root._play_song:160] ▶️ Now playing: [พากย์ไทย] Oblivion Battery ตอนที่ 2【Ani-One Thailand】
+[2026-06-21 02:31:24,450] INFO [discord.player._kill_process:267] ffmpeg process 11848 has not terminated. Waiting to terminate...
+[2026-06-21 02:31:24,450] INFO [root._play_next:106] 🔄 Refreshing link for: [พากย์ไทย] Oblivion Battery ตอนที่ 3【Ani-One Thailand】
+[2026-06-21 02:31:25,375] INFO [root._play_song:160] ▶️ Now playing: [พากย์ไทย] Oblivion Battery ตอนที่ 3【Ani-One Thailand】
+[2026-06-21 02:31:32,179] INFO [discord.voice_state._voice_disconnect:636] The voice handshake is being terminated for Channel ID 1051524974801854477 (Guild ID 1051524973493239859)
+[2026-06-21 02:31:32,191] INFO [root._play_next:106] 🔄 Refreshing link for: [พากย์ไทย] Oblivion Battery ตอนที่ 4【Ani-One Thailand】
+[2026-06-21 02:31:32,192] INFO [discord.player._kill_process:267] ffmpeg process 16924 has not terminated. Waiting to terminate...
+[2026-06-21 02:31:32,499] INFO [root._leave:790] Loop Off | In : test 006music bot Id :1051524973493239859
+[2026-06-21 02:31:33,092] ERROR [root._play_next:111] Error refreshing song [พากย์ไทย] Oblivion Battery ตอนที่ 4【Ani-One Thailand】: 'NoneType' object has no attribute 'play'
+[2026-06-21 02:31:33,092] INFO [discord.player._kill_process:267] ffmpeg process 7672 has not terminated. Waiting to terminate...
+[2026-06-21 02:31:33,094] INFO [discord.player._kill_process:272] ffmpeg process 7672 should have terminated with a return code of 1.
