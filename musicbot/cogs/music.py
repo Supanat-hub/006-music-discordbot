@@ -937,7 +937,7 @@ class Music(commands.Cog):
             await asyncio.sleep(10)
             await ctx.message.delete()
             return
-        if ctx.channel.permissions_for(ctx.author).administrator or state.is_requester(ctx.author):
+        elif ctx.channel.permissions_for(ctx.author).administrator or state.is_requester(ctx.author):
             # immediately skip if requester or admin
             emBed6 = discord.Embed(color=0xF3F4F9)
             emBed6.add_field(name='ข้ามเพลงแล้ว', value=(f'**`{ctx.author.name}`**: Skipped the song!'))
