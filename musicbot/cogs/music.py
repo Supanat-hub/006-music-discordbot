@@ -118,7 +118,8 @@ class Music(commands.Cog):
                 await self._play_next(ctx, state)
         else:
             state.now_playing = None
-            await ctx.guild.voice_client.disconnect()
+            if ctx.guild.voice_client:
+                await ctx.guild.voice_client.disconnect()
             logging.info("Queue finished so disconnected.")
 
     def _play_song(self, client, state, song):
@@ -782,16 +783,19 @@ class Music(commands.Cog):
             return
         client = interaction.guild.voice_client
         state = self.get_state(interaction.guild_id)
-        emBed3 = discord.Embed(color=0xF3F4F9)
-        emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
-        await interaction.response.send_message(embed=emBed3)
-        await client.disconnect()
-        client.cleanup()
-        logging.info(f"Loop Off | In : {interaction.guild.name} Id :{interaction.guild_id}")
         state.playlist = []
         state.repeat = False
         state.now_playing = None
-    
+        emBed3 = discord.Embed(color=0xF3F4F9)
+        emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
+        await interaction.response.send_message(embed=emBed3)
+        try:
+            await client.disconnect()
+        except Exception as e:
+            pass
+        client.cleanup()
+        logging.info(f"Loop Off | In : {interaction.guild.name} Id :{interaction.guild_id}")
+
     @app_commands.command(
         name="ping",
         description="ping of bot"
@@ -832,14 +836,19 @@ class Music(commands.Cog):
             return 
         client = ctx.guild.voice_client
         state = self.get_state(ctx.guild.id)
-        emBed3 = discord.Embed(color=0xff0000)
-        emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
-        await ctx.send(embed=emBed3)
-        await client.disconnect()
-        logging.info(f"Loop Off | In : {ctx.guild.name} Id :{ctx.guild.id}")
         state.playlist = []
         state.repeat = False
         state.now_playing = None
+        emBed3 = discord.Embed(color=0xff0000)
+        emBed3.add_field(name='006 music ได้ออกจากช่องแล้ว', value='disconnected')
+        await ctx.send(embed=emBed3)
+        try:
+            await client.disconnect()
+        except Exception as e:
+            pass
+        client.cleanup()
+        logging.info(f"Loop Off | In : {ctx.guild.name} Id :{ctx.guild.id}")
+        
 
     @commands.command(aliases=["resume"])
     @commands.guild_only()
