@@ -11,6 +11,7 @@ import yt_dlp as youtube_dl
 import urllib
 from ..utils.lyrics_scraper import get_lyrics, split_artist_title, chunk_text
 
+
 #url
 alert_url = "https://i.ibb.co/ykzmssp/aleart.gif"
 logo_bot = "https://i.ibb.co/6PmVgYx/logo-bot.png"
@@ -20,15 +21,15 @@ YTDL_OPTS = {
     "restrictfilenames": True,
     "outtmpl": "%(extractor)s-%(id)s-%(title)s.%(ext)s",
     "cookiefile": "cookies.txt",
-    "default_search": "auto",
-    "format": "bestaudio/best",
+    "default_search": "ytsearch",
+    "format": "bestaudio[ext=webm]/bestaudio[ext=m4a]/bestaudio/best",
+    "extract_flat": "discard_in_playlist",
     "quiet": True,
     "noplaylist": True,
-    "extract_flat": "in_playlist",
     "no_warnings": True,
     "source_address": "0.0.0.0",
-    "socket_timeout": 10,
-    "retries": 3,
+    "socket_timeout": 15,
+    "retries": 5,
 }
 
 FFMPEG_BEFORE_OPTS = '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5 -probesize 10M'
@@ -107,13 +108,19 @@ class Music(commands.Cog):
                 
             except Exception as e:
                 logging.error(f"Error refreshing song {song.title}: {e}")
-                await ctx.send(f"⚠️ เล่นเพลง {song.title} ไม่ได้ (Link Error) กำลังข้าม...", delete_after=10)
+                if state.text_channel:
+                    try:
+                        await state.text_channel.send(f"⚠️ เล่นเพลง {song.title} ไม่ได้ (Link Error) กำลังข้าม...", delete_after=10)
+                    except Exception:
+                        pass
                 await self._play_next(ctx, state)
         else:
+            state.now_playing = None
             logging.info("Queue finished.")
 
 
     def _play_song(self, client, state, song):
+        state.now_playing = song
         # สร้าง Source
         source = discord.PCMVolumeTransformer(
             discord.FFmpegPCMAudio(
@@ -138,12 +145,12 @@ class Music(commands.Cog):
                     self._play_song(client, state, song)
                 except Exception:
                     # ถ้า Refresh ไม่ผ่านตอน Loop ให้ข้าม
-                    asyncio.run_coroutine_threadsafe(self._play_next(client.guild, state), self.bot.loop)
+                    asyncio.run_coroutine_threadsafe(self._play_next(client, state), self.bot.loop)
                 return
 
             # กรณีเล่นเพลงถัดไป
             asyncio.run_coroutine_threadsafe(
-                self._play_next(client.guild, state), 
+                self._play_next(client, state), 
                 self.bot.loop
             )
 
@@ -233,6 +240,7 @@ class Music(commands.Cog):
         """Plays audio hosted at <url> (or performs a search for <url> and plays the first result)."""
         await interaction.response.defer()
         state = self.get_state(interaction.guild_id)  # get the guild's state
+        state.text_channel = interaction.channel
         channel = discord.VoiceChannel = None
         if not channel:
             try:
@@ -318,36 +326,14 @@ class Music(commands.Cog):
         await interaction.response.send_message("**wait for it....**")
         client = interaction.guild.voice_client
         state = self.get_state(interaction.guild_id)  # get the guild's state
-        channel = discord.VoiceChannel = None
+        state.text_channel = interaction.channel
+        channel = None
         voice_run = discord.utils.get(self.bot.voice_clients, guild=interaction.guild)
-        fullstring = url
-        substring = "youtube.com/playlist"
-        try:
-            if substring in fullstring:
-                pass
-            else:
-                emBed5 = discord.Embed(color=0xff0000)
-                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='This is not a playlist url.')
-                emBed5.set_author(name="006 music", icon_url=alert_url)
-                await interaction.edit_original_response(content=None, embed=emBed5)
-                await asyncio.sleep(10)
-                await interaction.delete_original_response()
-                return
-        except:
-                emBed5 = discord.Embed(color=0xff0000)
-                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='This is not a playlist url.')
-                emBed5.set_author(name="006 music", icon_url=alert_url)
-                await interaction.edit_original_response(content=None, embed=emBed5)
-                await asyncio.sleep(10)
-                await interaction.delete_original_response()
-                return
-        status_code = urllib.request.urlopen(url).getcode()
-        website_is_up = status_code == 200
-        if website_is_up:
-            pass
-        else:
+        
+        # Check if URL contains playlist
+        if "youtube.com/playlist" not in url:
             emBed5 = discord.Embed(color=0xff0000)
-            emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='This is not url.')
+            emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='This is not a playlist url.')
             emBed5.set_author(name="006 music", icon_url=alert_url)
             await interaction.edit_original_response(content=None, embed=emBed5)
             await asyncio.sleep(10)
@@ -360,7 +346,7 @@ class Music(commands.Cog):
             except AttributeError:
                 emBed5 = discord.Embed(color=0xff0000)
                 emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='กรุณาเชื่อมต่อช่องเสียงก่อน')
-                await interaction.edit_original_response(content = None, embed=emBed5)
+                await interaction.edit_original_response(content=None, embed=emBed5)
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
                 return
@@ -382,49 +368,58 @@ class Music(commands.Cog):
                 await asyncio.sleep(10)
                 await interaction.delete_original_response()
                 return  
+            
             try:
-                with youtube_dl.YoutubeDL(YTDL_OPTS) as ydl:
-                    info = ydl.extract_info(url, download=False)
-                    video = None
-                    entries = info["entries"]
-                    d = len(entries)
-                    if d > 50:
-                        emBed5 = discord.Embed(color=0xff0000)
-                        emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='ไม่สามารถเล่นได้ เนื่องจากมีวิดีโอในเพลลิสต์มากกว่า 50 ')
-                        emBed5.set_author(name="006 music", icon_url=alert_url)
-                        await interaction.edit_original_response(content=None, embed=emBed5)
-                        await asyncio.sleep(10)
-                        await interaction.delete_original_response()
-                        return
-                    if "_type" in info and info["_type"] == "playlist":
-                        await interaction.edit_original_response(content="**processing...**")
-                        itac = interaction.user
-                        success = 0
-                        fail = 0
-                        for i, entry in enumerate(entries):
-                            video_url = entry.get('webpage_url') or entry.get('url')
-                            if not video_url:
-                                continue
-                            try:
-                                video = await asyncio.to_thread(Video, video_url, itac)
-                                state.playlist.append(video)
-                                success += 1
-                            except Exception as e:
-                                logging.error(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
-                                fail += 1
-                                continue
-                            if (i+1) % 2 == 0 or (i+1) == d:
-                                bar = make_progress_bar(i+1, d)
-                                await interaction.edit_original_response(content=f"{bar} เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}")
-            except youtube_dl.DownloadError as e:
-                logging.error(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
-                await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
+                loop = self.bot.loop or asyncio.get_running_loop()
+                to_run = partial(youtube_dl.YoutubeDL(YTDL_OPTS).extract_info, url, download=False)
+                info = await loop.run_in_executor(None, to_run)
+                entries = info.get("entries", [])
+                d = len(entries)
+                if d == 0:
+                    await interaction.edit_original_response(content="Playlist is empty.", embed=None)
+                    return
+                if d > 50:
+                    emBed5 = discord.Embed(color=0xff0000)
+                    emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='ไม่สามารถเล่นได้ เนื่องจากมีวิดีโอในเพลลิสต์มากกว่า 50 ')
+                    emBed5.set_author(name="006 music", icon_url=alert_url)
+                    await interaction.edit_original_response(content=None, embed=emBed5)
+                    await asyncio.sleep(10)
+                    await interaction.delete_original_response()
+                    return
+                
+                if "_type" in info and info["_type"] == "playlist":
+                    await interaction.edit_original_response(content="**processing...**")
+                    itac = interaction.user
+                    success = 0
+                    fail = 0
+                    for i, entry in enumerate(entries):
+                        video_url = entry.get('webpage_url') or entry.get('url')
+                        if not video_url:
+                            continue
+                        try:
+                            video = Video({"webpage_url": video_url, "title": entry.get("title") or "Unknown"}, itac)
+                            state.playlist.append(video)
+                            success += 1
+                        except Exception as e:
+                            logging.error(f"Error adding song from playlist: {e}")
+                            fail += 1
+                            continue
+                        if (i+1) % 2 == 0 or (i+1) == d:
+                            bar = make_progress_bar(i+1, d)
+                            await interaction.edit_original_response(content=f"{bar} เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}")
+                    
+                    if not client.is_playing():
+                        await self._play_next(interaction, state)
+            except Exception as e:
+                logging.error(f"Error downloading playlist: {e}")
+                await interaction.edit_original_response(content="There was an error downloading your playlist, **sorry.**", embed=None)
                 return
+            
             if state.finish == True:
-                    await interaction.edit_original_response(content=f"**เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}**", embed=state.playlist[0].get_embed())
+                await interaction.edit_original_response(content=f"**เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}**", embed=state.playlist[0].get_embed() if len(state.playlist) > 0 else None)
             else:
                 emBed5 = discord.Embed(color=0xff0000)
-                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
+                emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again later.')
                 emBed5.set_author(name="006 music", icon_url=alert_url)
                 await interaction.edit_original_response(content=None, embed=emBed5)
                 state.playlist = []
@@ -435,58 +430,65 @@ class Music(commands.Cog):
             if interaction.user.voice is not None and interaction.user.voice.channel is not None:
                 channel = interaction.user.voice.channel
                 try:
-                    video = Video(url, interaction.user)
-                except youtube_dl.DownloadError as e:
-                    await interaction.edit_original_response(content="There was an error downloading your song, **sorry.**", embed=None)
+                    loop = self.bot.loop or asyncio.get_running_loop()
+                    to_run = partial(youtube_dl.YoutubeDL(YTDL_OPTS).extract_info, url, download=False)
+                    info = await loop.run_in_executor(None, to_run)
+                except Exception as e:
+                    logging.error(f"Error extracting playlist: {e}")
+                    await interaction.edit_original_response(content="There was an error downloading your playlist, **sorry.**", embed=None)
                     return
-                with youtube_dl.YoutubeDL(YTDL_OPTS) as ydl:
-                    info = ydl.extract_info(url, download=False)
-                    entries = info["entries"]
-                    d = len(entries)
-                    if d > 50:
-                        emBed5 = discord.Embed(color=0xff0000)
-                        emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='ไม่สามารถเล่นได้ เนื่องจากมีวิดีโอในเพลลิสต์มากกว่า 50 ')
-                        emBed5.set_author(name="006 music", icon_url=alert_url)
-                        await interaction.edit_original_response(content=None, embed=emBed5)
-                        await asyncio.sleep(10)
-                        await interaction.delete_original_response()
-                        return
+                
+                entries = info.get("entries", [])
+                d = len(entries)
+                if d == 0:
+                    await interaction.edit_original_response(content="Playlist is empty.", embed=None)
+                    return
+                if d > 50:
+                    emBed5 = discord.Embed(color=0xff0000)
+                    emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='ไม่สามารถเล่นได้ เนื่องจากมีวิดีโอในเพลลิสต์มากกว่า 50 ')
+                    emBed5.set_author(name="006 music", icon_url=alert_url)
+                    await interaction.edit_original_response(content=None, embed=emBed5)
+                    await asyncio.sleep(10)
+                    await interaction.delete_original_response()
+                    return
+                
+                try:
+                    first_url = entries[0].get('webpage_url') or entries[0].get('url')
+                    video = await Video.create(first_url, interaction.user, self.bot.loop)
+                except Exception as e:
+                    logging.error(f"Error creating first video: {e}")
+                    await interaction.edit_original_response(content="There was an error playing the first video of the playlist.", embed=None)
+                    return
+
                 client = await channel.connect()
                 await interaction.guild.change_voice_state(channel=channel, self_mute=False, self_deaf=True)
                 self._play_song(client, state, video)
-                try:
-                    with youtube_dl.YoutubeDL(YTDL_OPTS) as ydl:
-                        info = ydl.extract_info(url, download=False)
-                        entries = info["entries"]
-                        d = len(entries)
-                        video = None
-                    if "_type" in info and info["_type"] == "playlist":
-                        await interaction.edit_original_response(content="**processing...**")
-                        itac = interaction.user
-                        success = 1
-                        fail = 0
-                        for i, entry in enumerate(entries[1:], start=1):
-                            video_url = entry.get('webpage_url') or entry.get('url')
-                            if not video_url:
-                                continue
-                            try:
-                                video = await asyncio.to_thread(Video, video_url, itac)
-                                state.playlist.append(video)
-                                success += 1
-                            except Exception as e:
-                                logging.warn(f"Error downloading song: {e} | In : {interaction.guild.name} Id :{interaction.guild_id}")
-                                fail += 1
-                                continue
-                            if (i+1) % 2 == 0 or (i+1) == d:
-                                bar = make_progress_bar(i+1, d)
-                                await interaction.edit_original_response(content=f"{bar} เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}")
-                except:
-                    pass
+                
+                await interaction.edit_original_response(content="**processing...**")
+                itac = interaction.user
+                success = 1
+                fail = 0
+                for i, entry in enumerate(entries[1:], start=1):
+                    video_url = entry.get('webpage_url') or entry.get('url')
+                    if not video_url:
+                        continue
+                    try:
+                        video_obj = Video({"webpage_url": video_url, "title": entry.get("title") or "Unknown"}, itac)
+                        state.playlist.append(video_obj)
+                        success += 1
+                    except Exception as e:
+                        logging.warn(f"Error adding song: {e}")
+                        fail += 1
+                        continue
+                    if (i+1) % 2 == 0 or (i+1) == d:
+                        bar = make_progress_bar(i+1, d)
+                        await interaction.edit_original_response(content=f"{bar} เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}")
+                
                 if state.finish == True:
-                    await interaction.edit_original_response(content=f"**เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}**", embed=state.now_playing.get_embed())
+                    await interaction.edit_original_response(content=f"**เพิ่มเพลงสำเร็จ {success} | ล้มเหลว {fail}**", embed=state.now_playing.get_embed() if state.now_playing else video.get_embed())
                 else:
                     emBed5 = discord.Embed(color=0xff0000)
-                    emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again leter.')
+                    emBed5.add_field(name='เกิดข้อผิดพลาด T_T', value='Fail to add playlist, Try again later.')
                     emBed5.set_author(name="006 music", icon_url=alert_url)
                     await interaction.edit_original_response(content=None, embed=emBed5)
                     state.playlist = []
@@ -1021,6 +1023,7 @@ class Music(commands.Cog):
         """Plays audio hosted at <url> (or performs a search for <url> and plays the first result)."""
         client = ctx.guild.voice_client
         state = self.get_state(ctx.guild.id)  # get the guild's state
+        state.text_channel = ctx.channel
         channel = discord.VoiceChannel = None
         voice_run = discord.utils.get(self.bot.voice_clients, guild=ctx.guild)
         if not channel:
@@ -1059,6 +1062,8 @@ class Music(commands.Cog):
                     "There was an error downloading your song, **sorry.**")
                 return
             state.playlist.append(video)
+            if not client.is_playing():
+                await self._play_next(ctx, state)
             message = await ctx.send(embed=video.get_embed())
         else:
             if ctx.author.voice is not None and ctx.author.voice.channel is not None:
@@ -1106,6 +1111,7 @@ class GuildState:
         self.now_playing = None
         self.repeat = False
         self.finish = True
+        self.text_channel = None
 
     def is_requester(self, user):
-        return self.now_playing.requested_by == user
+        return self.now_playing and self.now_playing.requested_by == user

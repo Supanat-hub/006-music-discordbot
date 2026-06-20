@@ -3,24 +3,41 @@ import yt_dlp as ytdl
 import discord
 from functools import partial
 
+# Options for extracting audio stream URL
+# extract_flat: discard_in_playlist = flatten search/playlist entries (gives page URLs)
+# but fully extract single video URLs (gives stream URL + full metadata)
 YTDL_OPTS = {
     "no_check_certificate": True,
     "restrictfilenames": True,
     "outtmpl": "%(extractor)s-%(id)s-%(title)s.%(ext)s",
     # "cookiefile": "cookies.txt",
-    "default_search": "auto",
-    "format": "bestaudio/best",
+    "default_search": "ytsearch",
+    "format": "bestaudio[ext=webm]/bestaudio[ext=m4a]/bestaudio/best",
+    "extract_flat": "discard_in_playlist",
     "quiet": True,
     "noplaylist": True,
-    "extract_flat": "in_playlist",
     "no_warnings": True,
     "source_address": "0.0.0.0",
-    "socket_timeout": 10,
-    "retries": 3,
+    "socket_timeout": 15,
+    "retries": 5,
+    "postprocessors": [],
 }
+
+# Options for browsing playlists only (extract_flat enabled — does NOT fetch audio format)
+YTDL_PLAYLIST_OPTS = {
+    "no_check_certificate": True,
+    "quiet": True,
+    "noplaylist": False,
+    "extract_flat": True,
+    "no_warnings": True,
+    "source_address": "0.0.0.0",
+    "socket_timeout": 15,
+}
+
 musicrun_logo = "https://i.ibb.co/6s134j9/musicrun.gif"
 
 ydl = ytdl.YoutubeDL(YTDL_OPTS)
+ydl_playlist = ytdl.YoutubeDL(YTDL_PLAYLIST_OPTS)
 
 class Video:
     """คลาสสำหรับจัดการข้อมูลวิดีโอ"""
@@ -43,11 +60,20 @@ class Video:
         to_run = partial(ydl.extract_info, url=url_or_search, download=False)
         data = await loop.run_in_executor(None, to_run)
 
-        # จัดการกรณีเป็น Playlist (เอาตัวแรก)
+        # จัดการกรณีเป็น Playlist หรือ Search Result (เอาตัวแรก)
         if data.get("_type") == "playlist":
             if "entries" in data and len(data["entries"]) > 0:
-                # ถ้าเป็น playlist ต้องดึงข้อมูลตัวแรกอีกรอบ เพราะ extract_flat ให้ข้อมูลมาไม่ครบ
-                first_url = data["entries"][0]["url"]
+                first_entry = data["entries"][0]
+                # ใช้ webpage_url ก่อน (YouTube page URL) เพราะถ้าใช้ url อาจได้ stream URL (videoplayback)
+                # ซึ่งจะทำให้ดึง metadata ไม่ได้
+                first_url = (
+                    first_entry.get("webpage_url")
+                    or first_entry.get("original_url")
+                    or (f"https://www.youtube.com/watch?v={first_entry['id']}" if first_entry.get("id") else None)
+                    or first_entry.get("url")
+                )
+                if not first_url:
+                    raise Exception("Could not determine video URL from search results.")
                 to_run_sub = partial(ydl.extract_info, url=first_url, download=False)
                 data = await loop.run_in_executor(None, to_run_sub)
             else:

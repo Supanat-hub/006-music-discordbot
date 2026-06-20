@@ -12,6 +12,10 @@ EXAMPLE_CONFIG = """\"token\"=\"\" # the bot's token
 "vote_skip_ratio"=0.5 # the minimum ratio of votes needed to skip a song
 [tips]
 "github_url"="https://github.com/joek13/py-music-bot"
+
+[chord]
+"hcti_api_user_id"="id"
+"hcti_api_key"="key"
 """
 
 

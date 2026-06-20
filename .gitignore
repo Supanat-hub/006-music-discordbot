@@ -1,14 +1,38 @@
 # Python
 __pycache__/
 *.py[cod]
+*.pyo
 env/
 venv/
+.venv/
+
+# Pipenv
 Pipfile.lock
 
-# Configuration & Secrets 
+# Configuration & Secrets (ห้ามขึ้น GitHub!)
 config.toml
 .env
 cookies.txt
 
 # Logs
 *.log
+bot.log
+
+# yt-dlp downloaded audio files
+*.webm
+*.m4a
+*.mp3
+*.mp4
+*.ogg
+*.opus
+youtube-*
+soundcloud-*
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+*.swp
+
+# Build / Dist
+.dist/
