@@ -1,5 +1,6 @@
 import asyncio
 from datetime import datetime
+from functools import partial
 import math
 from pytz import timezone
 import logging
