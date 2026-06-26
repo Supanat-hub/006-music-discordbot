@@ -1,4 +1,5 @@
 import sys
+from keep_alive import keep_alive
 from . import bot
 import logging
 from . import config
@@ -20,4 +21,5 @@ if __name__ == "__main__":
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
 
+    keep_alive()
     bot.run()

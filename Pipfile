@@ -13,6 +13,7 @@ yt-dlp = "*"
 pytz = "*"
 davey = "*"
 "discord.py" = "*"
+flask = "*"
 
 [dev-packages]
 
